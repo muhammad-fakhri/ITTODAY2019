@@ -1,165 +1,69 @@
-@extends('layouts.navbar2')
-
-<!doctype html>
-<html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <title>Seminar - IT TODAY 2018</title>
-        <link rel="shortcut icon" href="img/logoittodayhitam.png" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" media="all">
-        <link href="css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/theme.css" rel="stylesheet" type="text/css" media="all" />
-        <link href="css/custom.css" rel="stylesheet" type="text/css" media="all" />
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400%7CRaleway:100,400,300,500,600,700%7COpen+Sans:400,500,600' rel='stylesheet' type='text/css'>
-    </head>
-    <body>	
-	
-		<div class="main-container"  style="background: url('/img/footer.png') no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover;  background-size: cover;">
-		<section class="page-title page-title-4 image-bg overlay parallax">
-		        <div class="background-image-holder">
-		            <img alt="Background Image" class="background-image" src="img/bggradien.png">
-		        </div>
-		        <div class="container">
-		            <div class="row">
-		                <div class="col-md-6">
-		                    <h3 class="uppercase mb0">NATIONAL SEMINAR</h3>
-		                </div>
-		                <div class="col-md-6 text-right">
-		                    <ol class="breadcrumb breadcrumb-2">
-		                        <li>
-		                            <a href="#register">Register</a>
-		                        </li>
-		                       <!-- <li>
-		                            <a href="#speakers">Speakers</a>
-		                        </li>-->
-		                        <li>
-		                            <a href="#faq">FAQ</a>
-		                        </li>
-		                    </ol>
-		                </div>
-		            </div>
-		            
-		        </div>
-		        
-		    </section>
-          
-		<section class="image-edge" style="padding-bottom: 0px; padding-top: 10px">
-            <div class="col-md-6 col-sm-4 p0 col-md-push-6 col-sm-push-8">
-                <img alt="Screenshot" class="mb-xs-24" src="img/iconseminar.png" style="height: auto; weight: 450px">
+@extends('layouts.app')
+@section('content')
+<!-- start banner Area -->
+<section class="detail-banner-area relative" id="home">
+    <div class="overlay overlay-bg"></div>
+    <div class="container">
+        <div class="row d-flex align-items-center justify-content-center">
+            <div class="about-content col-lg-12">
+                <h1 class="text-white">
+                    Seminar Nasional IT Today 2019
+                </h1>
+                <p class="text-white link-nav"><a href="/">Beranda </a> <span class="lnr lnr-arrow-right"></span> <a href="{{ route('seminar') }}">Seminar Nasional</a></p>
             </div>
-
-            <div class="container"  id="register">
-                <div class="col-md-5 col-md-pull-0 col-sm-7 col-sm-pull-4 v-align-transform">
-                    <div class="feature bordered text-center">
-                        <p class="lead mb40" style="color: white">
-						National Seminar ITTODAY 2018 merupakan seminar bertaraf nasional yang diisi oleh pembicara yang berasal dari perusahaan, startup, ataupun praktisi-praktisi di bidang IT. Seminar berisi presentasi dan interaksi antara pembicara dengan peserta.
-                        </h5><br><br>
-                        <a href="https://bit.ly/seminar_ittoday2018" class="btn btn-lg btn-white mb8 mt-xs-24">Register Now</a>
-                    </div>
-                </div>
+        </div>
+    </div>
+</section>
+<!-- End banner Area -->
+<!-- Start home-about Area -->
+<section class="home-about-area">
+    <div class="container-fluid">
+        <div class="row align-items-center">
+            <div class="col-lg-6 home-about-left no-padding">
+                <img class="mx-auto d-block img-fluid" src="{{ asset('img/seminar.png') }}" alt="">
             </div>
-            
-        </section>
-            
-<!--            <section id="speakers" style="padding-bottom: 0px">
-		        <div class="container">
-				<div class="row">
-		                <div class="col-sm-6 col-md-offset-3 text-center feature bordered text-center">
-		                    <h3 class="mb16">SPEAKERS</h3>
-							<h4>To be announced</h4>
-		                </div>
-		            </div>
-		            
-		        </div>
-		        
-		    </section>-->
-
-			<section id="faq" style="padding-bottom: 40px;" align="center" class="col-md-offset-1">
-		        <div class="container">
-		            <div class="row">
-		                <div class="col-md-offset-2 col-sm-6 text-center feature bordered text-center">
-		                    <h3 class="mb16">FREQUENTLY ASKED QUESTIONS</h3>
-		                </div>
-		            </div>
-		            
-		            <div class="row col-sm-10 col-sm-offset-1" style="background-color: rgba(255, 255, 255, 0.5); margin-left:0px; margin-right: 0px">
-		                    <ul class="accordion accordion-2 one-open">
-		                        <li>
-		                            <div class="title">
-		                                <h4 class="inline-block mb0">Kapan dan dimana seminar ini akan diadakan?</h4>
-		                            </div>
-		                            <div class="content">
-		                                <h5>
-										 Tanggal 16 September 2018 di Auditorium CCR IPB.
-		                                </h5>
-		                            </div>
-		                        </li>
-		                        <li>
-		                            <div class="title">
-		                                <h4 class="inline-block mb0">Apakah Seminar ini berbayar?</h4>
-		                            </div>
-		                            <div class="content">
-		                                <h5>
-                                        Seminar ini <b>gratis</b>.
-		                                </h5>
-		                            </div>
-		                        </li>
-		                        <li>
-		                            <div class="title">
-		                                <h4 class="inline-block mb0">Kapan pendaftaran seminar dibuka?</h4>
-		                            </div>
-		                            <div class="content">
-		                                <h5>
-                                        Pendaftaran seminar dibuka tanggal 5-20 Agustus 2018, konfirmasi seminar dilaksanakan pada tanggal 5-10 September 2018.
-		                                </h5>
-		                            </div>
-		                        </li>
-		                        <li>
-		                            <div class="title">
-		                                <h4 class="inline-block mb0">Jam berapa seminar dimulai dan berakhir?</h4>
-		                            </div>
-		                            <div class="content">
-		                                <h5>
-										Open gate seminar pukul 08.00 dan dimulai pukul 08.30 berakhir pada pukul 17.00.
-		                                </h5>
-		                            </div>
-                                </li>
-                                <li>
-		                            <div class="title">
-		                                <h4 class="inline-block mb0">Apa saja yang akan di dapatkan peserta?</h4>
-		                            </div>
-		                            <div class="content">
-		                                <h5>
-                                        Peserta akan mendapatkan E-Certificate, snack, dan konsumsi makan siang.
-		                                </h5>
-		                            </div>
-                                </li>
-                                <li>
-		                            <div class="title">
-		                                <h4 class="inline-block mb0">Siapa saja yang boleh ikut seminar?</h4>
-		                            </div>
-		                            <div class="content">
-		                                <h5>
-                                        Mahasiswa, profesional muda, atau khalayak umum yang tertarik dengan bidang IT.
-		                                </h5>
-		                            </div>
-                                </li>
-		                    </ul>
-		                    
-		                </div>
-		            </div>
-		            
-		        </div>
-		        
-		    </section></div>
-		
-				
-	<script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/parallax.js"></script>
-        <script src="js/scripts.js"></script>
-    </body>
-</html>
-				
+            <div class="col-lg-6 home-about-right no-padding">
+                <h1>Seminar Nasional IT Today 2019</h1>
+                <h5>
+                    Seminar Nasional adalah salah satu rangkaian acara dalam IT Today 2019. Acara ini membawa tema: "Revolutionize The World With Future Technology". Seminar ini nantinya akan mendatangkan pembicara - pembicara bertalenta yang berasal dari perusahaan IT skala besar dan startup lokal yang berkontribusi dalam perubahan teknologi digital di Indonesia.
+                </h5>
+                <a class="primary-btn text-uppercase" onclick="alert('Pendaftaran belum dibuka')" style="color: white;">Daftar</a>
+            </div>
+        </div>
+        <br><br><br>
+        <div class="row event-detail-container">
+            <div class="col-lg-6 event-detail">
+                <h3>SYARAT DAN KETENTUAN</h3>
+                <br>
+                <ul class="term">
+                    <li>1. Peserta merupakan mahasiswa S1/Sederajat dan masyarakat umum yang tertarik di bidang teknologi</li>
+                    <li>2. Peserta diharuskan mendaftar seminar nasional melalui web ittoday.web.id</li>
+                    <li>3. Biaya pendaftaran seminar nasional IT Today 2019 adalah sebesar Rp. 20.000,-</li>
+                    <li>4. Peserta akan mendapatkan sertifikat online setelah seminar nasional selesai diadakan</li>
+                </ul>
+            </div>
+            <div class="col-lg-6 event-detail">
+                <h3>TEMPAT KEGIATAN</h3>
+                <br>
+                <h4>Auditorium Common Class Room (CCR) Institut Pertanian Bogor</h4>
+                <br>
+                <h3>KUOTA PESERTA</h3>
+                <br>
+                <h4>500 orang peserta</h4>
+            </div>
+        </div>
+        <br><br><br>
+        <!-- Timeline Start -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="text-center">Timeline Seminar Nasional</h1>
+            </div>
+        </div>
+        <div class="timeline-img">
+            <img src="{{ asset('img/timeline-seminar.png') }}" alt="timeline seminar nasional" id="timeline-seminar">
+        </div>
+        <!-- Timeline End -->
+    </div>
+</section>
+<!-- End home-about Area -->
+@endsection
