@@ -92,7 +92,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-12 pb-40 header-text text-center">
-                <h1 class="pb-10 text-crem">Gallery IT TODAY 2019</h1>
+                <h1 class="pb-10 text-crem">KILAS BALIK IT TODAY 2018</h1>
             </div>
         </div>
         <div class="row">

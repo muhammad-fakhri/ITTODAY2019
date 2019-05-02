@@ -2849,8 +2849,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .footer-area {
   background: url(../img/footer-bg.png) center;
-  background-size: cover;
+  /*background-size: 100% 100%;*/
+  /*background-size: cover;*/
   padding-top: 100px;
+}
+
+.footer {
+    background-size: 100% 100%;
 }
 
 .footer-area .footer-nav li {
