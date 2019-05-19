@@ -7,7 +7,7 @@ $(document).ready(function() {
             $(".nav-menu-1").css('color', 'white');
         } else {
             $("header").css('background', '');
-            $(".nav-menu-1").css('color', '#FFB899');
+            $(".nav-menu-1").css('color', '#F67E7D');
         }
     });
 });
