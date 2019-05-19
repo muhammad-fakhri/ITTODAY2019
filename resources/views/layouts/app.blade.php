@@ -60,7 +60,14 @@
     <script src="{{ asset('js/waypoints.min.js') }}"></script>
     <script src="{{ asset('js/mail-script.js') }}"></script>
     <script src="{{ asset('js/main.js') }}"></script>
-    @yield('animation')
+
+    <!-- Javascript untuk scroll nav-bar -->
+    @if (!isset($tipe))
+        <script src="{{ asset('js/scroll2.js') }}"></script>
+    @else
+        <script src="{{ asset('js/scroll.js') }}"></script>
+    @endif
+    {{-- @yield('animation') --}}
 </body>
 
 </html>

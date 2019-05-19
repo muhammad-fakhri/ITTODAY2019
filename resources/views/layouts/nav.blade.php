@@ -8,12 +8,12 @@
                 <ul class="nav-menu">
                     <li class="menu-active"><a href="/" style="@if (!isset($tipe))
                     color: white;
-                @endif">Beranda</a></li>
+                @endif" class="nav-menu-1">Beranda</a></li>
                     <li class="menu-has-children"><a style="@if (!isset($tipe))
                     color: white;
                     @else
-                    color:#FFA45C;
-                @endif">Kompetisi</a>
+                    color:#F67E7D;
+                @endif" class="nav-menu-1">Kompetisi</a>
                         <ul>
                             <li><a href="{{ route('apps') }}">Appstoday</a></li>
                             <li><a href="{{ route('hack') }}">Hacktoday</a></li>
@@ -23,8 +23,8 @@
                     <li class="menu-has-children"><a style="@if (!isset($tipe))
                     color: white;
                     @else
-                    color:#FFA45C;
-                @endif">Acara</a>
+                    color:#F67E7D;
+                @endif" class="nav-menu-1">Acara</a>
                         <ul>
                             <li><a href="{{ route('seminar') }}">Seminar</a></li>
                             <li><a href="{{ route('workshop') }}">Workshop</a></li>
@@ -32,12 +32,12 @@
                     </li>
                     <li><a href="http://himalkom.cs.ipb.ac.id" style="@if (!isset($tipe))
                     color: white;
-                @endif">Himalkom IPB</a></li>
+                @endif" class="nav-menu-1">Himalkom IPB</a></li>
                     <li class="menu-has-children"><a style="@if (!isset($tipe))
                     color: white;
                     @else
-                    color:#FFA45C;
-                @endif">Masuk</a>
+                    color:#F67E7D;
+                @endif" class="nav-menu-1">Masuk</a>
                         <ul>
                             <li><a href="#" onclick="alert('Coming soon !')">Masuk</a></li>
                             <li><a href="#" onclick="alert('Coming soon !')">Daftar</a></li>

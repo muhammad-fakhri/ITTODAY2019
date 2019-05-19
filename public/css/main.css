@@ -2038,10 +2038,11 @@ h1, h2, h3, h4, h5, h6 {
   z-index: 997;
 }
 
-#header.header-scrolled {
-  background: rgba(138, 144, 255, 0.9);
+/*#header.header-scrolled {
+  background: rgba(246,126,125,0.7);
   transition: all 0.5s;
-}
+  color: white;
+}*/
 
 @media (max-width: 673px) {
   #logo {
@@ -2150,7 +2151,7 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 8px 0px 8px;
   text-decoration: none;
   display: inline-block;
-  color: #FFBB8E;
+  color: #F67E7D;
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
@@ -2182,7 +2183,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .nav-menu ul li:hover > a {
-  color: #FFA45C;
+  color: #F67E7D;
 
 }
 
