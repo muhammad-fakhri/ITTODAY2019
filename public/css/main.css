@@ -2565,26 +2565,47 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .home-about-right {
-  /*padding-right: 20%;
+  /*padding-right: 20%;*/
   padding-left: 4%;
 }
 
+/*
 @media (max-width: 1366px) {
   .home-about-right {
     padding-left: 15px;
     padding-right: 15px;
   }
-}
+}*/
 
 .home-about-right h1 {
-  padding: 20px 0;
+  /*padding: 20px 0;*/
+}
+
+.home-about-right h2 {
+  text-align: center;
+}
+
+.home-about-right h4 {
+  text-align: center;
+}
+
+.home-about-right h5 {
+  margin-bottom: 20px;
+  margin-right: 100px;
+  font-weight: 300;
+  text-align: justify;
+}
+
+.home-about-left h2 {
+  text-align: center;
 }
 
 .home-about-right p {
-  margin-right: 30px;
+  /*margin-right: 30px;*/
   text-align: justify;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
+
 .home-about-right a {
   margin: auto 0;
   /*font-size: 36px;*/
@@ -2636,13 +2657,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   .home-about-right h1 br {
     display: none;
   }
-}
-
-.home-about-right h5 {
-  margin-bottom: 20px;
-  margin-right: 100px;
-  font-weight: 300;
-  text-align: justify;
 }
 
 .home-about-right .primary-btn {
@@ -2849,9 +2863,25 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .footer-area {
   background: url(../img/footer-bg.png) center;
-  /*background-size: 100% 100%;*/
-  /*background-size: cover;*/
+  height: 600px;
+  widows: 100%;
+  background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
   padding-top: 100px;
+  /*background-size: cover;*/
+}
+
+.detail-banner-area {
+  height: 500px;
+  width: 100%;
+  /*position: fixed;*/
+  background: url(../img/detail-banner-bg.png);
+  background-size: 100% 100%;
+  -webkit-background-size: 100% 100%;
+  -moz-background-size: 100% 100%;
+  -o-background-size: 100% 100%;
 }
 
 .footer {
@@ -3805,6 +3835,11 @@ body.mobile-nav-active #mobile-nav-toggle {
 .event-detail .term {
   margin-right: 50px;
   text-align: justify;
+}
+
+.event-image {
+  width: 300px;
+  height: 300px;
 }
 
 .footer {

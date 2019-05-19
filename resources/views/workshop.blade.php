@@ -16,25 +16,26 @@
 </section>
 <!-- End banner Area -->
 <br><br>
-<!-- Start home-about Area -->
-<section class="home-about-area">
-    <div class="container-fluid">
-        <div class="row align-items-center">
-            <div class="col-lg-6 home-about-left no-padding">
-                <img class="mx-auto d-block img-fluid" src="{{ asset('img/workshop.png') }}" alt="">
+<section class="home-about-area" id="point">
+    <div class="container">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 home-about-left no-padding" id="appstoday-info">
+                <img class="mx-auto d-block img-fluid" src="{{ asset('img/workshop.png') }}" class="event-image" alt="workshop">
             </div>
             <div class="col-lg-6 home-about-right no-padding">
                 <h1>Workshop Computer Vision</h1>
-                <h5>
+                <p>
                     Acara ini merupakan pelatihan di bidang computer vision. Computer vision merupakan suatu bidang yang berhubungan dengan bagaimana komputer dapat dibuat untuk mendapatkan pemahaman tingkat tinggi dari gambar digital atau video. Setelah peserta diberikan pelatihan tersebut diharapkan peserta mendapatkan wawasan baru mengenai computer vision serta dapat menerapkannya sesuai dengan keahliannya masing-masing.
-                </h5>
+                </p>
                 <a class="primary-btn text-uppercase" onclick="alert('Pendaftaran belum dibuka')" style="color: white;">Daftar</a>
             </div>
         </div>
-        <br><br><br>
-        <div class="row event-detail-container">
-            <div class="col-lg-6 event-detail">
-                <h3>SYARAT DAN KETENTUAN</h3>
+        <br>
+        <br>
+        <br>    
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6 home-about-left no-padding">
+                <h2>SYARAT DAN KETENTUAN</h1>
                 <br>
                 <ul class="term">
                     <li>1. Peserta adalah Mahasiswa S1/sederajat dan yang tertarik dengan bidang Computer Vision</li>
@@ -44,18 +45,21 @@
                     <li>5. Peserta akan mendapatkan sertifikat online setelah workshop selesai diadakan</li>
                 </ul>
             </div>
-            <div class="col-lg-6 event-detail">
-                <h3>TEMPAT KEGIATAN</h3>
+            <div class="col-lg-6 home-about-right no-padding">
+                <h2>TEMPAT KEGIATAN</h1>
                 <br>
-                <h4>Lab Komputer 1 Ilmu Komputer Institut Pertanian Bogor</h4>
+                <h4>Lab Komputer 1 Ilmu Komputer</h4>
+                <h4>Institut Pertanian Bogor</h4>
                 <br>
-                <h3>KUOTA PESERTA</h3>
+                <h2>KUOTA PESERTA</h3>
                 <br>
                 <h4>Mahasiswa IPB : 25 orang</h4>
                 <h4>Mahasiwa Non-IPB : 25 orang</h4>
             </div>
         </div>
-        <br><br><br>
+        <br>
+        <br>
+        <br>
         <!-- Timeline Start -->
         <div class="row">
             <div class="col-lg-12">
@@ -65,7 +69,7 @@
         <div class="timeline-img">
             <img src="{{ asset('img/timeline-workshop.png') }}" alt="timeline workshop" id="timeline-workshop">
         </div>
-    <!-- Timeline End -->
+        <!-- Timeline End -->
     </div>
 </section>
 <!-- End home-about Area -->

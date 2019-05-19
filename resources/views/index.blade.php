@@ -26,7 +26,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-lg-6 home-about-left no-padding" id="appstoday-info">
-                <img class="mx-auto d-block img-fluid" src="{{ asset('img/apps.png') }}" alt="">
+                <img class="mx-auto d-block img-fluid" src="{{ asset('img/apps.png') }}" class="event-image" alt="appstoday">
             </div>
             <div class="col-lg-6 home-about-right no-padding">
                 <h1>Appstoday</h1>
@@ -45,12 +45,12 @@
                 <a class="primary-btn text-uppercase" href="{{ route('hack') }}">Detail</a>
             </div>
             <div class="col-lg-6 home-about-right no-padding">
-                <img class="mx-auto d-block img-fluid" src="{{ asset('img/hack.png') }}" alt="">
+                <img class="mx-auto d-block img-fluid" src="{{ asset('img/hack.png') }}" class="event-image" alt="hacktoday">
             </div>
         </div>
         <div class="row align-items-center">
             <div class="col-lg-6 home-about-left no-padding" id="daming-info">
-                <img class="mx-auto d-block img-fluid" src="{{ asset('img/daming.png') }}" alt="">
+                <img class="mx-auto d-block img-fluid" src="{{ asset('img/daming.png') }}" class="event-image" alt="data-science">
             </div>
             <div class="col-lg-6 home-about-right no-padding">
                 <h1>Data Science Competition</h1>
@@ -69,12 +69,12 @@
                 <a class="primary-btn text-uppercase" href="{{ route('seminar') }}">Detail</a>
             </div>
             <div class="col-lg-6 home-about-right no-padding">
-                <img class="mx-auto d-block img-fluid" src="{{ asset('img/seminar.png') }}" alt="">
+                <img class="mx-auto d-block img-fluid" src="{{ asset('img/seminar.png') }}" class="event-image" alt="seminar">
             </div>
         </div>
         <div class="row align-items-center">
             <div class="col-lg-6 home-about-left no-padding" id="workshop-info">
-                <img class="mx-auto d-block img-fluid" src="{{ asset('img/workshop.png') }}" alt="">
+                <img class="mx-auto d-block img-fluid" src="{{ asset('img/workshop.png') }}" class="event-image" alt="workshop">
             </div>
             <div class="col-lg-6 home-about-right no-padding">
                 <h1>Workshop Computer Vision</h1>
@@ -141,9 +141,9 @@
 </section>
 <!-- End feature Area -->
 @endsection
-@section('animation')
+{{-- @section('animation')
 <script>
 ScrollReveal().reveal('#appstoday-info');
 
 </script>
-@endsection
+@endsection --}}
