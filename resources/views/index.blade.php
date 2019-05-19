@@ -8,7 +8,7 @@
                 <h1>
                     IT TODAY 2019
                 </h1>
-                <h3 class="text-crem" id="tagline">
+                <h3 class="text-red" id="tagline">
                     #BringTheFutureToday
                 </h3>
                     <a href="#point" class="btn header-btn">
@@ -92,7 +92,7 @@
     <div class="container">
         <div class="row d-flex justify-content-center">
             <div class="col-md-12 pb-40 header-text text-center">
-                <h1 class="pb-10 text-crem">KILAS BALIK IT TODAY 2018</h1>
+                <h1 class="pb-10 text-red">KILAS BALIK IT TODAY 2018</h1>
             </div>
         </div>
         <div class="row">
