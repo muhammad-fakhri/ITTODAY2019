@@ -77,9 +77,9 @@
                 <img class="mx-auto d-block img-fluid" src="{{ asset('img/workshop.png') }}" class="event-image" alt="workshop">
             </div>
             <div class="col-lg-6 home-about-right no-padding">
-                <h1>Workshop Computer Vision</h1>
+                <h1>Workshop IT Today 2019</h1>
                 <p>
-                    Acara ini merupakan pelatihan di bidang computer vision. Computer vision merupakan suatu bidang yang berhubungan dengan bagaimana komputer dapat dibuat untuk mendapatkan pemahaman tingkat tinggi dari gambar digital atau video.
+                    Workshop IT Today 2019 adalah sebuah acara baru di dalam rangkaian acara IT Today 2019. Acara ini akan hadir dengan tema yang sangat berkaitan dengan dunia teknologi informasi.
                 </p>
                 <a class="primary-btn text-uppercase" href="{{ route('workshop') }}">Detail</a>
             </div>

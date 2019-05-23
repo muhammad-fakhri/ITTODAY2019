@@ -2609,7 +2609,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .home-about-right p {
   /*margin-right: 30px;*/
   text-align: justify;
-  /*font-size: 20px;*/
+  font-size: 20px;
 }
 
 .home-about-right a {
