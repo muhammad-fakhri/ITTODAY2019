@@ -8,10 +8,10 @@
                 <h1>
                     IT TODAY 2019
                 </h1>
-                <h3 class="text-red" id="tagline">
+                <h3 class="text-red">
                     #BringTheFutureToday
                 </h3>
-                    <a href="#point" class="btn header-btn">
+                <a href="#point" class="btn header-btn">
                     Cari tahu</a>
             </div>
             <div class="banner-img col-lg-6 col-md-6">
@@ -36,7 +36,7 @@
                 <a class="primary-btn text-uppercase" href="{{ route('apps') }}">Detail</a>
             </div>
         </div>
-        <div class="row align-items-center">
+        <div class="row ">
             <div class="col-lg-6 home-about-left no-padding" id="hacktoday-info">
                 <h1>Hacktoday</h1>
                 <p>
