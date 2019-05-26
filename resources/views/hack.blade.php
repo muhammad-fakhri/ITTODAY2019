@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content') 
-<!-- start banner Area -->
+<!-- start banner Area --> 
 <section class="detail-banner-area relative" id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">
@@ -36,13 +36,11 @@
         <br>
         <!-- Timeline Start -->
         <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12 timeline-title">
                 <h1 class="text-center">Timeline Hacktoday</h1>
             </div>
         </div>
-        <div class="timeline-img">
-            <img src="{{ asset('img/timeline-hack.png') }}" alt="timeline hacktoday" id="timeline-hacktoday">
-        </div>
+            <img class="timeline-img" src="{{ asset('img/timeline-hack.png') }}" alt="timeline hacktoday" id="timeline-hacktoday">
         <!--    Timeline End -->
     </div>
 </section>

@@ -14,27 +14,27 @@ class GuestController extends Controller
 
     public function apps()
     {
-    	return view('apps', ['title'=>'APPSTODAY']);
+    	return view('apps', ['title'=>'Appstoday | IT TODAY 2019 ']);
     }
 
     public function hack()
     {
-    	return view('hack', ['title'=>'HACKTODAY']);
+    	return view('hack', ['title'=>'Hacktoday | IT TODAY 2019 ']);
     }
 
     public function daming()
     {
-    	return view('daming', ['title'=>'DATA SCIENCE COMPETITION']);
+    	return view('daming', ['title'=>'Data Science Competition | IT TODAY 2019']);
     }
 
     public function seminar()
     {
-        return view('seminar', ['title'=>'SEMINAR']);
+        return view('seminar', ['title'=>'Seminar | IT TODAY 2019 ']);
     }
 
     public function workshop()
     {
-        return view('workshop', ['title'=>'WORKSHOP']);
+        return view('workshop', ['title'=>'Workshop | IT TODAY 2019 ']);
     }
 
     public function downApps()

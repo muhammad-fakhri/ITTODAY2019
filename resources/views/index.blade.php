@@ -8,10 +8,10 @@
                 <h1>
                     IT TODAY 2019
                 </h1>
-                <h3 class="text-red" id="tagline">
+                <h3 class="text-red">
                     #BringTheFutureToday
                 </h3>
-                    <a href="#point" class="btn header-btn">
+                <a href="#point" class="btn header-btn">
                     Cari tahu</a>
             </div>
             <div class="banner-img col-lg-6 col-md-6">
@@ -36,7 +36,7 @@
                 <a class="primary-btn text-uppercase" href="{{ route('apps') }}">Detail</a>
             </div>
         </div>
-        <div class="row align-items-center">
+        <div class="row ">
             <div class="col-lg-6 home-about-left no-padding" id="hacktoday-info">
                 <h1>Hacktoday</h1>
                 <p>
@@ -77,9 +77,9 @@
                 <img class="mx-auto d-block img-fluid" src="{{ asset('img/workshop.png') }}" class="event-image" alt="workshop">
             </div>
             <div class="col-lg-6 home-about-right no-padding">
-                <h1>Workshop Computer Vision</h1>
+                <h1>Workshop IT Today 2019</h1>
                 <p>
-                    Acara ini merupakan pelatihan di bidang computer vision. Computer vision merupakan suatu bidang yang berhubungan dengan bagaimana komputer dapat dibuat untuk mendapatkan pemahaman tingkat tinggi dari gambar digital atau video.
+                    Workshop IT Today 2019 adalah sebuah acara baru di dalam rangkaian acara IT Today 2019. Acara ini akan hadir dengan tema yang sangat berkaitan dengan dunia teknologi informasi.
                 </p>
                 <a class="primary-btn text-uppercase" href="{{ route('workshop') }}">Detail</a>
             </div>

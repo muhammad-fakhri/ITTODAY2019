@@ -2,7 +2,6 @@
 <footer class="footer-area section-gap">
     <div class="container footer">
         <div class="row">
-            {{-- <div class="col-lg-4 col-md-12"></div> --}}
             <div class="col-lg-12 col-md-12">
                 <div class="single-footer-widget">
                     <h6>IT TODAY 2019</h6>
@@ -13,7 +12,6 @@
                     </ul>
                 </div>
             </div>
-            {{-- <div class="col-lg-4 col-md-12"></div> --}}
         </div>
         <div class="row footer-bottom d-flex">
             <div class="col-lg-4 col-sm-4"></div>
