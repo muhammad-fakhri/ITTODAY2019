@@ -1,18 +1,15 @@
 <?php
- 
+
 namespace App\Mail;
 
 use Illuminate\Bus\Queueable;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 use Illuminate\Contracts\Queue\ShouldQueue;
-use Illuminate\Support\Facades\Auth;
 
-class Welcome extends Mailable
+class VerifyMail extends Mailable
 {
     use Queueable, SerializesModels;
-
-    //public variable
     public $user;
 
     /**
@@ -32,8 +29,6 @@ class Welcome extends Mailable
      */
     public function build()
     {
-        return $this->subject('IT TODAY 2019 | Verify Email Address')
-                    ->from('admin@ittoday.web.id')
-                    ->view('emails.welcome');
+        return $this->view('emails.verifyUser');
     }
 }
