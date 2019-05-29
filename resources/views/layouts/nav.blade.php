@@ -39,8 +39,8 @@
                     color:#F67E7D;
                 @endif" class="nav-menu-1">Masuk</a>
                         <ul>
-                            <li><a href="#" onclick="alert('Coming soon !')">Masuk</a></li>
-                            <li><a href="#" onclick="alert('Coming soon !')">Daftar</a></li>
+                            <li><a href="{{ route('login') }}">Masuk</a></li>
+                            <li><a href="{{ route('register') }}">Daftar</a></li>
                         </ul>
                     </li>
                 </ul>

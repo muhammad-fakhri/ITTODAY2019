@@ -9,8 +9,7 @@
 | routes are loaded by the RouteServiceProvider within a group which
 | contains the "web" middleware group. Now create something great!
 |
-*/
-
+ */
 
 //Route untuk guest atau user yang tidak login
 Route::get('/', 'GuestController@index');
@@ -22,6 +21,8 @@ Route::get('/workshop', 'GuestController@workshop')->name('workshop');
 Route::get('/rulebook-appstoday', 'GuestController@downApps')->name('downApps');
 Route::get('/rulebook-hacktoday', 'GuestController@downHack')->name('downHack');
 Route::get('/rulebook-dsc', 'GuestController@downDSC')->name('downDSC');
+
+Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
 //Route untuk user yang sudah login
 Auth::routes();
