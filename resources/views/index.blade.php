@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('content')
 <!-- start banner Area -->
 <section class="banner-area" id="home">
