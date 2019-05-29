@@ -103,4 +103,13 @@ class RegisterController extends Controller {
 		$this->guard()->logout();
 		return redirect('/login')->with('status', 'We sent you an activation code. Check your email and click on the link to verify.');
 	}
+
+	/**
+	 * Show the application registration form.
+	 *
+	 * @return \Illuminate\Http\Response
+	 */
+	public function showRegistrationForm() {
+		return view('auth.register', ['title' => 'Daftar | IT TODAY 2019', 'login' => false, 'register' => true]);
+	}
 }
