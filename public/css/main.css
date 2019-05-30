@@ -2085,6 +2085,7 @@ h6 {
     right: 0;
     transition: all 0.5s;
     z-index: 997;
+    /*background: linear-gradient(90deg, #F67E7D 0%, #FFB997 100%);*/
 }
 
 /*#header.header-scrolled {
@@ -2197,6 +2198,7 @@ h6 {
 /* Nav Meu Container */
 #nav-menu-container {
     margin: 0;
+    /*background-color: black;*/
 }
 
 /* Nav Meu Styling */
@@ -2204,7 +2206,7 @@ h6 {
     padding: 0 8px 0px 8px;
     text-decoration: none;
     display: inline-block;
-    color: #F67E7D;
+    color: white;
     font-weight: bold;
     font-size: 16px;
     text-transform: uppercase;
@@ -2237,11 +2239,14 @@ h6 {
 
 .nav-menu ul li:hover>a {
     color: #F67E7D;
-
 }
 
 .nav-menu ul ul {
     margin: 0;
+}
+
+.menu-has-children a{
+    color: white;
 }
 
 /* Mobile Nav Toggle */
@@ -2928,10 +2933,10 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 @media (max-width: 960px) {
-  .feature-area .single-feature img {
-    width: 90%;
-    margin-left: 15px;
-  }
+    .feature-area .single-feature img {
+        width: 90%;
+        margin-left: 15px;
+    }
 }
 
 .feature-area .single-feature:hover {
@@ -3989,28 +3994,28 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #timeline-appstoday {
-    height: 68%;
-    width: 68%;
+    height: 45%;
+    width: 45%;
 }
 
 #timeline-hacktoday {
-    height: 50%;
-    width: 50%;
+    height: 42%;
+    width: 42%;
 }
 
 #timeline-dsc {
+    height: 43%;
+    width: 43%;
+}
+
+#timeline-seminar {
     height: 40%;
     width: 40%;
 }
 
-#timeline-seminar {
-    height: 50%;
-    width: 50%;
-}
-
 #timeline-workshop {
-    height: 50%;
-    width: 50%;
+    height: 40%;
+    width: 40%;
 }
 
 .timeline-title {
