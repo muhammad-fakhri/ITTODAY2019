@@ -22,9 +22,9 @@ Route::get('/rulebook-appstoday', 'GuestController@downApps')->name('downApps');
 Route::get('/rulebook-hacktoday', 'GuestController@downHack')->name('downHack');
 Route::get('/rulebook-dsc', 'GuestController@downDSC')->name('downDSC');
 
-Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
+// Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
 //Route untuk user yang sudah login
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
