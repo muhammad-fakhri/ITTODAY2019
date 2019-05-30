@@ -28,7 +28,7 @@
                 <p>
                     HackToday atau yang lebih dikenal dengan Capture The Flag adalah salah satu cabang kompetisi IT Today 2019 dalam bidang keamanan teknologi informasi. Dalam lomba ini, peserta diharuskan untuk mencari celah-celah keamanan jaringan sehingga peserta mampu untuk menembus target yang disediakan oleh panitia. Lomba HackToday yang diadakan IT Today 2019 bertujuan agar setiap peserta mampu mengembangkan kemampuannya pada bidang Information Security.
                 </p>
-                <a class="primary-btn text-uppercase" onclick=" alert('Coming soon')" style="color: white;">Download Rulebook</a>
+                <a class="primary-btn text-uppercase" href="{{ route('downHack') }}" style="color: white;">Download Rulebook</a>
             </div>
         </div>
         <br>

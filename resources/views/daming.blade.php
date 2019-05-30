@@ -28,7 +28,7 @@
                 <p>
                     Data Science Competition merupakan kompetisi bertaraf nasional dalam bidang analisis data yang akan menghasilkan suatu pola atau prediksi dari suatu data. Peserta diharapkan dapat memberikan solusi terkait permasalahan yang ada di Indonesia melalui data. Kompetisi terbuka untuk mahasiswa program Sarjana di seluruh Indonesia, dengan masing-masing tim beranggotakan maksimal tiga orang.
                 </p>
-                <a class="primary-btn text-uppercase" onclick=" alert('Coming soon')" style="color: white;">Download Rulebook</a>
+                <a class="primary-btn text-uppercase" href="{{ route('downDSC') }}" style="color: white;">Download Rulebook</a>
             </div>
         </div>
         <br>
