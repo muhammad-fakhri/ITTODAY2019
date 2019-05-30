@@ -41,6 +41,6 @@ class LoginController extends Controller {
 	 * @return \Illuminate\Http\Response
 	 */
 	public function showLoginForm() {
-		return view('auth.login', ['title' => 'Masuk | IT TODAY 2019', 'login' => true, 'register' => false]);
+		return view('auth.login', ['title' => 'Masuk | IT TODAY 2019', 'login' => true, 'register' => false, 'tipe' => true, 'auth_page' => true]);
 	}
 }
