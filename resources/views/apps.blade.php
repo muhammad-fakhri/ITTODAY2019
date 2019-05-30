@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('content')
 <!-- start banner Area -->
 <section class="detail-banner-area relative" id="home">
@@ -25,7 +25,7 @@
             </div>
             <div class="col-lg-6 home-about-right no-padding">
                 <h1>Appstoday</h1>
-                <p> 
+                <p>
                     AppsToday merupakan salah satu cabang kompetisi IT Today 2019 pada bidang inovasi aplikasi. Lomba ini menjadi wadah bagi peserta akan menjadi generasi developer baru baru yang kreatif dan inovatif untuk memajukan daya saing Indonesia di bidang TIK. Peserta AppsToday merupakan mahasiswa S1 atau diploma. Perangkat lunak yang diajukan harus bersesuaian dengan tema acara IT Today 2019 yaitu “Revolutionize The World With Future Technology” dengan tagline “Bring The Future Today”.
                 </p>
                 <a class="primary-btn text-uppercase" onclick=" alert('Coming soon')" style="color: white;">Download Rulebook</a>

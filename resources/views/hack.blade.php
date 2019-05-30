@@ -1,6 +1,6 @@
-@extends('layouts.app')
-@section('content') 
-<!-- start banner Area --> 
+@extends('layouts.main')
+@section('content')
+<!-- start banner Area -->
 <section class="detail-banner-area relative" id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">

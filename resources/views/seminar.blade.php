@@ -1,6 +1,6 @@
-@extends('layouts.app')
+@extends('layouts.main')
 @section('content')
-<!-- start banner Area --> 
+<!-- start banner Area -->
 <section class="detail-banner-area relative" id="home">
     <div class="overlay overlay-bg"></div>
     <div class="container">
@@ -32,7 +32,7 @@
         </div>
         <br>
         <br>
-        <br>    
+        <br>
         <div class="row d-flex justify-content-center align-items-center">
             <div class="col-lg-6 home-about-left no-padding">
                 <h2>SYARAT DAN KETENTUAN</h1>
