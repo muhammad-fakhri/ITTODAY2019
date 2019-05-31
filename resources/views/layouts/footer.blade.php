@@ -16,9 +16,9 @@
         <div class="row footer-bottom d-flex">
             <div class="col-lg-4 col-sm-4"></div>
             <div class="col-lg-4 col-sm-4 footer-social">
-                <a href="https://facebook.com/ipbittoday/"><i class="fa fa-2x fa-facebook"></i></a>
-                <a href="https://twitter.com/ittoday_ipb"><i class="fa fa-2x fa-twitter"></i></a>
-                <a href="https://instagram.com/ittoday_ipb"><i class="fa fa-2x fa-instagram"></i></a>
+                <a href="https://facebook.com/ipbittoday/" target="_blank"><i class="fa fa-2x fa-facebook"></i></a>
+                <a href="https://twitter.com/ittoday_ipb" target="_blank"><i class="fa fa-2x fa-twitter"></i></a>
+                <a href="https://instagram.com/ittoday_ipb" target="_blank"><i class="fa fa-2x fa-instagram"></i></a>
             </div>
             <div class="col-lg-4 col-sm-4"></div>
         </div>
