@@ -1,13 +1,12 @@
 @extends('layouts.main2')
 @section('content')
-<div class="container verify-wrapper">
-    <div class="row verify-content">
-        <h3>Setel Ulang Kata Sandi</h3>
+    <div class="verify-content">
         @if (session('status'))
         <div class="alert alert-success" role="alert">
-            <p class="text-center">Kami telah mengirim e-mail tautan atur ulang kata sandi Anda!</p>
+            Kami telah mengirim e-mail tautan atur ulang kata sandi Anda!
         </div>
         @endif
+        <h3>Setel Ulang Kata Sandi</h3>
         <form action="{{ route('password.email') }}" method="POST">
             @csrf
             <label for="email" class="label">Email</label>
@@ -18,10 +17,9 @@
             @enderror
             <br>
             <br>
-            <div class="form-group lower-form">
+            <div class="form-group lower-form" id="reset-password-btn">
              <button type="submit">Kirim Tautan Setel Ulang Kata Sandi</button>
          </div>
         </form>
     </div>
-</div>
 @endsection

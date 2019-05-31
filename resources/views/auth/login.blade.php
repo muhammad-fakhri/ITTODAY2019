@@ -1,15 +1,15 @@
 @extends('layouts.main2')
 @section('content')
 <form action="{{ route('login') }}" class="input-form" method="POST">
-@if (session('status'))
-      <div class="alert alert-success">
+    @if (session('status'))
+    <div class="alert alert-success">
         Kami mengirimi Anda kode aktivasi. Periksa email Anda dan klik tautan untuk memverifikasi.
-      </div>
+    </div>
     @endif
     @if (session('warning'))
-      <div class="alert alert-warning">
+    <div class="alert alert-warning">
         {{ session('warning') }}
-      </div>
+    </div>
     @endif
     @csrf
     <ul class="nav-list">
@@ -49,7 +49,6 @@
     </div>
     <div class="form-group lower-form">
         <button type="submit">Masuk</button>
-
         @if (Route::has('password.request'))
         <a href="{{ route('password.request') }}" class="forget-password">Lupa kata sandi ? </a>
         @endif

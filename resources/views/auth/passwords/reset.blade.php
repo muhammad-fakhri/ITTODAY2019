@@ -1,7 +1,6 @@
 @extends('layouts.main2')
 @section('content')
-<div class="container verify-wrapper">
-    <div class="row verify-content">
+    <div class=" verify-content">
         <h3>Setel Ulang Kata Sandi</h3>
         <form action="{{ route('password.update') }}" method="POST">
             @csrf
@@ -30,5 +29,4 @@
             </div>
         </form>
     </div>
-</div>
 @endsection
