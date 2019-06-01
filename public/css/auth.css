@@ -702,7 +702,7 @@ input:focus {
 .inner-verify {
     position: absolute;
     float: center;
-    top: 18%;
+    top: 16%;
     left: 4%;
     width: 100%;
     height: 50%;
@@ -720,7 +720,7 @@ input:focus {
 .content-verify p {
     position: absolute;
 
-    top: 64%;
+    top: 62%;
     left: 10%;
     right: 10%;
 
@@ -760,7 +760,7 @@ input:focus {
 
 .content-verify h3 {
     position: absolute;
-    top: 10%;
+    top: 8%;
     left: 30%;
     text-align: center;
     font-family: Roboto;
