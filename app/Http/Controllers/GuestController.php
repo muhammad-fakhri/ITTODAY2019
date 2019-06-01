@@ -4,40 +4,50 @@ namespace App\Http\Controllers;
 
 use Illuminate\Support\Facades\Storage;
 
-class GuestController extends Controller {
-	public function index() {
+class GuestController extends Controller
+{
+	public function index()
+	{
 		return view('index', ['title' => 'IT TODAY 2019', 'tipe' => true]);
 	}
 
-	public function apps() {
+	public function apps()
+	{
 		return view('apps', ['title' => 'Appstoday | IT TODAY 2019']);
 	}
 
-	public function hack() {
+	public function hack()
+	{
 		return view('hack', ['title' => 'Hacktoday | IT TODAY 2019']);
 	}
 
-	public function daming() {
+	public function daming()
+	{
 		return view('daming', ['title' => 'Data Science Competition | IT TODAY 2019']);
 	}
 
-	public function seminar() {
+	public function seminar()
+	{
 		return view('seminar', ['title' => 'Seminar | IT TODAY 2019']);
 	}
 
-	public function workshop() {
+	public function workshop()
+	{
 		return view('workshop', ['title' => 'Workshop | IT TODAY 2019']);
 	}
 
-	public function downApps() {
+	public function downApps()
+	{
 		return Storage::download('public/RULEBOOK_APPSTODAY.pdf');
 	}
 
-	public function downHack() {
+	public function downHack()
+	{
 		return Storage::download('public/RULEBOOK_HACKTODAY.pdf');
 	}
 
-	public function downDSC() {
+	public function downDSC()
+	{
 		return Storage::download('public/RULEBOOK_DSC.pdf');
 	}
 }

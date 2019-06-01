@@ -2149,7 +2149,6 @@ h6 {
     left: 0;
     z-index: 99;
     /*/*background: rgba(255, 255, 255, 0.9);*/
-    */
     /*background: #000000;*/
 }
 
@@ -2833,7 +2832,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-radius: 25px;
     background: #FFBB8E;
     border: 1px solid transparent;
-    color: #fffff;
+    color: #fff;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
     text-align: center;
 }
@@ -4097,6 +4096,121 @@ body.mobile-nav-active #mobile-nav-toggle {
 .center {
     margin: 0 auto;
 }
+
+
+/*Email Verif CSS*/
+/* verifikasi email */
+.verify-bg1 {
+    position: relative;
+    width: 1440px;
+    height: 1024px;
+    background: #FFFFFF;
+}
+
+
+.verify-content {
+    position: absolute;
+    width: 1750px;
+    height: 826px;
+    left: -155px;
+    top: 154px;
+    background: url(../img/verifylogo.png);
+
+}
+
+/* Rectangle */
+.verify-bg {
+    position: absolute;
+    width: 1149px;
+    height: 757px;
+    left: 145px;
+    top: 139px;
+
+    background: #FFFFFF;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
+    border-radius: 35px;
+}
+
+
+/* verif */
+.verify-bg-logo {
+    position: absolute;
+    width: 666px;
+    height: 314.41px;
+    left: 435px;
+    top: 307px;
+    background: url(../img/verifylogo.png);
+
+}
+
+
+/* Verifikasi Email */
+.verify-title {
+    position: absolute;
+    width: 505px;
+    height: 84px;
+    left: 467px;
+    top: 216px;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 84px;
+
+    color: #F67E7D;
+
+}
+
+
+/* Mohon lakukan verifikasi email blablalalbalblba blaalblabalbalbalbalbllalabalbla */
+
+position: absolute;
+width: 754px;
+height: 84px;
+left: 358px;
+top: 627px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: normal;
+font-size: 36px;
+line-height: 42px;
+text-align: center;
+
+color: #F67E7D;
+
+
+
+/* Rectangle 2.3 */
+
+position: absolute;
+width: 600.93px;
+height: 69px;
+left: 432px;
+top: 747px;
+
+background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
+box-shadow: 0px 8.78182px 13.8px rgba(0, 0, 0, 0.2);
+border-radius: 31.3636px;
+
+
+/* Kirim Ulang Kode Verifikasi */
+
+position: absolute;
+width: 438px;
+height: 42px;
+left: 520px;
+top: 761px;
+
+font-family: Roboto;
+font-style: normal;
+font-weight: 500;
+font-size: 36px;
+line-height: 42px;
+
+color: #FFF4E3;
+
 
 /*
 ################

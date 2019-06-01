@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
+
 use App\Admin;
 use App\Team;
 use Illuminate\Http\Request;
@@ -8,8 +9,10 @@ use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
 
-class AdminController extends Controller {
-	public function index() {
+class AdminController extends Controller
+{
+	public function index()
+	{
 		if (!Session('adminLogin') == true) {
 			return redirect('/maribakuhantam/login')->with('status', 'Kamu harus login dulu !');
 		}
@@ -17,15 +20,18 @@ class AdminController extends Controller {
 		return view('admin.home', ['dataTeam' => $data]);
 	}
 
-	public function showLoginForm() {
+	public function showLoginForm()
+	{
 		return view('admin.login', ['title' => 'Admin Login | IT TODAY 2019', 'tipe' => true]);
 	}
 
-	public function showRegisterForm() {
+	public function showRegisterForm()
+	{
 		return view('admin.register', ['title' => 'Admin Register | IT TODAY 2019', 'tipe' => true]);
 	}
 
-	public function loginPost(Request $request) {
+	public function loginPost(Request $request)
+	{
 		$email = $request->email;
 		$password = $request->password;
 		$data = Admin::where('email', '=', $email)->first();
@@ -43,7 +49,8 @@ class AdminController extends Controller {
 		}
 	}
 
-	public function registerPost(Request $request) {
+	public function registerPost(Request $request)
+	{
 		$data = new Admin();
 		$data->name = $request->name;
 		$data->email = $request->email;
@@ -52,7 +59,6 @@ class AdminController extends Controller {
 		$email = Admin::where('email', '=', $request->email)->first();
 		if ($email) {
 			return redirect('/maribakuhantam/register')->with('status', 'Email ini sudah ada yang menggunakan !');
-
 		} else if ($request->password != $request->password_confirmation) {
 			return redirect('/maribakuhantam/register')->with('status', 'Password tidak sama !');
 		}
@@ -60,9 +66,15 @@ class AdminController extends Controller {
 		return redirect('/maribakuhantam/login')->with('status', 'Kamu berhasil terdaftar !');
 	}
 
-	public function logout() {
+	public function logout()
+	{
 		// Auth::logout();
 		Session::flush();
 		return redirect('/maribakuhantam/login')->with('status', 'Kamu sudah logout !');
+	}
+
+	public function tesaja()
+	{
+		return view('auth.verify');
 	}
 }
