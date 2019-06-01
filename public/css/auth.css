@@ -463,6 +463,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     height: 100%;
 }
 
+
 @media (max-width: 960px) {
 
     .inner-wrapper {
@@ -593,7 +594,7 @@ input:focus {
         padding: 0% 5%;
     }
 
-/*    .input-form div.alert {
+    /*    .input-form div.alert {
         font-size: 13px;
     }*/
 }
@@ -684,18 +685,93 @@ input:focus {
 
 /*------------ VERIFY EMAIL CSS START ------------ */
 
-.verify-content {
-    padding-right: 10%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+.verify {
+
+    position: relative;
+    width: 65%;
+    height: 80%;
+    top: 1%;
+    left: 18%;
+    background: #FFFFFF;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
+    border-radius: 35px;
+    z-index: 2;
+    padding: 15px;
 }
 
-.verify-content h3 {
-    text-align: center;
+.inner-verify {
+    position: absolute;
+    float: center;
+    top: 18%;
+    left: 4%;
+    width: 100%;
+    height: 50%;
+    background: url(../img/verifylogo.png) center no-repeat;
+    background-size: 50% auto;
 }
+
+.content-verify {
+    width: 70%;
+    height: 100%;
+    top: 50%;
+    left: 10%;
+}
+
+.content-verify p {
+    position: absolute;
+
+    top: 64%;
+    left: 10%;
+    right: 10%;
+
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 42px;
+    text-align: center;
+
+    color: #F67E7D;
+}
+
+.btn-verify {
+    position: absolute;
+    top: 80%;
+    left: 28%;
+    width: 45%;
+    height: 50px;
+    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
+    border: transparent;
+    border-radius: 25px;
+    text-align: center;
+    padding-top: 3px;
+}
+
+.btn-verify a {
+    position: relative;
+    top: 20%;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 32px;
+    color: #FFF4E3;
+}
+
+.content-verify h3 {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 72px;
+    line-height: 84px;
+
+    color: #F67E7D;
+}
+
 
 @media (max-width: 960px) {
     .verify-content {

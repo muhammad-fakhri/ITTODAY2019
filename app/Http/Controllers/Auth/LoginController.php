@@ -5,7 +5,8 @@ namespace App\Http\Controllers\Auth;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
-class LoginController extends Controller {
+class LoginController extends Controller
+{
 	/*
 		    |--------------------------------------------------------------------------
 		    | Login Controller
@@ -31,7 +32,8 @@ class LoginController extends Controller {
 	 *
 	 * @return void
 	 */
-	public function __construct() {
+	public function __construct()
+	{
 		$this->middleware('guest')->except('logout');
 	}
 
@@ -40,7 +42,8 @@ class LoginController extends Controller {
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function showLoginForm() {
+	public function showLoginForm()
+	{
 		return view('auth.login', ['title' => 'Masuk | IT TODAY 2019', 'login' => true, 'register' => false, 'tipe' => true, 'auth_page' => true]);
 	}
 }

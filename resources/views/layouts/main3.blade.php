@@ -65,16 +65,11 @@
             </div>
             @endif
         </div>
-        @include('layouts.nav', ['some' => 'data'])
         <div class="outer-wrapper">
             <img src="{{ asset('img/bg.png') }}" alt="bg image">
-            <div class="wrapper">
-                <div class="inner-wrapper">
-                </div>
-                <div class="inner-wrapper2">
-                    @yield('content')
-                </div>
-            </div>
+
+            @yield('content')
+
         </div>
         @include('layouts.footer')
     </div>

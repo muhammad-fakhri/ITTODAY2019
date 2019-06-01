@@ -58,3 +58,4 @@ Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 
 Route::get('/verify', 'AdminController@tesaja');
+Route::get('/logout', 'AdminController@out');

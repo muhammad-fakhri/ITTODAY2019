@@ -63,9 +63,9 @@
 
     <!-- Javascript untuk scroll nav-bar -->
     @if (!isset($tipe))
-        <script src="{{ asset('js/scroll2.js') }}"></script>
+    <script src="{{ asset('js/scroll2.js') }}"></script>
     @else
-        <script src="{{ asset('js/scroll.js') }}"></script>
+    <script src="{{ asset('js/scroll.js') }}"></script>
     @endif
     {{-- @yield('animation') --}}
 </body>

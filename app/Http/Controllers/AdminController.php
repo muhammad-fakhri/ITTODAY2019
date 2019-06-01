@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Session;
+use Auth;
 
 class AdminController extends Controller
 {
@@ -76,5 +77,10 @@ class AdminController extends Controller
 	public function tesaja()
 	{
 		return view('auth.verify');
+	}
+	public function out(Request $request)
+	{
+		Auth::logout();
+		return redirect('/');
 	}
 }
