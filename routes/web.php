@@ -27,7 +27,7 @@ Route::get('/rulebook-dsc', 'GuestController@downDSC')->name('downDSC');
 //ADMIN ROUTER
 Route::prefix('/maribakuhantam')->group(function () {
 	//Admin Homepage
-	Route::get('/', 'AdminController@index');
+	Route::get('/', 'AdminController@index')->name('adminHome');
 	//Admin Login
 	Route::get('/login', 'AdminController@showLoginForm')->name('adminLogin');
 	Route::post('/loginPost', 'AdminController@loginPost')->name('adminLoginPost');
@@ -36,7 +36,7 @@ Route::prefix('/maribakuhantam')->group(function () {
 	Route::post('/registerPost', 'AdminController@registerPost')->name('adminRegisterPost');
 
 	//Admin Logout
-	Route::get('/logout', 'AdminController@logout');
+	Route::get('/logout', 'AdminController@logout')->name('adminLogout');
 
 	Route::middleware(['auth'])->group(function () {
 		//Data Ruangan

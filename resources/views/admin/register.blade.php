@@ -1,4 +1,4 @@
-@extends('layouts.mainAdminAuth')
+@extends('layouts.admin.mainAdminAuth')
 @section('content')
 <div class="form-area">
     <h3>Admin Register</h3>

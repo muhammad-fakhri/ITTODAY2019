@@ -30,7 +30,7 @@
             </div>
             @endif
         </div>
-        @include('layouts.navAdmin')
+        @include('layouts.admin.navAdminAuth')
         <div class="outer-wrapper">
             <img src="{{ asset('img/bg.png') }}" alt="bg image">
             <div class="wrapper">

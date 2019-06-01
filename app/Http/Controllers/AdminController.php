@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Admin;
+use App\Team;
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\Hash;
@@ -9,7 +10,11 @@ use Illuminate\Support\Facades\Session;
 
 class AdminController extends Controller {
 	public function index() {
-		return view('admin.home');
+		if (!Session('adminLogin') == true) {
+			return redirect('/maribakuhantam/login')->with('status', 'Kamu harus login dulu !');
+		}
+		$data = Team::all();
+		return view('admin.home', ['dataTeam' => $data]);
 	}
 
 	public function showLoginForm() {
@@ -26,7 +31,8 @@ class AdminController extends Controller {
 		$data = Admin::where('email', '=', $email)->first();
 		if ($data) {
 			if (Hash::check($password, $data->password)) {
-				Auth::login($data);
+				// Auth::login($data);
+				Session::put('adminLogin', true);
 				Session::put('name', $data->name);
 				return redirect('/maribakuhantam');
 			} else {
@@ -52,5 +58,11 @@ class AdminController extends Controller {
 		}
 		$data->save();
 		return redirect('/maribakuhantam/login')->with('status', 'Kamu berhasil terdaftar !');
+	}
+
+	public function logout() {
+		// Auth::logout();
+		Session::flush();
+		return redirect('/maribakuhantam/login')->with('status', 'Kamu sudah logout !');
 	}
 }
