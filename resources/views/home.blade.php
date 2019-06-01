@@ -6,29 +6,29 @@
         <div class="box">
             <a href="/data-diri/ketua-tim">
                 <div class="inner-box1 inner-box"></div>
-                <a href="/data-diri">Isi Data Diri</a>
+                <a href="/data-diri/ketua-tim">Isi Data Diri</a>
             </a>
         </div>
         <div class="box hidden">
-            <a href="#">Unggah Bukti Pembayaran</a>
+            <a href="{{ route('bayar') }}">Unggah Bukti Pembayaran</a>
         </div>
         <div class="box hidden">
-            <a href="#">Unggah Proposal</a>
+            <a href="{{ route('propo') }}">Unggah Proposal</a>
         </div>
     </div>
     <div class="column gone">
         <div class="box">
-            <a href="#">
+            <a href="{{ route('bayar') }}">
                 <div class="inner-box2 inner-box"></div>
-                <a href="#">Unggah Bukti Pembayaran</a>
+                <a href="{{ route('bayar') }}">Unggah Bukti Pembayaran</a>
             </a>
         </div>
     </div>
     <div class="column gone">
         <div class="box">
-            <a href="#">
+            <a href="{{ route('propo') }}">
                 <div class="inner-box3 inner-box"></div>
-                <a href="#">Unggah Proposal</a>
+                <a href="{{ route('propo') }}">Unggah Proposal</a>
             </a>
         </div>
     </div>

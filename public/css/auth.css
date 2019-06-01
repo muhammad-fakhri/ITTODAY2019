@@ -440,13 +440,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     position: relative;
     width: 70%;
     height: 70%;
+    background: white;
     top: 15%;
     left: 15%;
-    background: white;
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
     border-radius: 35px;
     z-index: 2;
     padding: 15px;
+    /*border: 1px solid black;*/
 }
 
 .inner-wrapper {
@@ -759,12 +760,146 @@ input:focus {
 
 /*------------ VERIFY EMAIL CSS END ------------ */
 
-/*------------ CUSTOM RESET PASSWORD BUTTON CSS ------------ */
+/*------------ CUSTOM RESET PASSWORD BUTTON CSS START ------------ */
 @media (max-width: 960px) {
     #reset-password-btn button {
         font-size: 12px;
     }
 }
+
+/*------------ CUSTOM RESET PASSWORD BUTTON CSS END ------------ */
+
+/*-------------- PAYMENT AREA CSS START --------------*/
+
+.payment-wrapper {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    align-items: center;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /*border: 1px solid black;*/
+}
+
+
+.payment-wrapper p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: #F67E7D;
+}
+
+@media(max-width: 960px) {
+    .payment-wrapper {
+        width: 95%;
+        left: 2.5%;
+    }
+
+    .payment-wrapper p {
+        font-size: 15px;
+    }
+}
+
+#payment-btn {
+    width: 25%;
+    height: 35px;
+    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
+    border: transparent;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: Roboto;
+    font-style: normal;
+}
+
+#payment-img {
+    height: 300px;
+    width: 100%;
+    /*border: 1px solid green;*/
+}
+
+#payment-img img {
+    width: 100%;
+    height: 300px;
+}
+
+@media (max-width: 960px) {
+    #payment-img {
+        height: 150px;
+    }
+
+    #payment-img img {
+        height: 150px;
+    }
+}
+
+/*-------------- PAYMENT AREA CSS END --------------*/
+/*-------------- PROPOSAL AREA CSS START --------------*/
+.proposal-wrapper {
+    position: absolute;
+    left: 20%;
+    width: 60%;
+    align-items: center;
+    text-align: center;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    /*border: 1px solid black;*/
+}
+
+.proposal-wrapper p {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    color: #F67E7D;
+}
+
+.proposal-wrapper input{
+    margin-bottom: 20px;
+}
+
+@media(max-width: 960px) {
+    .proposal-wrapper {
+        width: 95%;
+        left: 2.5%;
+    }
+
+    .proposal-wrapper p {
+        font-size: 15px;
+    }
+}
+
+.link-input {
+    width: 60%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 2px 5px;
+}
+
+#proposal-btn {
+    width: 25%;
+    height: 35px;
+    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
+    border: transparent;
+    border-radius: 10px;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    font-family: Roboto;
+    font-style: normal;
+}
+
+/*-------------- PROPOSAL AREA CSS END --------------*/
 
 /*-------------- FOOTER AREA CSS START --------------*/
 .footer-area {

@@ -41,6 +41,12 @@ class HomeController extends Controller {
 
 	public function showPembayaran()
 	{
-		return view('pembayaran', ['title'=>'Pembayaran | IT TODAY 2019', 'tipe'=>true]);
+		return view('pembayaran', ['title'=>'Pembayaran | IT TODAY 2019', 'tipe'=>true, 'upload_page'=>true]);
+	}
+
+	public function showProposal()
+	{
+		return view('proposal', ['title'=>'Proposal | IT TODAY 2019', 'tipe'=>true, 'upload_page'=>true]);
+		# code...
 	}
 }

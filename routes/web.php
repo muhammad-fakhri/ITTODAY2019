@@ -26,7 +26,8 @@ Route::get('/rulebook-dsc', 'GuestController@downDSC')->name('downDSC');
 Auth::routes(['verify' => true]);
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
 Route::get('/data-diri/{key}', 'HomeController@showDataDiri')->name('data_diri')->middleware('verified');
-Route::get('/pembayaran', 'HomeController@showPembayaran')->name('pembayaran')->middleware('verified');
+Route::get('/pembayaran', 'HomeController@showPembayaran')->name('bayar')->middleware('verified');
+Route::get('/proposal', 'HomeController@showProposal')->name('propo')->middleware('verified');
 
 // Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 //ADMIN ROUTER
