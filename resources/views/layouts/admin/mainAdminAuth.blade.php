@@ -22,36 +22,15 @@
 <body>
     <div class="big-wrapper">
         <div class="nav-fake">
-            @if (session('resent'))
+            @if (session('status'))
             <div class="alert alert-success" role="alert">
                 <p class="text-center">
-                    Tautan verifikasi baru telah dikirim ke alamat email Anda.
-                </p>
-            </div>
-            @endif
-            @if (session('status') && !isset($auth_page))
-            <div class="alert alert-success" role="alert">
-                <p class="text-center">
-                    Kami telah mengirim e-mail tautan atur ulang kata sandi Anda!
-                </p>
-            </div>
-            @endif
-            @if (session('status') && isset($auth_page))
-            <div class="alert alert-success">
-                <p class="text-center">
-                    Kami mengirimi Anda kode aktivasi. Periksa email Anda dan klik tautan untuk memverifikasi.
-                </p>
-            </div>
-            @endif
-            @if (session('warning'))
-            <div class="alert alert-warning">
-                <p class="text-center">
-                    {{ session('warning') }}
+                    {{ session('status') }}
                 </p>
             </div>
             @endif
         </div>
-        @include('layouts.nav', ['some' => 'data'])
+        @include('layouts.navAdmin')
         <div class="outer-wrapper">
             <img src="{{ asset('img/bg.png') }}" alt="bg image">
             <div class="wrapper">

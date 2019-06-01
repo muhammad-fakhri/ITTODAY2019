@@ -100,7 +100,16 @@ body {
 
 /*-------------- HEADER AREA CSS START --------------*/
 
+.alert {
+    z-index: 1000;
+    /*position: relative;*/
+}
+
 header {
+    height: 85px;
+}
+
+.nav-fake {
     height: 85px;
 }
 
@@ -110,7 +119,8 @@ header {
     top: 0;
     right: 0;
     transition: all 0.5s;
-    z-index: 997;
+    z-index: 998;
+    position: fixed;
 }
 
 .main-menu {
@@ -468,6 +478,37 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*-------------- Wrapper CSS END -------------- */
 
 /*-------------- FORM AREA CSS START --------------*/
+.form-area {
+    padding-left: 5%;
+    width: 40%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.form-area h3 {
+    text-align: center;
+}
+
+@media (max-width: 960px) {
+    .form-area {
+        padding-left: 0;
+        float: left;
+        width: 80%;
+        left: 50%;
+        -webkit-transform: translateX(-50%) translateY(-50%);
+        -ms-transform: translateX(-50%) translateY(-50%);
+        transform: translateX(-50%) translateY(-50%);
+    }
+
+    .form-area h3 {
+        font-size: 20px;
+    }
+
+}
+
 .nav-list {
     margin-left: -40px;
     margin-bottom: 10px;
@@ -538,24 +579,23 @@ input:focus {
 
 .input {
     width: 100%;
-    height: 35px background: #FFE3D0;
+    height: 35px;
+    background: #FFE3D0;
     box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
     border-radius: 25px;
     border: transparent;
 }
 
-.input-form {
-    padding: 0 18%;
-}
+.input-form {}
 
 @media (max-width: 960px) {
     .input-form {
         padding: 0% 5%;
     }
 
-    .input-form div.alert {
+/*    .input-form div.alert {
         font-size: 13px;
-    }
+    }*/
 }
 
 .label {

@@ -24,6 +24,34 @@ Route::get('/rulebook-dsc', 'GuestController@downDSC')->name('downDSC');
 
 // Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 
+//ADMIN ROUTER
+Route::prefix('/maribakuhantam')->group(function () {
+	//Admin Homepage
+	Route::get('/', 'AdminController@index');
+	//Admin Login
+	Route::get('/login', 'AdminController@showLoginForm')->name('adminLogin');
+	Route::post('/loginPost', 'AdminController@loginPost')->name('adminLoginPost');
+	//Admin Register
+	Route::get('/register', 'AdminController@showRegisterForm')->name('adminRegister');
+	Route::post('/registerPost', 'AdminController@registerPost')->name('adminRegisterPost');
+
+	//Admin Logout
+	Route::get('/logout', 'AdminController@logout');
+
+	Route::middleware(['auth'])->group(function () {
+		//Data Ruangan
+		Route::prefix('/ruang')->group(function () {
+			Route::get('/', 'Admin\RuangController@index');
+			Route::get('/insert', 'Admin\RuangController@insert');
+			Route::get('/fakultas/{id}', 'Admin\RuangController@fakultas');
+			Route::post('/store', 'Admin\RuangController@store');
+			Route::get('/delete/{kode}', 'Admin\RuangController@delete');
+			Route::get('/{id}', 'Admin\RuangController@show');
+			Route::put('/{id}', 'Admin\RuangController@update');
+		});
+	});
+});
+
 //Route untuk user yang sudah login
 Auth::routes(['verify' => true]);
 

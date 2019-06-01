@@ -21,10 +21,9 @@
                         </ul>
                     </li>
                     <li><a href="http://himalkom.cs.ipb.ac.id" class="nav-menu-1">Himalkom IPB</a></li>
+                    @if (!isset($auth_page))
+                    @guest
                     <li class="menu-has-children">
-                        @if (!isset($auth_page))
-                            {{-- expr --}}
-                        @guest
                         <a style="color: white;" class="nav-menu-1">Masuk</a>
                         <ul>
                             <li><a href="{{ route('login') }}">Masuk</a></li>
@@ -41,8 +40,9 @@
                                 </form>
                             </li>
                         </ul>
-                        @endguest
-                        @endif
+                    </li>
+                    @endguest
+                    @endif
                 </ul>
             </nav><!-- #nav-menu-container -->
         </div>
