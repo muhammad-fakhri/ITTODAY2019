@@ -2144,7 +2144,7 @@ h6 {
 
 .nav-menu ul {
     position: absolute;
-    display: none;
+    /*display: none;*/
     top: 100%;
     left: 0;
     z-index: 99;

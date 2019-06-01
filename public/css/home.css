@@ -102,7 +102,6 @@ body {
 
 .alert {
     z-index: 1000;
-    /*position: relative;*/
 }
 
 header {
@@ -421,6 +420,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .outer-wrapper {
+    /*border: 1px solid black;*/
     height: 100%;
     width: 100%;
 }
@@ -438,29 +438,30 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .wrapper {
     position: relative;
-    width: 70%;
-    height: 70%;
-    top: 15%;
-    left: 15%;
-    background: white;
-    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
-    border-radius: 35px;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
     z-index: 2;
     padding: 15px;
 }
 
 .inner-wrapper {
     float: left;
-    width: 50%;
+    width: 30%;
     height: 100%;
-    background: url(../img/logo-picture.jpg) center no-repeat;
-    background-size: 70% auto;
 }
 
 .inner-wrapper2 {
-    float: right;
-    width: 50%;
+    width: 40%;
     height: 100%;
+}
+
+.inner-wrapper3 {
+    float: right;
+    width: 30%;
+    height: 100%;
+
 }
 
 @media (max-width: 960px) {
@@ -477,294 +478,141 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*-------------- Wrapper CSS END -------------- */
 
-/*-------------- FORM AREA CSS START --------------*/
-.form-area {
-    padding-left: 5%;
-    width: 40%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
+/*-------------- Column & Row & Box CSS START -------------- */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 2% 5%;
+    height: 100%;
 }
 
-.form-area h3 {
-    text-align: center;
+.row {
+    height: 100%;
 }
+
+/*.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
 
 @media (max-width: 960px) {
-    .form-area {
-        padding-left: 0;
-        float: left;
-        width: 80%;
-        left: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
+    .column {
+        width: 100%;
     }
 
-    .form-area h3 {
-        font-size: 20px;
+    .gone {
+        display: none;
     }
 
+    .hidden {
+        margin-top: 10%;
+    }
 }
 
-.nav-list {
-    margin-left: -40px;
-    margin-bottom: 10px;
-    align-items: left;
-    text-align: left;
+@media (min-width: 960px) {
+    .hidden {
+        display: none;
+    }
 }
 
-ul.nav-list {
-    list-style: none;
+.box {
+    /*border: 2px solid black;*/
+    box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.16);
+    background: white;
+    border-radius: 15px;
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    padding: 20% 10%;
 }
 
-ul.nav-list li {
-    display: inline;
-}
-
-ul li {
-    list-style-type: none;
-}
-
-.noactive {
+.box a {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    color: rgba(0, 0, 0, 0.2);
-}
-
-.active {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
+    font-size: 20px;
     color: #F67E7D;
 }
 
-.active:hover,
-.noactive:hover {
-    color: #ff5149;
+.box a:hover {
     text-decoration: none;
+    color: black;
 }
 
-.splitter {
-    color white;
-    font-size: 24px;
-    font-weight: 1000;
-    font-style: bold;
-    background: linear-gradient(180deg, #F67E7D 0%, #FFCDAB 100%, #FFCDAB 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+@media(max-width: 960px) {
+    .box {
+        padding: 5% 0;
+        height: 20%;
+    }
 
-@media (max-width:960px) {
-
-    .active,
-    .noactive,
-    .splitter {
+    .box a {
         font-size: 18px;
     }
 }
 
-input {
-    padding: 8px 10px;
+.inner-box {
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 60%;
+    width: 80%;
 }
 
-input:focus {
-    background-color: #ffc9a5;
-}
-
-.input {
-    width: 100%;
-    height: 35px;
-    background: #FFE3D0;
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    border: transparent;
-}
-
-.input-form {}
-
-@media (max-width: 960px) {
-    .input-form {
-        padding: 0% 5%;
-    }
-
-    /*    .input-form div.alert {
-        font-size: 13px;
-    }*/
-}
-
-.label {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 0px;
-    color: #FEB595;
-    margin-top: 20px;
-}
-
-
-.label2 {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 0px;
-    color: #FEB595;
-    margin-top: 15px;
-}
-
-@media (max-width: 960px) {
-
-    .label,
-    .label2 {
-        font-size: 15px;
+@media(max-width: 960px) {
+    .inner-box {
+        display: none;
     }
 }
 
-.warning-message {
-    margin-bottom: 5px;
-    color: red;
+.inner-box1 {
+    background: url(../img/home/data_diri.png) no-repeat center center;
+    background-size: contain;
 }
 
-.lower-form {
+.inner-box2 {
+    background: url(../img/home/bayar.png) no-repeat center center;
+    background-size: contain;
+}
+
+.inner-box3 {
+    background: url(../img/home/berkas.png) no-repeat center center;
+    background-size: contain;
+}
+
+@media (max-width: 960px) {
+    .inner-box1 {
+        display: none;
+    }
+
+    .inner-box2 {
+        display: none;
+    }
+
+    .inner-box3 {
+        display: none;
+    }
+}
+
+/*-------------- Column & Row & Box CSS END -------------- */
+
+/*------------ USER WELCOME CSS START ------------ */
+#user-welcome {
     text-align: center;
-}
-
-.lower-form button {
-    width: 100%;
-    height: 35px;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    border: transparent;
-    font-family: Roboto;
+    font-family: 'Roboto', sans-serif;
     font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    color: #FFF4E3;
-    margin-bottom: 5px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
+    font-weight: bold;
+    font-size: 30px;
+    color: #F67E7D;
 }
 
-.lower-form button:focus {
-    outline: none;
-}
-
-.lower-form button:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    background: linear-gradient(90deg, #FEB595 3.13%, #F67E7D 97.6%);
-}
-
-.forget-password {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    color: #FEB595;
-}
-
-.is-invalid {
-    border: 2px solid red;
-}
-
-/*-------------- FORM AREA CSS END --------------*/
-
-/*------------ VERIFY EMAIL CSS START ------------ */
-
-.verify-content {
-    padding-right: 10%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.verify-content h3 {
-    text-align: center;
-}
-
-@media (max-width: 960px) {
-    .verify-content {
-        padding-right: 0;
-        width: 80%;
-        left: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    .verify-content h3 {
+@media(max-width: 960px) {
+    #user-welcome {
         font-size: 20px;
-        text-align: center;
     }
 }
 
-.lower-form button {
-    width: 100%;
-    height: 35px;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    border: transparent;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    color: #FFF4E3;
-    margin-bottom: 5px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.btn-custom {
-    width: 100%;
-    height: 35px;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border: transparent;
-    border-radius: 25px;
-    text-align: center;
-    padding-top: 3px;
-}
-
-.btn-custom a {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    color: #FFF4E3;
-}
-
-@media (max-width: 960px) {
-    .btn-custom a {
-        font-size: 15px;
-    }
-}
-
-/*------------ VERIFY EMAIL CSS END ------------ */
-
-/*------------ CUSTOM RESET PASSWORD BUTTON CSS ------------ */
-@media (max-width: 960px) {
-    #reset-password-btn button {
-        font-size: 12px;
-    }
-}
+/*------------ USER WELCOME CSS END ------------ */
 
 /*-------------- FOOTER AREA CSS START --------------*/
 .footer-area {
@@ -852,6 +700,7 @@ input:focus {
 
 .single-footer-widget ul li {
     font-size: 18px;
+    list-style-type: none;
 }
 
 @media (max-width: 991.98px) {

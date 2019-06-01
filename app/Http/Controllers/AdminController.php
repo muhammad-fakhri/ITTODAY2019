@@ -14,7 +14,7 @@ class AdminController extends Controller {
 			return redirect('/maribakuhantam/login')->with('status', 'Kamu harus login dulu !');
 		}
 		$data = Team::all();
-		return view('admin.home', ['dataTeam' => $data]);
+		return view('admin.home', ['dataTeam' => $data, 'page'=>'Dashboard']);
 	}
 
 	public function showLoginForm() {
