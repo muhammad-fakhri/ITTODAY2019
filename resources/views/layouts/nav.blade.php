@@ -31,7 +31,9 @@
                             <li><a href="{{ route('register') }}">Daftar</a></li>
                             @endif
                         </ul>
+                    </li>
                         @else
+                    <li class="menu-has-children">
                         <a style="color: white;" class="nav-menu-1">{{ Auth::user()->name }}</a>
                         <ul>
                             <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
