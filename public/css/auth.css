@@ -568,6 +568,13 @@ ul li {
     .splitter {
         font-size: 18px;
     }
+
+    .nav-list {
+        margin-left: 0px;
+        margin-bottom: 10px;
+        align-items: left;
+        text-align: left;
+    }
 }
 
 input {
@@ -690,7 +697,7 @@ input:focus {
     position: relative;
     width: 65%;
     height: 80%;
-    top: 1%;
+    top: 15%;
     left: 18%;
     background: #FFFFFF;
     box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
@@ -702,7 +709,7 @@ input:focus {
 .inner-verify {
     position: absolute;
     float: center;
-    top: 14%;
+    top: 13%;
     left: 4%;
     width: 100%;
     height: 50%;
@@ -739,7 +746,7 @@ input:focus {
     top: 81%;
     left: 28%;
     width: 45%;
-    height: 47px;
+    height: 8%;
     background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
     box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
     border: transparent;
@@ -775,19 +782,94 @@ input:focus {
 
 
 @media (max-width: 960px) {
-    .verify-content {
-        padding-right: 0;
-        width: 80%;
-        left: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
+    .verify {
+
+        position: relative;
+        width: 75%;
+        height: 80%;
+        top: 15%;
+        left: 12%;
+        background: #FFFFFF;
+        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
+        border-radius: 35px;
+        z-index: 2;
+        padding: 15px;
     }
 
-    .verify-content h3 {
-        font-size: 20px;
-        text-align: center;
+    .inner-verify {
+        position: absolute;
+        float: center;
+        top: 18%;
+        left: 4%;
+        width: 100%;
+        height: 50%;
+        background: url(../img/verifylogo.png) center no-repeat;
+        background-size: 80% auto;
     }
+
+    .content-verify {
+        width: 70%;
+        height: 100%;
+        top: 50%;
+        left: 10%;
+    }
+
+    .content-verify h3 {
+        position: absolute;
+        top: 22%;
+        left: 28%;
+        text-align: center;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 30px;
+        line-height: 84px;
+
+        color: #F67E7D;
+    }
+
+    .content-verify p {
+        position: absolute;
+
+        top: 54%;
+        left: 10%;
+        right: 10%;
+
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 20px;
+        text-align: center;
+
+        color: #F67E7D;
+    }
+
+    .btn-verify {
+        position: absolute;
+        top: 70%;
+        left: 20%;
+        width: 60%;
+        height: 6%;
+        background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
+        box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
+        border: transparent;
+        border-radius: 25px;
+        text-align: center;
+        padding-top: 3px;
+    }
+
+    .btn-verify a {
+        position: relative;
+        top: 20%;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        color: #FFF4E3;
+    }
+
+
 }
 
 .lower-form button {

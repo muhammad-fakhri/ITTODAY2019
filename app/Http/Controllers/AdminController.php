@@ -76,7 +76,7 @@ class AdminController extends Controller
 
 	public function tesaja()
 	{
-		return view('auth.verify');
+		return view('auth.verify', ['title' => 'Verify Email | IT TODAY 2019', 'tipe' => true]);
 	}
 	public function out(Request $request)
 	{
