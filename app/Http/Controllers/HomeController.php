@@ -1,14 +1,15 @@
 <?php
 
 namespace App\Http\Controllers;
-use Illuminate\Support\Facades\Storage;
 use App\Anggota1;
 use App\Anggota2;
 use App\Bayar;
+use App\Berkas;
 use App\KetuaTim;
 use App\Team;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
 
 class HomeController extends Controller {
 	/**
@@ -62,8 +63,8 @@ class HomeController extends Controller {
 
 	public function showPembayaran() {
 		$user = Auth::user();
-		$dataBayar = Bayar::where('idTim','=',$user->idTim)->first();
-		return view('pembayaran', ['title' => 'Pembayaran | IT TODAY 2019', 'tipe' => true, 'upload_page' => true, 'Bayar'=>$dataBayar]);
+		$dataBayar = Bayar::where('idTim', '=', $user->idTim)->first();
+		return view('pembayaran', ['title' => 'Pembayaran | IT TODAY 2019', 'tipe' => true, 'upload_page' => true, 'Bayar' => $dataBayar]);
 	}
 
 	public function postPembayaran(Request $req) {
@@ -87,6 +88,8 @@ class HomeController extends Controller {
 
 	public function showBerkas() {
 		$jenisLomba = Auth::user()->jenisTim;
+		$dataBerkas = Berkas::where('idTim', '=', Auth::user()->idTim)->first();
+		// dd($dataBerkas);
 		switch ($jenisLomba) {
 		case 1:
 			$berkas = 'Proposal';
@@ -101,7 +104,26 @@ class HomeController extends Controller {
 			$berkas = 'Berkas';
 			break;
 		}
-		return view('berkas', ['title' => $berkas . ' | IT TODAY 2019', 'tipe' => true, 'upload_page' => true, 'Lomba'=>$jenisLomba]);
+		return view('berkas', ['title' => $berkas . ' | IT TODAY 2019', 'tipe' => true, 'upload_page' => true, 'Lomba' => $jenisLomba, 'Berkas' => $dataBerkas]);
+	}
+
+	public function postBerkas(Request $req) {
+		$data = Berkas::where('idTim', '=', Auth::user()->idTim)->first();
+		// dd($data);
+		$uploadedBerkas = $req->file('berkas');
+		if ($uploadedBerkas) {
+			if ($data->namaBerkas && $data->alamatBerkas) {
+				Storage::delete($data->alamatBerkas);
+				$data->namaBerkas == null;
+				$data->alamatBerkas == null;
+			}
+			$pathBerkas = $uploadedBerkas->store('public/berkas');
+			$data->namaBerkas = $uploadedBerkas->getClientOriginalName();
+			$data->alamatBerkas = $pathBerkas;
+		}
+		$data->linkVideo = $req->linkVideo;
+		$data->save();
+		return redirect()->back();
 	}
 
 	public function updateDataDiri(Request $req, $key, $id) {
@@ -187,11 +209,22 @@ class HomeController extends Controller {
 		$user->save();
 
 		//update data pembayaran
-		$bayar = Bayar::where('idTim','=',$id)->first();
+		$bayar = Bayar::where('idTim', '=', $id)->first();
 		$bayar->namaTim = $req->namaTim;
 		$bayar->jenisTim = $req->jenisTim;
 		$bayar->save();
 
+		//update data berkas
+		$berkas = Berkas::where('idTim', '=', $id)->first();
+		$berkas->namaTim = $req->namaTim;
+		$berkas->jenisTim = $req->jenisTim;
+		
+		// jika jenis tim berganti dari appstoday ke mata lomba lain
+		//maka linkVideo akan dihapus
+		if ($req->jenisTim != 1) {
+			$berkas->linkVideo = null;
+		}
+		$berkas->save();
 		return redirect()->back();
 	}
 }

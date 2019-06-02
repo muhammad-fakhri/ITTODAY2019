@@ -512,7 +512,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .nav-list {
-    margin-left: -40px;
+    /*margin-left: -40px;*/
     margin-bottom: 10px;
     align-items: left;
     text-align: left;
@@ -1080,6 +1080,11 @@ input:focus {
 
 }
 
+#nama-berkas{
+        height: 25px;
+        width: 50%;
+}
+
 #berkas-input {
     /*margin: 0 auto;*/
     width: 60%;
@@ -1101,6 +1106,10 @@ input:focus {
 
     .berkas-wrapper p {
         font-size: 15px;
+    }
+
+    #nama-berkas{
+        width: 90%;
     }
 
     #berkas-input {

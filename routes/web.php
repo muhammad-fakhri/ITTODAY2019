@@ -31,6 +31,7 @@ Route::put('/data-team/{id}', 'HomeController@updateDataTeam')->middleware('veri
 Route::get('/pembayaran', 'HomeController@showPembayaran')->name('bayar')->middleware('verified');
 Route::post('/pembayaran', 'HomeController@postPembayaran')->name('postBayar')->middleware('verified');
 Route::get('/berkas', 'HomeController@showBerkas')->name('berkas')->middleware('verified');
+Route::post('/berkas', 'HomeController@postBerkas')->name('postBerkas')->middleware('verified');
 // Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 //ADMIN ROUTER
 // Route::prefix('/maribakuhantam')->group(function () {

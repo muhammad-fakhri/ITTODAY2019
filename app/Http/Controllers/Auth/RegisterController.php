@@ -4,18 +4,18 @@ namespace App\Http\Controllers\Auth;
 
 use App\Anggota1;
 use App\Anggota2;
+use App\Bayar;
+use App\Berkas;
 use App\Http\Controllers\Controller;
 use App\KetuaTim;
 use App\Team;
 use App\User;
-use App\Bayar;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use \Illuminate\Http\Request;
 
-class RegisterController extends Controller
-{
+class RegisterController extends Controller {
 	/*
 		    |--------------------------------------------------------------------------
 		    | Register Controller
@@ -41,8 +41,7 @@ class RegisterController extends Controller
 	 *
 	 * @return void
 	 */
-	public function __construct()
-	{
+	public function __construct() {
 		$this->middleware('guest');
 	}
 
@@ -52,8 +51,7 @@ class RegisterController extends Controller
 	 * @param  array  $data
 	 * @return \Illuminate\Contracts\Validation\Validator
 	 */
-	protected function validator(array $data)
-	{
+	protected function validator(array $data) {
 		return Validator::make($data, [
 			'name' => ['required', 'string', 'max:255'],
 			'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
@@ -67,8 +65,7 @@ class RegisterController extends Controller
 	 * @param  array  $data
 	 * @return \App\User
 	 */
-	protected function create(array $data)
-	{
+	protected function create(array $data) {
 		$user = User::create([
 			'name' => $data['name'],
 			'email' => $data['email'],
@@ -117,11 +114,16 @@ class RegisterController extends Controller
 		$bayar->jenisTim = 0;
 		$bayar->save();
 
+		//buat data berkas baru
+		$berkas = new Berkas;
+		$berkas->idTim = $team->id;
+		$berkas->jenisTim = 0;
+		$berkas->save();
+
 		return $user;
 	}
 
-	protected function registered(Request $request, $user)
-	{
+	protected function registered(Request $request, $user) {
 		$this->guard()->logout();
 		return view('auth.verify', ['title' => 'Verify Email | IT TODAY 2019', 'tipe' => true]);
 	}
@@ -131,8 +133,7 @@ class RegisterController extends Controller
 	 *
 	 * @return \Illuminate\Http\Response
 	 */
-	public function showRegistrationForm()
-	{
+	public function showRegistrationForm() {
 		return view('auth.register', ['title' => 'Daftar | IT TODAY 2019', 'login' => false, 'register' => true, 'tipe' => true, 'auth_page' => true]);
 	}
 }
