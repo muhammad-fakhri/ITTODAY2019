@@ -37,6 +37,9 @@
                         <a style="color: white;" class="nav-menu-1">{{ Auth::user()->name }}</a>
                         <ul>
                             <li><a href="/home">Home</a></li>
+                            <li><a href="/data-diri/ketua-tim">Data Tim</a></li>
+                            <li><a href="{{ route('bayar') }}">Pembayaran</a></li>
+                            <li><a href="{{ route('propo') }}">Proposal</a></li>
                             <li><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf

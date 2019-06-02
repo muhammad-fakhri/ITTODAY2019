@@ -32,22 +32,35 @@
             --}} </div>
         @include('layouts.nav')
         <div class="outer-wrapper">
-            <div id="form-title-area">
-                <h1 id="form-title">Edit Data
-                    @switch($profil_page)
-                    @case(1)
-                    Ketua Tim
-                    @break
-                    @case(2)
-                    Anggota 1
-                    @break
-                    @case(3)
-                    Anggota 2
-                    @break
-                    @default
-                    Ketua Tim
-                    @endswitch
-                </h1>
+            <div id="team-info-area">
+                <form method="POST" action="/data-team/{{$Team->id}}" id="team-info">
+                    @csrf
+                    <input type="hidden" name="_method" value="put">
+                    <div class="row">
+                        <div class="col">
+                            <label class="label">Nama Tim</label><br>
+                            <input type="text" name="namaTim" class="input" value="{{ $Team->namaTim }}">
+                        </div>
+                        <div class="col">
+                            <label class="label">Cabang Kompetisi</label><br>
+                            <select class="select" name="jenisTim">
+                                <option value="0" @if ($Team->jenisTim == 0)
+                                    selected
+                                    @endif>Pilih ...</option>
+                                <option value="1" @if ($Team->jenisTim == 1)
+                                    selected
+                                    @endif>Appstoday</option>
+                                <option value="2" @if ($Team->jenisTim == 2)
+                                    selected
+                                    @endif>Hacktoday</option>
+                                <option value="3" @if ($Team->jenisTim == 3)
+                                    selected
+                                    @endif>Data Science Competition</option>
+                            </select>
+                        </div>
+                    </div>
+                    <button type="submit" class="custom-btn save-btn" id="team-info-btn">Simpan Nama Tim dan Cabang Kompetisi</button>
+                </form>
             </div>
             <div class="wrapper">
                 @yield('content')

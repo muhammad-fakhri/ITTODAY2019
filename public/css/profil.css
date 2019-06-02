@@ -419,6 +419,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     height: 2100px;
 }
 
+@media(max-width: 960px) {
+    .big-wrapper {
+        height: 1750px;
+    }
+}
+
 .outer-wrapper {
     /*border: 1px solid black;*/
     height: 100%;
@@ -443,11 +449,19 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-radius: 19.2993px;
     position: relative;
     width: 70%;
-    height: 90%;
-    top: 5%;
+    height: 92%;
+    top: 8%;
     left: 15%;
     z-index: 2;
-    padding: 50px;
+    padding: 15px 50px;
+}
+
+@media(max-width: 960px) {
+    .wrapper {
+        width: 90%;
+        left: 5%;
+        padding: 10px;
+    }
 }
 
 /*.inner-wrapper {
@@ -483,30 +497,79 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*-------------- Wrapper CSS END -------------- */
 
 /*-------------- FORM AREA CSS START --------------*/
-#form-title-area{
-    /*top: 25%;*/
-    /*border: 1px solid red;*/
-    margin-top: 28px;
-    position: absolute;
-    width: 100%;
-    height: 50px;
-    border-radius: 35px;
+#form-title-area {
+    /*margin-top: 28px;*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    /*border-radius: 35px;*/
+    /*border: 1px solid black;*/
+    /*align-items: center;*/
     text-align: center;
 }
 
-#form-title{
+#form-title {
+    margin: 0 auto;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
     color: #F67E7D;
-    /*position: absolute;*/
+    font-size: 36px;
 }
+
+@media(max-width: 960px) {
+    #form-title {
+        font-size: 22px;
+    }
+}
+
+#team-info-area {
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    /*height: 100%;*/
+    /*height: 100px;*/
+    /*border-radius: 35px;*/
+    /*border: 1px solid black;*/
+    align-items: center;
+    text-align: center;
+}
+
+#team-info {
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+    width: 70%;
+    padding: 0 5%;
+    /*font-family: Roboto;*/
+    /*font-style: normal;*/
+    /*font-weight: bold;*/
+    /*color: #F67E7D;*/
+    /*font-size: 36px;       */
+}
+
+@media(max-width: 960px) {
+    #team-info {
+        width: 95%;
+    }
+
+    #team-info input,
+    #team-info select {
+        font-size: 12px;
+    }
+}
+
 .wrapper a {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 30px;
     color: #F67E7D;
+}
+
+@media(max-width: 960px) {
+    .wrapper a {
+        font-size: 15px;
+    }
 }
 
 .wrapper a:hover {
@@ -531,6 +594,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     line-height: 28px;
 }
 
+@media(max-width: 960px) {
+    .label {
+        font-size: 12px;
+    }
+}
+
 /*.label img {
     display: block;
     max-width: 100%;
@@ -546,6 +615,13 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 5px;
 }
 
+@media(max-width: 960px) {
+    .berkas-image {
+        width: 180px;
+        height: 100px;
+    }
+}
+
 .left img {
     display: block;
     margin: 0 auto;
@@ -557,6 +633,30 @@ body.mobile-nav-active #mobile-nav-toggle {
 .input_date,
 .select {
     margin-bottom: 20px;
+}
+
+@media (max-width: 960px) {
+
+    .input,
+    .input_file,
+    .input_date,
+    .select {
+        margin-bottom: 10px;
+    }
+
+    .right input {
+        font-size: 12px;
+    }
+
+    .left .input {
+
+    }
+    .left .input_file {
+        /*height: 20px;*/
+        font-size: 10px;
+        /*size: 50;*/
+        /*width: 50%;*/
+    }
 }
 
 .input {
@@ -599,12 +699,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .input_file {
-    /*    width: 100%;
-    height: 40px;
-    background: #FFE3D0;
-    border-radius: 15px;
-    border: transparent;*/
+    width: 100%;
+    /*height: 40px;*/
+    /*background: #FFE3D0;*/
+    /*border-radius: 15px;*/
+    /*border: transparent;*/
     /*padding: 3px;*/
+}
+
+@media(max-width: 960px) {
+    .input_file {
+        width: 90%;
+    }
 }
 
 /*-------------- FORM AREA CSS END --------------*/
@@ -613,6 +719,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .row {
     /*height: 100%;*/
 }
+
 .col {
     float: left;
     width: 33.33%;
@@ -651,6 +758,57 @@ body.mobile-nav-active #mobile-nav-toggle {
     max-width: 80%;
 }
 
+.left .link_input {
+    width: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    /*padding: 2px 5px;*/
+    margin-bottom: 10px;
+}
+
+.left table {
+    width: 100%;
+    /*border: 1px solid black;*/
+    text-align: left;
+}
+
+table, tr, td {
+    /*border: 1px solid black;*/
+}
+
+.left h3 {
+    /*margin: 0 auto;*/
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: #F67E7D;
+    font-size: 20px;
+}
+
+.left td {
+    font-family: Roboto;
+    font-style: normal;
+    /*font-weight: bold;*/
+}
+
+@media(max-width: 960px) {
+    .left h3 {
+        font-size: 15px;
+    }
+
+    .left td {
+        font-size: 10px;
+    }
+
+    .left .link_input {
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 10px;
+        /*text-align: left;*/
+    }
+}
+
 .btn-area {
     margin-top: 30px;
     float: right;
@@ -667,6 +825,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 }
 
+@media (max-width: 960px) {
+    .custom-btn {
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
+    }
+}
+
 .cancel-btn {
     background: rgba(0, 0, 0, 0.15);
 }
@@ -678,6 +844,20 @@ body.mobile-nav-active #mobile-nav-toggle {
 .save-btn:hover {
     background: linear-gradient(180deg, #F67E7D 100%, #FEB595 0%);
 
+}
+
+#team-info-btn {
+    width: 350px;
+    height: 33px;
+    font-size: 16px;
+}
+
+@media(max-width: 960px) {
+    #team-info-btn {
+        width: 250px;
+        font-size: 12px;
+        height: 30px;
+    }
 }
 
 /*-------------- Column & Row CSS START -------------- */

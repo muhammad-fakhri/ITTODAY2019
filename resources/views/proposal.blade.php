@@ -3,7 +3,8 @@
 <div class="proposal-wrapper">
     <form method="POST" action="#">
         <p>Unggah proposal terbaikmu disini</p>
-        <input type="file" name=""><br>
+        <input type="file" name="" id="propo-input"><br>
+        <hr>
         <p>Lampirkan link videomu disini</p>
         <input type="text" name="" class="link-input"><br>
         <button id="proposal-btn">Unggah</button>

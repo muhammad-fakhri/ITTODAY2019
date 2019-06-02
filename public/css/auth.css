@@ -804,6 +804,13 @@ input:focus {
     }
 }
 
+@media(max-width: 960px) {
+
+    #payment-input {
+        width: 100%;
+    }
+}
+
 #payment-btn {
     width: 25%;
     height: 35px;
@@ -816,6 +823,12 @@ input:focus {
     font-size: 15px;
     font-family: Roboto;
     font-style: normal;
+}
+
+@media(max-width: 960px) {
+    #payment-btn {
+        width: 50%;
+    }
 }
 
 #payment-img {
@@ -862,8 +875,26 @@ input:focus {
     color: #F67E7D;
 }
 
-.proposal-wrapper input{
+.proposal-wrapper input {
     margin-bottom: 20px;
+}
+
+.proposal-wrapper hr {
+    border: 1px solid rgba(0, 0, 0, 0.2);;
+
+}
+
+#propo-input {
+    /*margin: 0 auto;*/
+    width: 60%;
+}
+
+.link-input {
+    width: 60%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    padding: 2px 5px;
 }
 
 @media(max-width: 960px) {
@@ -875,14 +906,14 @@ input:focus {
     .proposal-wrapper p {
         font-size: 15px;
     }
-}
 
-.link-input {
-    width: 60%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #000000;
-    padding: 2px 5px;
+    #propo-input {
+        width: 90%;
+    }
+
+    .link-input {
+        width: 80%;
+    }
 }
 
 #proposal-btn {
@@ -897,6 +928,12 @@ input:focus {
     font-size: 15px;
     font-family: Roboto;
     font-style: normal;
+}
+
+@media(max-width: 960px){
+    #proposal-btn{
+        width: 60%;
+    }
 }
 
 /*-------------- PROPOSAL AREA CSS END --------------*/
