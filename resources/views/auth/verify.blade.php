@@ -6,9 +6,11 @@
         <p>Sebelum melanjutkan, silakan periksa email Anda untuk tautan verifikasi.
             Jika Anda tidak menerima email, klik tombol di bawah untuk mengirim ulang tautan verifikasi.</p>
         <div class="inner-verify"></div>
-        <div class="btn-verify">
-            <a href="{{ route('verification.resend') }}">Kirim Ulang Kode Verifikasi</a>
-        </div>
+        <form action="{{ route('verification.resend') }}">
+            <div class="form-group verify-form">
+                <button type="submit">Kirim Ulang Kode Verifikasi</button>
+            </div>
+        </form>
     </div>
 </div>
 @endsection

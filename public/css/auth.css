@@ -780,6 +780,44 @@ input:focus {
     color: #F67E7D;
 }
 
+.verify-form {
+    text-align: center;
+}
+
+.verify-form button {
+    position: absolute;
+    top: 81%;
+    left: 28%;
+    width: 45%;
+    height: 8%;
+    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    border: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFF4E3;
+    margin-bottom: 5px;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
+.verify-form button:focus {
+    outline: none;
+}
+
+.verify-form button:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background: linear-gradient(90deg, #FEB595 3.13%, #F67E7D 97.6%);
+}
 
 @media (max-width: 960px) {
     .verify {
