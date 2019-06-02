@@ -1,8 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
+use Illuminate\Support\Facades\Storage;
 use App\Anggota1;
 use App\Anggota2;
+use App\Bayar;
 use App\KetuaTim;
 use App\Team;
 use Auth;
@@ -59,11 +61,47 @@ class HomeController extends Controller {
 	}
 
 	public function showPembayaran() {
-		return view('pembayaran', ['title' => 'Pembayaran | IT TODAY 2019', 'tipe' => true, 'upload_page' => true]);
+		$user = Auth::user();
+		$dataBayar = Bayar::where('idTim','=',$user->idTim)->first();
+		return view('pembayaran', ['title' => 'Pembayaran | IT TODAY 2019', 'tipe' => true, 'upload_page' => true, 'Bayar'=>$dataBayar]);
 	}
 
-	public function showProposal() {
-		return view('proposal', ['title' => 'Proposal | IT TODAY 2019', 'tipe' => true, 'upload_page' => true]);
+	public function postPembayaran(Request $req) {
+		$user = Auth::user();
+		$bayar = Bayar::where('idTim', '=', $user->idTim)->first();
+		// dd($bayar);
+		$uploadedBayar = $req->file('bayar');
+		if ($uploadedBayar) {
+			if ($bayar->namaBayar && $bayar->alamatBayar) {
+				Storage::delete($bayar->alamatBayar);
+				$bayar->namaBayar == null;
+				$bayar->alamatBayar == null;
+			}
+			$pathBayar = $uploadedBayar->store('public/bayar');
+			$bayar->namaBayar = $uploadedBayar->getClientOriginalName();
+			$bayar->alamatBayar = $pathBayar;
+		}
+		$bayar->save();
+		return redirect()->back();
+	}
+
+	public function showBerkas() {
+		$jenisLomba = Auth::user()->jenisTim;
+		switch ($jenisLomba) {
+		case 1:
+			$berkas = 'Proposal';
+			break;
+		case 2:
+			$berkas = 'WriteUp';
+			break;
+		case 3:
+			$berkas = 'Makalah';
+			break;
+		default:
+			$berkas = 'Berkas';
+			break;
+		}
+		return view('berkas', ['title' => $berkas . ' | IT TODAY 2019', 'tipe' => true, 'upload_page' => true, 'Lomba'=>$jenisLomba]);
 	}
 
 	public function updateDataDiri(Request $req, $key, $id) {
@@ -99,19 +137,34 @@ class HomeController extends Controller {
 		$uploadedFoto = $req->file('foto');
 		$uploadedSKMA = $req->file('skma');
 		$uploadedKTM = $req->file('ktm');
-		if ($uploadedFoto && !$data->namaFoto) {
+		if ($uploadedFoto) {
+			if ($data->namaFoto && $data->alamatFoto) {
+				Storage::delete($data->alamatFoto);
+				$data->namaFoto == null;
+				$data->alamatFoto == null;
+			}
 			$pathFoto = $uploadedFoto->store('public/foto');
 			$data->namaFoto = $uploadedFoto->getClientOriginalName();
 			$data->alamatFoto = $pathFoto;
 		}
 
-		if ($uploadedSKMA && !$data->namaSKMA) {
+		if ($uploadedSKMA) {
+			if ($data->namaSKMA && $data->alamatSKMA) {
+				Storage::delete($data->alamatSKMA);
+				$data->namaSKMA == null;
+				$data->alamatSKMA == null;
+			}
 			$pathSKMA = $uploadedSKMA->store('public/skma');
 			$data->namaSKMA = $uploadedSKMA->getClientOriginalName();
 			$data->alamatSKMA = $pathSKMA;
 		}
 
-		if ($uploadedKTM && !$data->namaKTM) {
+		if ($uploadedKTM) {
+			if ($data->namaKTM && $data->alamatKTM) {
+				Storage::delete($data->alamatKTM);
+				$data->namaKTM == null;
+				$data->alamatKTM == null;
+			}
 			$pathKTM = $uploadedKTM->store('public/ktm');
 			$data->namaKTM = $uploadedKTM->getClientOriginalName();
 			$data->alamatKTM = $pathKTM;
@@ -119,7 +172,6 @@ class HomeController extends Controller {
 
 		$data->save();
 		return redirect()->back();
-		# return redirect('/data-diri/' . $back);
 	}
 
 	public function updateDataTeam(Request $req, $id) {
@@ -127,6 +179,19 @@ class HomeController extends Controller {
 		$Team->namaTim = $req->namaTim;
 		$Team->jenisTim = $req->jenisTim;
 		$Team->save();
+
+		//update data user
+		$user = Auth::user();
+		$user->namaTim = $req->namaTim;
+		$user->jenisTim = $req->jenisTim;
+		$user->save();
+
+		//update data pembayaran
+		$bayar = Bayar::where('idTim','=',$id)->first();
+		$bayar->namaTim = $req->namaTim;
+		$bayar->jenisTim = $req->jenisTim;
+		$bayar->save();
+
 		return redirect()->back();
 	}
 }

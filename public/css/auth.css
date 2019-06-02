@@ -1049,8 +1049,8 @@ input:focus {
 }
 
 /*-------------- PAYMENT AREA CSS END --------------*/
-/*-------------- PROPOSAL AREA CSS START --------------*/
-.proposal-wrapper {
+/*-------------- BERKAS AREA CSS START --------------*/
+.berkas-wrapper {
     position: absolute;
     left: 20%;
     width: 60%;
@@ -1063,7 +1063,7 @@ input:focus {
     /*border: 1px solid black;*/
 }
 
-.proposal-wrapper p {
+.berkas-wrapper p {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
@@ -1071,16 +1071,16 @@ input:focus {
     color: #F67E7D;
 }
 
-.proposal-wrapper input {
+.berkas-wrapper input {
     margin-bottom: 20px;
 }
 
-.proposal-wrapper hr {
+.berkas-wrapper hr {
     border: 1px solid rgba(0, 0, 0, 0.2);;
 
 }
 
-#propo-input {
+#berkas-input {
     /*margin: 0 auto;*/
     width: 60%;
 }
@@ -1094,16 +1094,16 @@ input:focus {
 }
 
 @media(max-width: 960px) {
-    .proposal-wrapper {
+    .berkas-wrapper {
         width: 95%;
         left: 2.5%;
     }
 
-    .proposal-wrapper p {
+    .berkas-wrapper p {
         font-size: 15px;
     }
 
-    #propo-input {
+    #berkas-input {
         width: 90%;
     }
 
@@ -1112,7 +1112,7 @@ input:focus {
     }
 }
 
-#proposal-btn {
+#berkas-btn {
     width: 25%;
     height: 35px;
     background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
@@ -1127,12 +1127,12 @@ input:focus {
 }
 
 @media(max-width: 960px){
-    #proposal-btn{
+    #berkas-btn{
         width: 60%;
     }
 }
 
-/*-------------- PROPOSAL AREA CSS END --------------*/
+/*-------------- BERKAS AREA CSS END --------------*/
 
 /*-------------- FOOTER AREA CSS START --------------*/
 .footer-area {

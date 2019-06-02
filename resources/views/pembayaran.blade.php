@@ -3,11 +3,18 @@
 <div class="payment-wrapper">
     <p>Unggah bukti pembayaranmu disini</p>
     <div id="payment-img">
-        <img src="{{ url('img/gallery/4.jpg') }}">
+        <img src="
+        @if ($Bayar->alamatBayar)
+        	{{ Storage::url($Bayar->alamatBayar) }}
+        @else
+        	{{ url('img/gallery/4.jpg') }}
+        @endif
+        ">
     </div>
-    <form method="POST" action="#">
-        <input type="file" name="" id="payment-input"><br>
-        <button id="payment-btn">Unggah</button>
+    <form method="POST" action="{{ route('postBayar') }}" enctype="multipart/form-data">
+        @csrf
+        <input type="file" name="bayar" id="payment-input"><br>
+        <button id="payment-btn" type="submit">Unggah</button>
     </form>
 </div>
 @endsection

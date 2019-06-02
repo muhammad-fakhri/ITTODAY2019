@@ -8,6 +8,7 @@ use App\Http\Controllers\Controller;
 use App\KetuaTim;
 use App\Team;
 use App\User;
+use App\Bayar;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -76,14 +77,13 @@ class RegisterController extends Controller
 
 		//buat tim baru
 		$team = new Team;
-		// $team->namaTim = '';
 		$team->jenisTim = 0;
 		$team->save();
 
 		//set idtim dan nama tim ke dari model tim ke model user
 		$dataUser = User::where('email', '=', $user->email)->first();
 		$dataUser->idTim = $team->id;
-		$dataUser->namaTim = $team->namaTim;
+		$dataUser->jenisTim = 0;
 		$dataUser->save();
 
 		//buat data ketua tim baru
@@ -110,6 +110,12 @@ class RegisterController extends Controller
 		$dataTeam->idanggota1 = $anggota1->id;
 		$dataTeam->idanggota2 = $anggota2->id;
 		$dataTeam->save();
+
+		//buat data pembayaran yang baru
+		$bayar = new Bayar;
+		$bayar->idTim = $team->id;
+		$bayar->jenisTim = 0;
+		$bayar->save();
 
 		return $user;
 	}

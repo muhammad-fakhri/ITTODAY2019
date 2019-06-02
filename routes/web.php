@@ -29,7 +29,8 @@ Route::get('/data-diri/{key}', 'HomeController@showDataDiri')->name('data_diri')
 Route::put('/data-diri/{key}/{id}', 'HomeController@updateDataDiri')->middleware('verified');
 Route::put('/data-team/{id}', 'HomeController@updateDataTeam')->middleware('verified');
 Route::get('/pembayaran', 'HomeController@showPembayaran')->name('bayar')->middleware('verified');
-Route::get('/proposal', 'HomeController@showProposal')->name('propo')->middleware('verified');
+Route::post('/pembayaran', 'HomeController@postPembayaran')->name('postBayar')->middleware('verified');
+Route::get('/berkas', 'HomeController@showBerkas')->name('berkas')->middleware('verified');
 // Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
 //ADMIN ROUTER
 // Route::prefix('/maribakuhantam')->group(function () {
