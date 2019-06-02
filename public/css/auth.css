@@ -702,7 +702,7 @@ input:focus {
 .inner-verify {
     position: absolute;
     float: center;
-    top: 16%;
+    top: 14%;
     left: 4%;
     width: 100%;
     height: 50%;
@@ -720,15 +720,15 @@ input:focus {
 .content-verify p {
     position: absolute;
 
-    top: 62%;
+    top: 58%;
     left: 10%;
     right: 10%;
 
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 30px;
-    line-height: 42px;
+    font-size: 26px;
+    line-height: 33px;
     text-align: center;
 
     color: #F67E7D;
@@ -736,10 +736,10 @@ input:focus {
 
 .btn-verify {
     position: absolute;
-    top: 83%;
+    top: 81%;
     left: 28%;
     width: 45%;
-    height: 50px;
+    height: 47px;
     background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
     box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
     border: transparent;
@@ -754,19 +754,20 @@ input:focus {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 32px;
+    font-size: 26px;
     color: #FFF4E3;
 }
 
 .content-verify h3 {
     position: absolute;
-    top: 8%;
-    left: 30%;
+    top: 6%;
+    left: 28%;
+    right: 28%;
     text-align: center;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 72px;
+    font-size: 56px;
     line-height: 84px;
 
     color: #F67E7D;
