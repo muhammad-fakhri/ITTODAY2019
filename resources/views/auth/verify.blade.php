@@ -3,14 +3,13 @@
 <div class="verify">
     <div class="content-verify">
         <h3>Verifikasi Email</h3>
-        <p>Sebelum melanjutkan, silakan periksa email Anda untuk tautan verifikasi.
-            Jika Anda tidak menerima email, klik tombol di bawah untuk mengirim ulang tautan verifikasi.</p>
-        <div class="inner-verify"></div>
-        <form action="{{ route('verification.resend') }}">
-            <div class="form-group verify-form">
-                <button type="submit">Kirim Ulang Kode Verifikasi</button>
+        <div class="verify-img"></div>
+        <div class="verify-form">
+            <p>Sebelum melanjutkan, silakan periksa email Anda untuk tautan verifikasi. Jika Anda tidak menerima email, klik tombol di bawah untuk mengirim ulang tautan verifikasi.</p>
+            <div class="btn-verify">
+                <a href="{{ route('verification.resend') }}" class="">Kirim Ulang Kode Verifikasi</a>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 @endsection

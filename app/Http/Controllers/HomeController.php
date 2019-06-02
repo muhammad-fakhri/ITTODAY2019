@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 use App\Anggota1;
 use App\Anggota2;
+use App\Bayar;
+use App\Berkas;
 use App\KetuaTim;
 use App\Team;
 use Auth;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Storage;
+use Validator;
 
 class HomeController extends Controller {
 	/**
@@ -59,11 +63,68 @@ class HomeController extends Controller {
 	}
 
 	public function showPembayaran() {
-		return view('pembayaran', ['title' => 'Pembayaran | IT TODAY 2019', 'tipe' => true, 'upload_page' => true]);
+		$user = Auth::user();
+		$dataBayar = Bayar::where('idTim', '=', $user->idTim)->first();
+		return view('pembayaran', ['title' => 'Pembayaran | IT TODAY 2019', 'tipe' => true, 'upload_page' => true, 'Bayar' => $dataBayar]);
 	}
 
-	public function showProposal() {
-		return view('proposal', ['title' => 'Proposal | IT TODAY 2019', 'tipe' => true, 'upload_page' => true]);
+	public function postPembayaran(Request $req) {
+		$user = Auth::user();
+		$bayar = Bayar::where('idTim', '=', $user->idTim)->first();
+		// dd($bayar);
+		$uploadedBayar = $req->file('bayar');
+		if ($uploadedBayar) {
+			if ($bayar->namaBayar && $bayar->alamatBayar) {
+				Storage::delete($bayar->alamatBayar);
+				$bayar->namaBayar == null;
+				$bayar->alamatBayar == null;
+			}
+			$pathBayar = $uploadedBayar->store('public/bayar');
+			$bayar->namaBayar = $uploadedBayar->getClientOriginalName();
+			$bayar->alamatBayar = $pathBayar;
+		}
+		$bayar->save();
+		return redirect()->back();
+	}
+
+	public function showBerkas() {
+		$jenisLomba = Auth::user()->jenisTim;
+		$dataBerkas = Berkas::where('idTim', '=', Auth::user()->idTim)->first();
+		// dd($dataBerkas);
+		switch ($jenisLomba) {
+		case 1:
+			$berkas = 'Proposal';
+			break;
+		case 2:
+			$berkas = 'WriteUp';
+			break;
+		case 3:
+			$berkas = 'Makalah';
+			break;
+		default:
+			$berkas = 'Berkas';
+			break;
+		}
+		return view('berkas', ['title' => $berkas . ' | IT TODAY 2019', 'tipe' => true, 'upload_page' => true, 'Lomba' => $jenisLomba, 'Berkas' => $dataBerkas]);
+	}
+
+	public function postBerkas(Request $req) {
+		$data = Berkas::where('idTim', '=', Auth::user()->idTim)->first();
+		// dd($data);
+		$uploadedBerkas = $req->file('berkas');
+		if ($uploadedBerkas) {
+			if ($data->namaBerkas && $data->alamatBerkas) {
+				Storage::delete($data->alamatBerkas);
+				$data->namaBerkas == null;
+				$data->alamatBerkas == null;
+			}
+			$pathBerkas = $uploadedBerkas->store('public/berkas');
+			$data->namaBerkas = $uploadedBerkas->getClientOriginalName();
+			$data->alamatBerkas = $pathBerkas;
+		}
+		$data->linkVideo = $req->linkVideo;
+		$data->save();
+		return redirect()->back();
 	}
 
 	public function updateDataDiri(Request $req, $key, $id) {
@@ -99,19 +160,34 @@ class HomeController extends Controller {
 		$uploadedFoto = $req->file('foto');
 		$uploadedSKMA = $req->file('skma');
 		$uploadedKTM = $req->file('ktm');
-		if ($uploadedFoto && !$data->namaFoto) {
+		if ($uploadedFoto) {
+			if ($data->namaFoto && $data->alamatFoto) {
+				Storage::delete($data->alamatFoto);
+				$data->namaFoto == null;
+				$data->alamatFoto == null;
+			}
 			$pathFoto = $uploadedFoto->store('public/foto');
 			$data->namaFoto = $uploadedFoto->getClientOriginalName();
 			$data->alamatFoto = $pathFoto;
 		}
 
-		if ($uploadedSKMA && !$data->namaSKMA) {
+		if ($uploadedSKMA) {
+			if ($data->namaSKMA && $data->alamatSKMA) {
+				Storage::delete($data->alamatSKMA);
+				$data->namaSKMA == null;
+				$data->alamatSKMA == null;
+			}
 			$pathSKMA = $uploadedSKMA->store('public/skma');
 			$data->namaSKMA = $uploadedSKMA->getClientOriginalName();
 			$data->alamatSKMA = $pathSKMA;
 		}
 
-		if ($uploadedKTM && !$data->namaKTM) {
+		if ($uploadedKTM) {
+			if ($data->namaKTM && $data->alamatKTM) {
+				Storage::delete($data->alamatKTM);
+				$data->namaKTM == null;
+				$data->alamatKTM == null;
+			}
 			$pathKTM = $uploadedKTM->store('public/ktm');
 			$data->namaKTM = $uploadedKTM->getClientOriginalName();
 			$data->alamatKTM = $pathKTM;
@@ -119,14 +195,57 @@ class HomeController extends Controller {
 
 		$data->save();
 		return redirect()->back();
-		# return redirect('/data-diri/' . $back);
 	}
 
 	public function updateDataTeam(Request $req, $id) {
+		$messages = [
+			// 'unique' => 'Nama tim ini sudah dipakai, silakan gunakan nama tim yang lain.',
+			'max' => 'Jumlah maksimal karakter untuk nama tim adalah 50, mohon pilih nama tim yang lain.',
+			'namaTim.required' => 'Mohon masukkan nama tim yang kurang dari 50 karakter.',
+		];
+
+		$validator = Validator::make($req->all(), [
+			'namaTim' => 'required|max:50',
+			'jenisTim' => 'required',
+		], $messages)->validate();
+
 		$Team = Team::find($id);
+		$data = Team::where('namaTim', '=', $req->namaTim)->first();
+		// dd($data);
+		//kalo udh ada yang make nama tim nya (unique custom validator)
+		if ($data) {
+			if ($Team->id != $data->id) {
+				return redirect()->back()->with('alert', 'Nama tim ini sudah dipakai, silakan gunakan nama tim yang lain.');
+			}
+		}
+
 		$Team->namaTim = $req->namaTim;
 		$Team->jenisTim = $req->jenisTim;
 		$Team->save();
+
+		//update data user
+		$user = Auth::user();
+		$user->namaTim = $req->namaTim;
+		$user->jenisTim = $req->jenisTim;
+		$user->save();
+
+		//update data pembayaran
+		$bayar = Bayar::where('idTim', '=', $id)->first();
+		$bayar->namaTim = $req->namaTim;
+		$bayar->jenisTim = $req->jenisTim;
+		$bayar->save();
+
+		//update data berkas
+		$berkas = Berkas::where('idTim', '=', $id)->first();
+		$berkas->namaTim = $req->namaTim;
+		$berkas->jenisTim = $req->jenisTim;
+
+		// jika jenis tim berganti dari appstoday ke mata lomba lain
+		//maka linkVideo akan dihapus
+		if ($req->jenisTim != 1) {
+			$berkas->linkVideo = null;
+		}
+		$berkas->save();
 		return redirect()->back();
 	}
 }
