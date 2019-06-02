@@ -1,0 +1,765 @@
+/*-------------- FONT FACE IMPORT START --------------*/
+@font-face {
+    font-family: 'Gilroy-Regular';
+    src: url('../fonts/Gilroy/Gilroy-Regular.eot');
+    src: local('Gilroy Regular'), local('Gilroy-Regular'),
+        url('../fonts/Gilroy/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy/Gilroy-Regular.woff') format('woff'),
+        url('../fonts/Gilroy/Gilroy-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Bold';
+    src: url('../fonts/Gilroy/Gilroy-Bold.eot');
+    src: local('Gilroy Bold'), local('Gilroy-Bold'),
+        url('../fonts/Gilroy/Gilroy-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy/Gilroy-Bold.woff') format('woff'),
+        url('../fonts/Gilroy/Gilroy-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Thin';
+    src: url('../fonts/Gilroy/Gilroy-Thin.eot');
+    src: local('Gilroy Thin'), local('Gilroy-Thin'),
+        url('../fonts/Gilroy/Gilroy-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy/Gilroy-Thin.woff') format('woff'),
+        url('../fonts/Gilroy/Gilroy-Thin.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Heavy';
+    src: url('../fonts/Gilroy/Gilroy-Heavy.eot');
+    src: local('Gilroy Heavy'), local('Gilroy-Heavy'),
+        url('../fonts/Gilroy/Gilroy-Heavy.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy/Gilroy-Heavy.woff') format('woff'),
+        url('../fonts/Gilroy/Gilroy-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Medium';
+    src: url('../fonts/Gilroy/Gilroy-Medium.eot');
+    src: local('Gilroy Medium'), local('Gilroy-Medium'),
+        url('../fonts/Gilroy/Gilroy-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy/Gilroy-Medium.woff') format('woff'),
+        url('../fonts/Gilroy/Gilroy-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Light';
+    src: url('../fonts/Gilroy/Gilroy-Light.eot');
+    src: local('Gilroy Light'), local('Gilroy-Light'),
+        url('../fonts/Gilroy/Gilroy-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy/Gilroy-Light.woff') format('woff'),
+        url('../fonts/Gilroy/Gilroy-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gilroy-Black';
+    src: url('Gilroy-Black.eot');
+    src: local('Gilroy Black'), local('Gilroy-Black'),
+        url('Gilroy-Black.eot?#iefix') format('embedded-opentype'),
+        url('Gilroy-Black.woff') format('woff'),
+        url('Gilroy-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+/*-------------- FONT FACE IMPORT END --------------*/
+
+html,
+body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-horizontal-center {
+    justify-content: center;
+}
+
+.flex-vertical-center {
+    align-items: center;
+}
+
+
+/*-------------- HEADER AREA CSS START --------------*/
+
+.alert {
+    z-index: 1000;
+}
+
+header {
+    height: 85px;
+}
+
+.nav-fake {
+    height: 85px;
+}
+
+#header {
+    padding: 0px 0px 20px 0px;
+    left: 0;
+    top: 0;
+    right: 0;
+    transition: all 0.5s;
+    z-index: 998;
+    position: fixed;
+}
+
+.main-menu {
+    padding-top: 20px;
+}
+
+@media (max-width: 673px) {
+    #logo {
+        margin-left: 20px;
+    }
+}
+
+#header #logo h1 {
+    font-size: 34px;
+    margin: 0;
+    padding: 0;
+    line-height: 1;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+#header #logo h1 a,
+#header #logo h1 a:hover {
+    color: #fff;
+    padding-left: 10px;
+    border-left: 4px solid #8a90ff;
+}
+
+#header #logo img {
+    padding: 0;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #header #logo h1 {
+        font-size: 28px;
+    }
+
+    #header #logo img {
+        max-height: 40px;
+    }
+}
+
+/*-------------- HEADER AREA CSS END --------------*/
+
+
+/*-------------- Navigation Menu Start -------------- */
+/*-------------- Nav Menu Essentials --------------*/
+.nav-menu,
+.nav-menu * {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.nav-menu ul {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+}
+
+.nav-menu li {
+    position: relative;
+    white-space: nowrap;
+}
+
+.nav-menu>li {
+    float: left;
+}
+
+.nav-menu li:hover>ul,
+.nav-menu li.sfHover>ul {
+    display: block;
+}
+
+.nav-menu ul ul {
+    top: 0;
+    left: 100%;
+}
+
+.nav-menu ul li {
+    min-width: 180px;
+    text-align: left;
+}
+
+/* Nav Menu Arrows */
+.sf-arrows .sf-with-ul {
+    padding-right: 30px;
+}
+
+.sf-arrows .sf-with-ul:after {
+    content: "\f107";
+    position: absolute;
+    right: 15px;
+    font-family: fontAwesome;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.sf-arrows ul .sf-with-ul:after {
+    content: "\f105";
+}
+
+/* Nav Meu Container */
+#nav-menu-container {
+    margin: 0;
+}
+
+/* Nav Meu Styling */
+.nav-menu a {
+    padding: 0 8px 0px 8px;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+    text-transform: uppercase;
+    outline: none;
+}
+
+.nav-menu>li {
+    margin-left: 10px;
+}
+
+.nav-menu ul {
+    margin: 22px 0 0 0;
+    padding: 10px;
+    box-shadow: 0px 0px 30px rgba(127, 137, 161, 0.25);
+    background: #fff;
+}
+
+.nav-menu ul li {
+    transition: 0.3s;
+}
+
+.nav-menu ul li a {
+    padding: 10px;
+    color: #333;
+    transition: 0.3s;
+    display: block;
+    font-size: 12px;
+    text-transform: none;
+}
+
+.nav-menu ul li:hover>a {
+    color: #F67E7D;
+    text-decoration: none;
+
+}
+
+.nav-menu ul ul {
+    margin: 0;
+}
+
+.menu-has-children a {
+    color: white;
+}
+
+.nav-menu-1:hover {
+    color: white;
+    text-decoration: none;
+}
+
+/*-------------- Mobile Nav Toggle --------------*/
+#mobile-nav-toggle {
+    position: fixed;
+    right: 15px;
+    z-index: 999;
+    top: 22px;
+    border: 0;
+    background: none;
+    font-size: 24px;
+    display: none;
+    transition: all 0.4s;
+    outline: none;
+    cursor: pointer;
+}
+
+@media (max-width: 767px) {
+    #mobile-nav-toggle {
+        top: 22px;
+    }
+}
+
+#mobile-nav-toggle i {
+    color: #fff;
+    font-weight: 900;
+}
+
+@media (max-width: 960px) {
+    #mobile-nav-toggle {
+        display: inline;
+    }
+
+    #nav-menu-container {
+        display: none;
+    }
+}
+
+/* Mobile Nav Styling */
+#mobile-nav {
+    position: fixed;
+    top: 0;
+    padding-top: 18px;
+    bottom: 0;
+    z-index: 998;
+    background: rgba(0, 0, 0, 0.8);
+    left: -260px;
+    width: 260px;
+    overflow-y: auto;
+    transition: 0.4s;
+}
+
+#mobile-nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+#mobile-nav ul li {
+    position: relative;
+}
+
+#mobile-nav ul li a {
+    color: #fff;
+    font-size: 13px;
+    text-transform: uppercase;
+    overflow: hidden;
+    padding: 10px 22px 10px 15px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    display: block;
+    outline: none;
+    font-weight: 700;
+}
+
+#mobile-nav ul li a:hover {
+    color: #fff;
+}
+
+#mobile-nav ul li li {
+    padding-left: 30px;
+}
+
+#mobile-nav ul .menu-has-children i {
+    position: absolute;
+    right: 0;
+    z-index: 99;
+    padding: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+#mobile-nav ul .menu-has-children i.fa-chevron-up {
+    color: #8a90ff;
+}
+
+#mobile-nav ul .menu-has-children li a {
+    text-transform: none;
+}
+
+#mobile-nav ul .menu-item-active {
+    color: #8a90ff;
+}
+
+#mobile-body-overly {
+    width: 100%;
+    height: 100%;
+    z-index: 997;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    display: none;
+}
+
+/* Mobile Nav body classes */
+body.mobile-nav-active {
+    overflow: hidden;
+}
+
+body.mobile-nav-active #mobile-nav {
+    left: 0;
+}
+
+body.mobile-nav-active #mobile-nav-toggle {
+    color: #fff;
+}
+
+/*-------------- Navigation Menu Start -------------- */
+
+/*-------------- Wrapper CSS START -------------- */
+.big-wrapper {
+    height: 100%;
+}
+
+.outer-wrapper {
+    /*border: 1px solid black;*/
+    height: 100%;
+    width: 100%;
+}
+
+.outer-wrapper img {
+    position: absolute;
+    z-index: 1;
+    max-width: 100%;
+    max-height: 100%;
+    height: 100%;
+    width: 100%;
+    display: block;
+    margin: auto;
+}
+
+.wrapper {
+    position: relative;
+    width: 80%;
+    height: 80%;
+    top: 10%;
+    left: 10%;
+    z-index: 2;
+    padding: 15px;
+}
+
+.inner-wrapper {
+    float: left;
+    width: 30%;
+    height: 100%;
+}
+
+.inner-wrapper2 {
+    width: 40%;
+    height: 100%;
+}
+
+.inner-wrapper3 {
+    float: right;
+    width: 30%;
+    height: 100%;
+
+}
+
+@media (max-width: 960px) {
+
+    .inner-wrapper {
+        display: none;
+    }
+
+    .inner-wrapper2 {
+        width: 100%;
+        float: left;
+    }
+}
+
+/*-------------- Wrapper CSS END -------------- */
+
+/*-------------- Column & Row & Box CSS START -------------- */
+.column {
+    float: left;
+    width: 33.33%;
+    padding: 2% 5%;
+    height: 100%;
+}
+
+.row {
+    height: 100%;
+}
+
+/*.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}*/
+
+@media (max-width: 960px) {
+    .column {
+        width: 100%;
+    }
+
+    .gone {
+        display: none;
+    }
+
+    .hidden {
+        margin-top: 10%;
+    }
+}
+
+@media (min-width: 960px) {
+    .hidden {
+        display: none;
+    }
+}
+
+.box {
+    /*border: 2px solid black;*/
+    box-shadow: 0px 9px 36px rgba(0, 0, 0, 0.16);
+    background: white;
+    border-radius: 15px;
+    height: 80%;
+    width: 100%;
+    text-align: center;
+    padding: 20% 10%;
+}
+
+.box a {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    color: #F67E7D;
+}
+
+.box a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+@media(max-width: 960px) {
+    .box {
+        padding: 5% 0;
+        height: 20%;
+    }
+
+    .box a {
+        font-size: 18px;
+    }
+}
+
+.inner-box {
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+    margin-bottom: 30px;
+    height: 60%;
+    width: 80%;
+}
+
+@media(max-width: 960px) {
+    .inner-box {
+        display: none;
+    }
+}
+
+.inner-box1 {
+    background: url(../img/home/data_diri.png) no-repeat center center;
+    background-size: contain;
+}
+
+.inner-box2 {
+    background: url(../img/home/bayar.png) no-repeat center center;
+    background-size: contain;
+}
+
+.inner-box3 {
+    background: url(../img/home/berkas.png) no-repeat center center;
+    background-size: contain;
+}
+
+@media (max-width: 960px) {
+    .inner-box1 {
+        display: none;
+    }
+
+    .inner-box2 {
+        display: none;
+    }
+
+    .inner-box3 {
+        display: none;
+    }
+}
+
+/*-------------- Column & Row & Box CSS END -------------- */
+
+/*------------ USER WELCOME CSS START ------------ */
+#user-welcome {
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    color: #F67E7D;
+}
+
+@media(max-width: 960px) {
+    #user-welcome {
+        font-size: 20px;
+    }
+}
+
+/*------------ USER WELCOME CSS END ------------ */
+
+/*-------------- FOOTER AREA CSS START --------------*/
+.footer-area {
+    background: url(../img/footer-bg.png) center;
+    height: 400px;
+    width: 100%;
+    background-size: 100% 100%;
+    -webkit-background-size: 100% 100%;
+    -moz-background-size: 100% 100%;
+    -o-background-size: 100% 100%;
+    padding-top: 100px;
+}
+
+.footer {
+    background-size: 100% 100%;
+}
+
+.footer-area h6 {
+    color: #fff;
+    text-align: center;
+    margin-top: 25px;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+.footer-social {
+    text-align: center;
+}
+
+.footer-social a {
+    background: #111111;
+    width: 50px;
+    height: 50px;
+    display: inline-table;
+    text-align: center;
+    padding-top: 12px;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-social a:hover i {
+    color: #000000;
+}
+
+.footer-social i {
+    color: #cccccc;
+    -webkit-transition: all 0.3s ease 0s;
+    -moz-transition: all 0.3s ease 0s;
+    -o-transition: all 0.3s ease 0s;
+    transition: all 0.3s ease 0s;
+}
+
+.footer-bottom {
+    margin-top: 25px;
+}
+
+@media (max-width: 991.98px) {
+    .footer-social {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .footer-social a {
+        width: 40px;
+        height: 40px;
+        padding-top: 8px;
+    }
+
+    .footer-social i {
+        color: #cccccc;
+        font-size: 25px;
+    }
+
+    .footer-bottom {
+        margin-top: 0px;
+    }
+}
+
+.single-footer-widget {
+    color: #fff;
+    text-align: center;
+}
+
+.single-footer-widget ul li {
+    font-size: 18px;
+    list-style-type: none;
+}
+
+@media (max-width: 991.98px) {
+    .single-footer-widget ul li {
+        font-size: 15px;
+    }
+}
+
+.single-footer-widget ::-moz-selection {
+    /* Code for Firefox */
+    background-color: #8a90ff;
+    color: #777777;
+}
+
+.single-footer-widget ::selection {
+    background-color: #8a90ff;
+    color: #777777;
+}
+
+.single-footer-widget ::-webkit-input-placeholder {
+    /* WebKit, Blink, Edge */
+    color: #777777;
+    font-weight: 300;
+}
+
+.single-footer-widget :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #777777;
+    opacity: 1;
+    font-weight: 300;
+}
+
+.single-footer-widget ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    color: #777777;
+    opacity: 1;
+    font-weight: 300;
+}
+
+.single-footer-widget :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #777777;
+    font-weight: 300;
+}
+
+.single-footer-widget ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #777777;
+    font-weight: 300;
+}
+
+@media (max-width: 991.98px) {
+    .single-footer-widget {
+        margin-bottom: 60px;
+    }
+}
+
+.section-gap {
+    padding: 120px 0;
+}
+
+/*-------------- FOOTER AREA CSS END --------------*/

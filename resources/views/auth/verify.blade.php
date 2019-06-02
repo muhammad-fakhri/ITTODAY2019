@@ -1,4 +1,4 @@
-@extends('layouts.main3')
+@extends('layouts.mainAuth')
 @section('content')
 <div class="verify">
     <div class="content-verify">

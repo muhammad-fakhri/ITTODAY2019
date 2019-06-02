@@ -1,4 +1,4 @@
-@extends('layouts.main2')
+@extends('layouts.mainAuth')
 @section('content')
 <div class="form-area">
     <form action="{{ route('login') }}" class="input-form" method="POST">

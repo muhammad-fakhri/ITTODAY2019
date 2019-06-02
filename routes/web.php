@@ -22,40 +22,34 @@ Route::get('/rulebook-appstoday', 'GuestController@downApps')->name('downApps');
 Route::get('/rulebook-hacktoday', 'GuestController@downHack')->name('downHack');
 Route::get('/rulebook-dsc', 'GuestController@downDSC')->name('downDSC');
 
-// Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
-
-//ADMIN ROUTER
-Route::prefix('/maribakuhantam')->group(function () {
-	//Admin Homepage
-	Route::get('/', 'AdminController@index')->name('adminHome');
-	//Admin Login
-	Route::get('/login', 'AdminController@showLoginForm')->name('adminLogin');
-	Route::post('/loginPost', 'AdminController@loginPost')->name('adminLoginPost');
-	//Admin Register
-	Route::get('/register', 'AdminController@showRegisterForm')->name('adminRegister');
-	Route::post('/registerPost', 'AdminController@registerPost')->name('adminRegisterPost');
-
-	//Admin Logout
-	Route::get('/logout', 'AdminController@logout')->name('adminLogout');
-
-	Route::middleware(['auth'])->group(function () {
-		//Data Ruangan
-		Route::prefix('/ruang')->group(function () {
-			Route::get('/', 'Admin\RuangController@index');
-			Route::get('/insert', 'Admin\RuangController@insert');
-			Route::get('/fakultas/{id}', 'Admin\RuangController@fakultas');
-			Route::post('/store', 'Admin\RuangController@store');
-			Route::get('/delete/{kode}', 'Admin\RuangController@delete');
-			Route::get('/{id}', 'Admin\RuangController@show');
-			Route::put('/{id}', 'Admin\RuangController@update');
-		});
-	});
-});
-
 //Route untuk user yang sudah login
 Auth::routes(['verify' => true]);
-
 Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/data-diri/{key}', 'HomeController@showDataDiri')->name('data_diri')->middleware('verified');
+Route::put('/data-diri/{key}/{id}', 'HomeController@updateDataDiri')->middleware('verified');
+Route::put('/data-team/{id}', 'HomeController@updateDataTeam')->middleware('verified');
+Route::get('/pembayaran', 'HomeController@showPembayaran')->name('bayar')->middleware('verified');
+Route::get('/proposal', 'HomeController@showProposal')->name('propo')->middleware('verified');
+// Route::get('/user/verify/{token}', 'Auth\RegisterController@verifyUser');
+//ADMIN ROUTER
+// Route::prefix('/maribakuhantam')->group(function () {
+// 	//Admin Homepage
+// 	Route::get('/', 'AdminController@index')->name('adminHome');
+// 	//Admin Login
+// 	Route::get('/login', 'AdminController@showLoginForm')->name('adminLogin');
+// 	Route::post('/loginPost', 'AdminController@loginPost')->name('adminLoginPost');
+// 	//Admin Register
+// 	Route::get('/register', 'AdminController@showRegisterForm')->name('adminRegister');
+// 	Route::post('/registerPost', 'AdminController@registerPost')->name('adminRegisterPost');
 
-Route::get('/verify', 'AdminController@tesaja');
-Route::get('/logout', 'AdminController@out');
+// 	//Admin Logout
+// 	Route::get('/logout', 'AdminController@logout')->name('adminLogout');
+
+// 	// Route::middleware(['auth'])->group(function () {
+// 		//Team
+// 		Route::prefix('/team')->group(function () {
+// 			Route::get('/{id}', 'Admin\TeamController@show');
+// 			Route::put('/{id}', 'Admin\TeamController@update');
+// 		});
+// 	// });
+// });

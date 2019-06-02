@@ -102,7 +102,6 @@ body {
 
 .alert {
     z-index: 1000;
-    /*position: relative;*/
 }
 
 header {
@@ -417,15 +416,22 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 /*-------------- Wrapper CSS START -------------- */
 .big-wrapper {
-    height: 100%;
+    height: 2100px;
+}
+
+@media(max-width: 960px) {
+    .big-wrapper {
+        height: 1750px;
+    }
 }
 
 .outer-wrapper {
+    /*border: 1px solid black;*/
     height: 100%;
     width: 100%;
 }
 
-.outer-wrapper img {
+/*.outer-wrapper img {
     position: absolute;
     z-index: 1;
     max-width: 100%;
@@ -434,36 +440,47 @@ body.mobile-nav-active #mobile-nav-toggle {
     width: 100%;
     display: block;
     margin: auto;
-}
+}*/
 
 .wrapper {
+    /*border: 1px solid black;*/
+    background: #FFFFFF;
+    box-shadow: 0px 0.964965px 71.4074px rgba(0, 0, 0, 0.15);
+    border-radius: 19.2993px;
     position: relative;
     width: 70%;
-    height: 70%;
-    background: white;
-    top: 15%;
+    height: 92%;
+    top: 8%;
     left: 15%;
-    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
-    border-radius: 35px;
     z-index: 2;
-    padding: 15px;
-    /*border: 1px solid black;*/
+    padding: 15px 50px;
 }
 
-.inner-wrapper {
+@media(max-width: 960px) {
+    .wrapper {
+        width: 90%;
+        left: 5%;
+        padding: 10px;
+    }
+}
+
+/*.inner-wrapper {
     float: left;
-    width: 50%;
+    width: 30%;
     height: 100%;
-    background: url(../img/logo-picture.jpg) center no-repeat;
-    background-size: 70% auto;
 }
 
 .inner-wrapper2 {
-    float: right;
-    width: 50%;
+    width: 40%;
     height: 100%;
 }
 
+.inner-wrapper3 {
+    float: right;
+    width: 30%;
+    height: 100%;
+
+}
 
 @media (max-width: 960px) {
 
@@ -475,665 +492,375 @@ body.mobile-nav-active #mobile-nav-toggle {
         width: 100%;
         float: left;
     }
-}
+}*/
 
 /*-------------- Wrapper CSS END -------------- */
 
 /*-------------- FORM AREA CSS START --------------*/
-.form-area {
-    padding-left: 5%;
-    width: 40%;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-}
-
-.form-area h3 {
+#form-title-area {
+    /*margin-top: 28px;*/
+    /*position: absolute;*/
+    /*width: 100%;*/
+    /*height: 50px;*/
+    /*border-radius: 35px;*/
+    /*border: 1px solid black;*/
+    /*align-items: center;*/
     text-align: center;
 }
 
-@media (max-width: 960px) {
-    .form-area {
-        padding-left: 0;
-        float: left;
-        width: 80%;
-        left: 50%;
-        -webkit-transform: translateX(-50%) translateY(-50%);
-        -ms-transform: translateX(-50%) translateY(-50%);
-        transform: translateX(-50%) translateY(-50%);
-    }
-
-    .form-area h3 {
-        font-size: 20px;
-    }
-
-}
-
-.nav-list {
-    margin-left: -40px;
-    margin-bottom: 10px;
-    align-items: left;
-    text-align: left;
-}
-
-ul.nav-list {
-    list-style: none;
-}
-
-ul.nav-list li {
-    display: inline;
-}
-
-ul li {
-    list-style-type: none;
-}
-
-.noactive {
+#form-title {
+    margin: 0 auto;
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
-    color: rgba(0, 0, 0, 0.2);
+    color: #F67E7D;
+    font-size: 36px;
 }
 
-.active {
+@media(max-width: 960px) {
+    #form-title {
+        font-size: 22px;
+    }
+}
+
+#team-info-area {
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    /*height: 100%;*/
+    /*height: 100px;*/
+    /*border-radius: 35px;*/
+    /*border: 1px solid black;*/
+    align-items: center;
+    text-align: center;
+}
+
+#team-info {
+    /*border: 1px solid black;*/
+    margin: 0 auto;
+    width: 70%;
+    padding: 0 5%;
+    /*font-family: Roboto;*/
+    /*font-style: normal;*/
+    /*font-weight: bold;*/
+    /*color: #F67E7D;*/
+    /*font-size: 36px;       */
+}
+
+@media(max-width: 960px) {
+    #team-info {
+        width: 95%;
+    }
+
+    #team-info input,
+    #team-info select {
+        font-size: 12px;
+    }
+}
+
+.wrapper a {
     font-family: Roboto;
     font-style: normal;
     font-weight: bold;
-    font-size: 24px;
+    font-size: 30px;
     color: #F67E7D;
 }
 
-.active:hover,
-.noactive:hover {
-    color: #ff5149;
+@media(max-width: 960px) {
+    .wrapper a {
+        font-size: 15px;
+    }
+}
+
+.wrapper a:hover {
+    color: #fc2423;
     text-decoration: none;
 }
 
-.splitter {
+.wrapper hr {
+    border: 2px solid rgba(0, 0, 0, 0.2);
+}
+
+.active {
     color: white;
-    font-size: 24px;
-    font-weight: 1000;
-    font-style: bold;
-    background: linear-gradient(180deg, #F67E7D 0%, #FFCDAB 100%, #FFCDAB 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-@media (max-width:960px) {
-
-    .active,
-    .noactive,
-    .splitter {
-        font-size: 18px;
-    }
-
-    .nav-list {
-        margin-left: 0px;
-        margin-bottom: 10px;
-        align-items: left;
-        text-align: left;
-    }
-}
-
-input {
-    padding: 8px 10px;
-}
-
-input:focus {
-    background-color: #ffc9a5;
-}
-
-.input {
-    width: 100%;
-    height: 35px;
-    background: #FFE3D0;
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    border: transparent;
-}
-
-.input-form {}
-
-@media (max-width: 960px) {
-    .input-form {
-        padding: 0% 5%;
-    }
-
-    /*    .input-form div.alert {
-        font-size: 13px;
-    }*/
+    text-decoration: underline;
 }
 
 .label {
     font-family: Roboto;
     font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 0px;
-    color: #FEB595;
-    margin-top: 20px;
-}
-
-
-.label2 {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 0px;
-    color: #FEB595;
-    margin-top: 15px;
-}
-
-@media (max-width: 960px) {
-
-    .label,
-    .label2 {
-        font-size: 15px;
-    }
-}
-
-.warning-message {
-    margin-bottom: 5px;
-    color: red;
-}
-
-.lower-form {
-    text-align: center;
-}
-
-.lower-form button {
-    width: 100%;
-    height: 35px;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    border: transparent;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    color: #FFF4E3;
-    margin-bottom: 5px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.lower-form button:focus {
-    outline: none;
-}
-
-.lower-form button:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    background: linear-gradient(90deg, #FEB595 3.13%, #F67E7D 97.6%);
-}
-
-.forget-password {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    color: #FEB595;
-}
-
-.is-invalid {
-    border: 2px solid red;
-}
-
-/*-------------- FORM AREA CSS END --------------*/
-
-/*------------ VERIFY EMAIL CSS START ------------ */
-
-.verify {
-
-    position: relative;
-    width: 65%;
-    height: 80%;
-    top: 15%;
-    left: 18%;
-    background: #FFFFFF;
-    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
-    border-radius: 35px;
-    z-index: 2;
-    padding: 15px;
-}
-
-.inner-verify {
-    position: absolute;
-    float: center;
-    top: 13%;
-    left: 4%;
-    width: 100%;
-    height: 50%;
-    background: url(../img/verifylogo.png) center no-repeat;
-    background-size: 50% auto;
-}
-
-.content-verify {
-    width: 70%;
-    height: 100%;
-    top: 50%;
-    left: 10%;
-}
-
-.content-verify p {
-    position: absolute;
-
-    top: 58%;
-    left: 10%;
-    right: 10%;
-
-    font-family: Roboto;
-    font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 33px;
-    text-align: center;
-
-    color: #F67E7D;
+    font-size: 20px;
+    line-height: 28px;
 }
 
-.btn-verify {
-    position: absolute;
-    top: 81%;
-    left: 28%;
-    width: 45%;
-    height: 8%;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border: transparent;
-    border-radius: 25px;
-    text-align: center;
-    padding-top: 3px;
-}
-
-.btn-verify a {
-    position: relative;
-    top: 20%;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 26px;
-    color: #FFF4E3;
-}
-
-.content-verify h3 {
-    position: absolute;
-    top: 6%;
-    left: 28%;
-    right: 28%;
-    text-align: center;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 56px;
-    line-height: 84px;
-
-    color: #F67E7D;
-}
-
-.verify-form {
-    text-align: center;
-}
-
-.verify-form button {
-    position: absolute;
-    top: 81%;
-    left: 28%;
-    width: 45%;
-    height: 8%;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    border: transparent;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    color: #FFF4E3;
-    margin-bottom: 5px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.verify-form button:focus {
-    outline: none;
-}
-
-.verify-form button:hover {
-    background-position: 100% 0;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-    background: linear-gradient(90deg, #FEB595 3.13%, #F67E7D 97.6%);
-}
-
-@media (max-width: 960px) {
-    .verify {
-
-        position: relative;
-        width: 75%;
-        height: 80%;
-        top: 15%;
-        left: 12%;
-        background: #FFFFFF;
-        box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
-        border-radius: 35px;
-        z-index: 2;
-        padding: 15px;
-    }
-
-    .inner-verify {
-        position: absolute;
-        float: center;
-        top: 18%;
-        left: 4%;
-        width: 100%;
-        height: 50%;
-        background: url(../img/verifylogo.png) center no-repeat;
-        background-size: 80% auto;
-    }
-
-    .content-verify {
-        width: 70%;
-        height: 100%;
-        top: 50%;
-        left: 10%;
-    }
-
-    .content-verify h3 {
-        position: absolute;
-        top: 22%;
-        left: 28%;
-        text-align: center;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 30px;
-        line-height: 84px;
-
-        color: #F67E7D;
-    }
-
-    .content-verify p {
-        position: absolute;
-
-        top: 54%;
-        left: 10%;
-        right: 10%;
-
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 20px;
-        text-align: center;
-
-        color: #F67E7D;
-    }
-
-    .btn-verify {
-        position: absolute;
-        top: 70%;
-        left: 20%;
-        width: 60%;
-        height: 6%;
-        background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-        box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-        border: transparent;
-        border-radius: 25px;
-        text-align: center;
-        padding-top: 3px;
-    }
-
-    .btn-verify a {
-        position: relative;
-        top: 20%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 15px;
-        color: #FFF4E3;
-    }
-
-
-}
-
-.lower-form button {
-    width: 100%;
-    height: 35px;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    border: transparent;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    color: #FFF4E3;
-    margin-bottom: 5px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.btn-custom {
-    width: 100%;
-    height: 35px;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border: transparent;
-    border-radius: 25px;
-    text-align: center;
-    padding-top: 3px;
-}
-
-.btn-custom a {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 18px;
-    color: #FFF4E3;
-}
-
-@media (max-width: 960px) {
-    .btn-custom a {
-        font-size: 15px;
-    }
-}
-
-/*------------ VERIFY EMAIL CSS END ------------ */
-
-/*------------ CUSTOM RESET PASSWORD BUTTON CSS START ------------ */
-@media (max-width: 960px) {
-    #reset-password-btn button {
+@media(max-width: 960px) {
+    .label {
         font-size: 12px;
     }
 }
 
-/*------------ CUSTOM RESET PASSWORD BUTTON CSS END ------------ */
+/*.label img {
+    display: block;
+    max-width: 100%;
+    width: 500px;
+    height: auto;
+}*/
 
-/*-------------- PAYMENT AREA CSS START --------------*/
-
-.payment-wrapper {
-    position: absolute;
-    left: 20%;
-    width: 60%;
-    align-items: center;
-    text-align: center;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    /*border: 1px solid black;*/
-}
-
-
-.payment-wrapper p {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    color: #F67E7D;
+.berkas-image {
+    display: block;
+    /*max-width: 100%;*/
+    width: 300px;
+    height: 200px;
+    margin-bottom: 5px;
 }
 
 @media(max-width: 960px) {
-    .payment-wrapper {
-        width: 95%;
-        left: 2.5%;
-    }
-
-    .payment-wrapper p {
-        font-size: 15px;
+    .berkas-image {
+        width: 180px;
+        height: 100px;
     }
 }
 
-@media(max-width: 960px) {
-
-    #payment-input {
-        width: 100%;
-    }
+.left img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
 }
 
-#payment-btn {
-    width: 25%;
-    height: 35px;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border: transparent;
-    border-radius: 10px;
-    text-align: center;
-    color: white;
-    font-size: 15px;
-    font-family: Roboto;
-    font-style: normal;
-}
-
-@media(max-width: 960px) {
-    #payment-btn {
-        width: 50%;
-    }
-}
-
-#payment-img {
-    height: 300px;
-    width: 100%;
-    /*border: 1px solid green;*/
-}
-
-#payment-img img {
-    width: 100%;
-    height: 300px;
-}
-
-@media (max-width: 960px) {
-    #payment-img {
-        height: 150px;
-    }
-
-    #payment-img img {
-        height: 150px;
-    }
-}
-
-/*-------------- PAYMENT AREA CSS END --------------*/
-/*-------------- PROPOSAL AREA CSS START --------------*/
-.proposal-wrapper {
-    position: absolute;
-    left: 20%;
-    width: 60%;
-    align-items: center;
-    text-align: center;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    /*border: 1px solid black;*/
-}
-
-.proposal-wrapper p {
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 25px;
-    color: #F67E7D;
-}
-
-.proposal-wrapper input {
+.input,
+.input_file,
+.input_date,
+.select {
     margin-bottom: 20px;
 }
 
-.proposal-wrapper hr {
-    border: 1px solid rgba(0, 0, 0, 0.2);;
+@media (max-width: 960px) {
 
+    .input,
+    .input_file,
+    .input_date,
+    .select {
+        margin-bottom: 10px;
+    }
+
+    .right input {
+        font-size: 12px;
+    }
+
+    .left .input {
+
+    }
+    .left .input_file {
+        /*height: 20px;*/
+        font-size: 10px;
+        /*size: 50;*/
+        /*width: 50%;*/
+    }
 }
 
-#propo-input {
-    /*margin: 0 auto;*/
-    width: 60%;
+.input {
+    width: 100%;
+    height: 30px;
+    background: #FFE3D0;
+    border-radius: 15px;
+    border: transparent;
+    padding: 10px 15px;
 }
 
-.link-input {
-    width: 60%;
-    background: transparent;
-    border: none;
-    border-bottom: 1px solid #000000;
-    padding: 2px 5px;
+.input:focus {
+    background-color: #ffc9a5;
+}
+
+.input_date {
+    width: 100%;
+    height: 30px;
+    background: #FFE3D0;
+    border-radius: 15px;
+    border: transparent;
+    padding: 3px 15px;
+}
+
+.input_date:focus {
+    background-color: #ffc9a5;
+}
+
+.select {
+    width: 100%;
+    height: 30px;
+    background: #FFE3D0;
+    border-radius: 15px;
+    border: transparent;
+    padding: 3px 15px;
+}
+
+.select:focus {
+    background-color: #ffc9a5;
+}
+
+.input_file {
+    width: 100%;
+    /*height: 40px;*/
+    /*background: #FFE3D0;*/
+    /*border-radius: 15px;*/
+    /*border: transparent;*/
+    /*padding: 3px;*/
 }
 
 @media(max-width: 960px) {
-    .proposal-wrapper {
-        width: 95%;
-        left: 2.5%;
+    .input_file {
+        width: 90%;
     }
+}
 
-    .proposal-wrapper p {
+/*-------------- FORM AREA CSS END --------------*/
+
+/*-------------- Column & Row CSS START -------------- */
+.row {
+    /*height: 100%;*/
+}
+
+.col {
+    float: left;
+    width: 33.33%;
+    text-align: center;
+    /*padding: 2% 5%;*/
+    /*height: 100%;*/
+    /*border: 1px solid black;*/
+}
+
+.column {
+    /*height: 100%;*/
+    /*padding: 30px;*/
+}
+
+.left {
+    float: left;
+    width: 30%;
+    height: 1000px;
+    text-align: center;
+    /*align-items: center;*/
+    /*border: 1px solid black;*/
+}
+
+.right {
+    padding-left: 30px;
+    float: right;
+    width: 70%;
+    height: 100%;
+    height: 1000px;
+    /*border: 1px solid black;*/
+}
+
+.left img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80%;
+}
+
+.left .link_input {
+    width: 80%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #000000;
+    /*padding: 2px 5px;*/
+    margin-bottom: 10px;
+}
+
+.left table {
+    width: 100%;
+    /*border: 1px solid black;*/
+    text-align: left;
+}
+
+table, tr, td {
+    /*border: 1px solid black;*/
+}
+
+.left h3 {
+    /*margin: 0 auto;*/
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    color: #F67E7D;
+    font-size: 20px;
+}
+
+.left td {
+    font-family: Roboto;
+    font-style: normal;
+    /*font-weight: bold;*/
+}
+
+@media(max-width: 960px) {
+    .left h3 {
         font-size: 15px;
     }
 
-    #propo-input {
-        width: 90%;
+    .left td {
+        font-size: 10px;
     }
 
-    .link-input {
-        width: 80%;
+    .left .link_input {
+        width: 100%;
+        margin-bottom: 5px;
+        font-size: 10px;
+        /*text-align: left;*/
     }
 }
 
-#proposal-btn {
-    width: 25%;
-    height: 35px;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
+.btn-area {
+    margin-top: 30px;
+    float: right;
+}
+
+.custom-btn {
+    width: 300px;
+    height: 45px;
+    box-shadow: 0px 4px 23px rgba(0, 0, 0, 0.11);
+    border-radius: 15px;
     border: transparent;
-    border-radius: 10px;
-    text-align: center;
     color: white;
-    font-size: 15px;
-    font-family: Roboto;
-    font-style: normal;
+    font-size: 20px;
+
 }
 
-@media(max-width: 960px){
-    #proposal-btn{
-        width: 60%;
+@media (max-width: 960px) {
+    .custom-btn {
+        width: 150px;
+        height: 30px;
+        font-size: 15px;
     }
 }
 
-/*-------------- PROPOSAL AREA CSS END --------------*/
+.cancel-btn {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+.save-btn {
+    background: linear-gradient(180deg, #F67E7D 0%, #FEB595 100%);
+}
+
+.save-btn:hover {
+    background: linear-gradient(180deg, #F67E7D 100%, #FEB595 0%);
+
+}
+
+#team-info-btn {
+    width: 350px;
+    height: 33px;
+    font-size: 16px;
+}
+
+@media(max-width: 960px) {
+    #team-info-btn {
+        width: 250px;
+        font-size: 12px;
+        height: 30px;
+    }
+}
+
+/*-------------- Column & Row CSS START -------------- */
 
 /*-------------- FOOTER AREA CSS START --------------*/
 .footer-area {
@@ -1221,6 +948,7 @@ input:focus {
 
 .single-footer-widget ul li {
     font-size: 18px;
+    list-style-type: none;
 }
 
 @media (max-width: 991.98px) {

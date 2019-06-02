@@ -25,11 +25,25 @@
                 <tr>
                     <td>{{ $team->id }}</td>
                     <td>
-                        <a href="#">
+                        <a href="/maribakuhantam/team/{{ $team->id }}">
                             {{ $team->namaTim }}
                         </a>
                     </td>
-                    <td>{{ $team->jenisTim }}</td>
+                    <td>
+                        @switch($team->jenisTim)
+                        @case(1)
+                        Appstoday
+                        @break
+                        @case(2)
+                        Hacktoday
+                        @break
+                        @case(3)
+                        Data Science
+                        @break
+                        @default
+                        Ada yang error
+                        @endswitch
+                    </td>
                     <td>
                         @if ($team->verifSKMAKetua == true)
                         Sudah
