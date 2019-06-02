@@ -462,6 +462,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     float: right;
     width: 50%;
     height: 100%;
+    /*border: 1px solid black;*/
 }
 
 
@@ -512,7 +513,6 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .nav-list {
-    /*margin-left: -40px;*/
     margin-bottom: 10px;
     align-items: left;
     text-align: left;
@@ -601,10 +601,6 @@ input:focus {
     .input-form {
         padding: 0% 5%;
     }
-
-    /*    .input-form div.alert {
-        font-size: 13px;
-    }*/
 }
 
 .label {
@@ -694,10 +690,9 @@ input:focus {
 /*------------ VERIFY EMAIL CSS START ------------ */
 
 .verify {
-    /*border: 1px solid black;*/
     position: relative;
     width: 65%;
-    height: 80%;
+    height: 70%;
     top: 15%;
     left: 18%;
     background: #FFFFFF;
@@ -708,109 +703,58 @@ input:focus {
     text-align: center;
 }
 
-.inner-verify {
-    /*border: 1px solid black;*/
-    position: absolute;
-    float: center;
-    top: 13%;
-    left: 4%;
-    width: 90%;
-    height: 50%;
-    background: url(../img/verifylogo.png) center no-repeat;
-    background-size: 30% 100%;
-}
-
 .content-verify {
     width: 100%;
     height: 100%;
-    top: 50%;
-    left: 10%;
-    /*border: 1px solid black;*/
 }
 
-.content-verify p {
-    margin-top: 10px;
-    position: absolute;
-    top: 58%;
-    left: 10%;
-    right: 10%;
+.content-verify h3 {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    color: #F67E7D;
+}
+
+.verify-img {
+    height: 50%;
+    width: 100%;
+    background: url(../img/verifylogo.png) center no-repeat;
+    background-size: auto 100%;
+}
+
+@media(max-width: 960px){
+    .verify-img {
+        background-size: auto 70%;
+    }
+}
+
+.verify-form {
+    padding: 0% 10%;
+    text-align: center;
+}
+
+
+.verify-form p {
     font-family: Roboto;
     font-style: normal;
     font-weight: normal;
-    font-size: 26px;
-    line-height: 33px;
-    text-align: center;
+    font-size: 25px;
     color: #F67E7D;
 }
 
 .btn-verify {
-    position: absolute;
-    top: 81%;
-    left: 28%;
-    width: 45%;
-    height: 8%;
+    width: 300px;
+    margin: 0 auto;
+    position: relative;
     background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
     box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
     border: transparent;
     border-radius: 25px;
-    text-align: center;
     padding-top: 3px;
 }
 
-.btn-verify a {
-    position: relative;
-    top: 20%;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 26px;
-    color: #FFF4E3;
-}
-
-.content-verify h3 {
-    position: absolute;
-    top: 6%;
-    left: 28%;
-    right: 28%;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 50px;
-    line-height: 84px;
-    color: #F67E7D;
-}
-
-.verify-form {
-    text-align: center;
-}
-
-.verify-form button {
-    position: absolute;
-    top: 81%;
-    left: 28%;
-    width: 45%;
-    height: 8%;
-    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-    border-radius: 25px;
-    border: transparent;
-    font-family: Roboto;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 15px;
-    color: #FFF4E3;
-    margin-bottom: 5px;
-    moz-transition: all .4s ease-in-out;
-    -o-transition: all .4s ease-in-out;
-    -webkit-transition: all .4s ease-in-out;
-    transition: all .4s ease-in-out;
-}
-
-.verify-form button:focus {
-    outline: none;
-}
-
-.verify-form button:hover {
+.btn-verify:hover {
     background-position: 100% 0;
     moz-transition: all .4s ease-in-out;
     -o-transition: all .4s ease-in-out;
@@ -819,9 +763,19 @@ input:focus {
     background: linear-gradient(90deg, #FEB595 3.13%, #F67E7D 97.6%);
 }
 
+.btn-verify a {
+    font-family: Roboto;
+    font-style: normal;
+    font-size: 20px;
+    color: #FFF4E3;
+}
+
+.btn-verify a:hover {
+    color: white;
+}
+
 @media (max-width: 960px) {
     .verify {
-
         position: relative;
         width: 75%;
         height: 80%;
@@ -834,81 +788,44 @@ input:focus {
         padding: 15px;
     }
 
-    .inner-verify {
-        position: absolute;
-        float: center;
-        top: 18%;
-        left: 4%;
-        width: 100%;
-        height: 50%;
-        background: url(../img/verifylogo.png) center no-repeat;
-        background-size: 80% auto;
-    }
-
     .content-verify {
-        width: 70%;
+        width: 100%;
         height: 100%;
-        top: 50%;
-        left: 10%;
     }
 
     .content-verify h3 {
-        position: absolute;
-        top: 22%;
-        left: 28%;
         text-align: center;
         font-family: Roboto;
         font-style: normal;
         font-weight: bold;
-        font-size: 30px;
-        line-height: 84px;
-
+        font-size: 18px;
         color: #F67E7D;
     }
 
-    .content-verify p {
-        position: absolute;
+    .verify-form {
+        padding: 0%;
+    }
 
-        top: 54%;
-        left: 10%;
-        right: 10%;
-
+    .verify-form p {
         font-family: Roboto;
         font-style: normal;
         font-weight: normal;
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 15px;
         text-align: center;
-
         color: #F67E7D;
     }
 
     .btn-verify {
-        position: absolute;
-        top: 70%;
-        left: 20%;
-        width: 60%;
-        height: 6%;
-        background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
-        box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
-        border: transparent;
-        border-radius: 25px;
-        text-align: center;
-        padding-top: 3px;
+        width: 90%;
+        padding-top: 0;
     }
 
     .btn-verify a {
-        position: relative;
-        top: 20%;
-        font-family: Roboto;
-        font-style: normal;
-        font-weight: 500;
         font-size: 15px;
-        color: #FFF4E3;
     }
-
-
 }
+
+/*------------ VERIFY EMAIL CSS END ------------ */
 
 .lower-form button {
     width: 100%;
@@ -954,16 +871,108 @@ input:focus {
     }
 }
 
-/*------------ VERIFY EMAIL CSS END ------------ */
 
-/*------------ CUSTOM RESET PASSWORD BUTTON CSS START ------------ */
+/*------------  RESET PASSWORD CSS START ------------ */
+.reset-content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.inner-reset-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+.inner-reset-content h3 {
+    font-family: Roboto;
+    font-style: normal;
+    color: #F67E7D;
+    font-size: 25px;
+}
+
+@media(max-width: 960px) {
+    .inner-reset-content {
+        width: 90%;
+    }
+    .inner-reset-content h3 {
+        font-size: 20px;
+    }
+}
+
+.inner-email-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 70%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+@media(max-width: 960px) {
+    .inner-email-content {
+        width: 90%;
+        height: 80%;
+    }
+}
+
+.inner-email-content h3 {
+    font-family: Roboto;
+    font-style: normal;
+    color: #F67E7D;
+    font-size: 20px;
+}
+
+#reset-password-btn {
+    margin-top: 30px;
+}
+
+#reset-password-btn button {
+    width: 100%;
+    height: 35px;
+    background: linear-gradient(90deg, #F67E7D 3.13%, #FEB595 97.6%);
+    box-shadow: 0px 7px 11px rgba(0, 0, 0, 0.2);
+    border-radius: 25px;
+    border: transparent;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    color: #FFF4E3;
+    /*margin-bottom: 5px;*/
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+}
+
 @media (max-width: 960px) {
     #reset-password-btn button {
         font-size: 12px;
     }
 }
 
-/*------------ CUSTOM RESET PASSWORD BUTTON CSS END ------------ */
+#reset-password-btn button:focus {
+    outline: none;
+}
+
+#reset-password-btn button:hover {
+    background-position: 100% 0;
+    moz-transition: all .4s ease-in-out;
+    -o-transition: all .4s ease-in-out;
+    -webkit-transition: all .4s ease-in-out;
+    transition: all .4s ease-in-out;
+    background: linear-gradient(90deg, #FEB595 3.13%, #F67E7D 97.6%);
+}
+
+/*------------  RESET PASSWORD CSS END ------------ */
 
 /*-------------- PAYMENT AREA CSS START --------------*/
 
@@ -1076,13 +1085,14 @@ input:focus {
 }
 
 .berkas-wrapper hr {
-    border: 1px solid rgba(0, 0, 0, 0.2);;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    ;
 
 }
 
-#nama-berkas{
-        height: 25px;
-        width: 50%;
+#nama-berkas {
+    height: 25px;
+    width: 50%;
 }
 
 #berkas-input {
@@ -1108,7 +1118,7 @@ input:focus {
         font-size: 15px;
     }
 
-    #nama-berkas{
+    #nama-berkas {
         width: 90%;
     }
 
@@ -1135,8 +1145,8 @@ input:focus {
     font-style: normal;
 }
 
-@media(max-width: 960px){
-    #berkas-btn{
+@media(max-width: 960px) {
+    #berkas-btn {
         width: 60%;
     }
 }

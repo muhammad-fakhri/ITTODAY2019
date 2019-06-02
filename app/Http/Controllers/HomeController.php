@@ -10,6 +10,7 @@ use App\Team;
 use Auth;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
+use Validator;
 
 class HomeController extends Controller {
 	/**
@@ -197,7 +198,27 @@ class HomeController extends Controller {
 	}
 
 	public function updateDataTeam(Request $req, $id) {
+		$messages = [
+			// 'unique' => 'Nama tim ini sudah dipakai, silakan gunakan nama tim yang lain.',
+			'max' => 'Jumlah maksimal karakter untuk nama tim adalah 50, mohon pilih nama tim yang lain.',
+			'namaTim.required' => 'Mohon masukkan nama tim yang kurang dari 50 karakter.',
+		];
+
+		$validator = Validator::make($req->all(), [
+			'namaTim' => 'required|max:50',
+			'jenisTim' => 'required',
+		], $messages)->validate();
+
 		$Team = Team::find($id);
+		$data = Team::where('namaTim', '=', $req->namaTim)->first();
+		// dd($data);
+		//kalo udh ada yang make nama tim nya (unique custom validator)
+		if ($data) {
+			if ($Team->id != $data->id) {
+				return redirect()->back()->with('alert', 'Nama tim ini sudah dipakai, silakan gunakan nama tim yang lain.');
+			}
+		}
+
 		$Team->namaTim = $req->namaTim;
 		$Team->jenisTim = $req->jenisTim;
 		$Team->save();
@@ -218,7 +239,7 @@ class HomeController extends Controller {
 		$berkas = Berkas::where('idTim', '=', $id)->first();
 		$berkas->namaTim = $req->namaTim;
 		$berkas->jenisTim = $req->jenisTim;
-		
+
 		// jika jenis tim berganti dari appstoday ke mata lomba lain
 		//maka linkVideo akan dihapus
 		if ($req->jenisTim != 1) {

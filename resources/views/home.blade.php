@@ -1,7 +1,7 @@
 @extends('layouts.mainHome')
 @section('content')
 <p id="user-welcome">Halo, {{ Auth::user()->name }}</p>
-<div class="row">
+<div class="row"> 
     <div class="column">
         <div class="box">
             <a href="/data-diri/ketua-tim">

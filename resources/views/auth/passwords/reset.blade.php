@@ -1,6 +1,7 @@
 @extends('layouts.mainAuth')
 @section('content')
-    <div class=" verify-content">
+<div class="reset-content">
+    <div class="inner-email-content">
         <h3>Setel Ulang Kata Sandi</h3>
         <form action="{{ route('password.update') }}" method="POST">
             @csrf
@@ -29,4 +30,5 @@
             </div>
         </form>
     </div>
+</div>
 @endsection

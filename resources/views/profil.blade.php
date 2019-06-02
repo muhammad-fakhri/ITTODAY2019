@@ -56,114 +56,7 @@
             @endif" disabled>
             <input type="file" name="foto" class="input_file"><br>
             <hr>
-            <h3>Status Verifikasi</h3>
-            <table>
-                <tr>
-                    <td>Foto 3x4</td>
-                    <td>:</td>
-                    <td>
-                        @switch($profil_page)
-                        @case(1)
-                        @if ($Team->verifFotoKetua == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @break
-                        @case(2)
-                        @if ($Team->verifFoto1 == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @break
-                        @case(3)
-                        @if ($Team->verifFoto2 == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @break
-                        @default
-                        @if ($Team->verifFotoKetua == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @endswitch
-                    </td>
-                </tr>
-                <tr>
-                    <td>Bukti Mahasiswa/Siswa</td>
-                    <td>:</td>
-                    <td>
-                        @switch($profil_page)
-                        @case(1)
-                        @if ($Team->verifSKMAKetua == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @break
-                        @case(2)
-                        @if ($Team->verifSKMA1 == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @break
-                        @case(3)
-                        @if ($Team->verifSKMA2 == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @break
-                        @default
-                        @if ($Team->verifSKMAKetua == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @endswitch
-                    </td>
-                </tr>
-                <tr>
-                    <td>KTM/Kartu Pelajar</td>
-                    <td>:</td>
-                    <td>
-                        @switch($profil_page)
-                        @case(1)
-                        @if ($Team->verifKTMKetua == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @break
-                        @case(2)
-                        @if ($Team->verifKTM1 == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @break
-                        @case(3)
-                        @if ($Team->verifKTM2 == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @break
-                        @default
-                        @if ($Team->verifKTMKetua == 1)
-                        Sudah
-                        @else
-                        Belum
-                        @endif
-                        @endswitch
-                    </td>
-                </tr>
-            </table>
+            @include('layouts.statusVerif')
         </div>
         <div class="right">
             <label class="label">Nama Lengkap</label><br>
@@ -206,16 +99,17 @@
             @if ($Peserta->namaSKMA && $Peserta->alamatSKMA)
             {{ Storage::url($Peserta->alamatSKMA) }}
             @else
-            {{ url('img/gallery/3.JPG') }}
+            {{ url('img/default_file.jpg') }}
             @endif
             " class="berkas-image">
-            <input type="file" name="skma" class="input_file"><br>
+            <input type="file" name="skma" class="input_file" id="aboveSmall"><br>
+            <p id="small">**Surat keterangan mahasiswa aktif / Kartu Rencana Studi (mahasiswa) / Surat keterangan aktif siswa</p><br>
             <label class="label">Scan KTM/Kartu Pelajar</label><br>
             <img src="
                         @if ($Peserta->namaKTM && $Peserta->alamatKTM)
             {{ Storage::url($Peserta->alamatKTM) }}
             @else
-            {{ url('img/gallery/3.JPG') }}
+            {{ url('img/default_file.jpg') }}
             @endif
             " class="berkas-image">
             <input type="file" name="ktm" class="input_file"><br>

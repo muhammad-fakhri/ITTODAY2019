@@ -7,7 +7,7 @@
         @if ($Bayar->alamatBayar)
         	{{ Storage::url($Bayar->alamatBayar) }}
         @else
-        	{{ url('img/gallery/4.jpg') }}
+        	{{ url('img/default_file.jpg') }}
         @endif
         ">
     </div>
