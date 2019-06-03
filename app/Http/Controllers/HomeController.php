@@ -69,6 +69,18 @@ class HomeController extends Controller {
 	}
 
 	public function postPembayaran(Request $req) {
+		//pesan validasi
+		$messages = [
+			'bayar.max' => 'Ukuran maksimal berkas pembayaran yang bisa di upload adalah 2MB, mohon ganti atau resize berkas pembayaran.',
+			'bayar.image' => 'Berkas pembayaran harus dalam format jpeg, png, jpg, atau svg.',
+			'bayar.mimes:jpeg,png,jpg,svg' => 'Berkas pembayaran harus dalam format jpeg, png, jpg, atau svg.',
+		];
+
+		//validasi input
+		$validator = Validator::make($req->all(), [
+			'bayar' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+		], $messages)->validate();
+
 		$user = Auth::user();
 		$bayar = Bayar::where('idTim', '=', $user->idTim)->first();
 		// dd($bayar);
@@ -79,7 +91,10 @@ class HomeController extends Controller {
 				$bayar->namaBayar == null;
 				$bayar->alamatBayar == null;
 			}
-			$pathBayar = $uploadedBayar->store('public/bayar');
+			//using symlink
+			// $pathBayar = $uploadedFoto->store('public/bayar');
+			//not using symlink
+			$pathBayar = $uploadedBayar->store('bayar');
 			$bayar->namaBayar = $uploadedBayar->getClientOriginalName();
 			$bayar->alamatBayar = $pathBayar;
 		}
@@ -109,8 +124,17 @@ class HomeController extends Controller {
 	}
 
 	public function postBerkas(Request $req) {
+		//pesan validasi
+		$messages = [
+			'berkas.max' => 'Ukuran berkas yang bisa diupload adalah maksimal 10MB',
+		];
+
+		//validasi input
+		$validator = Validator::make($req->all(), [
+			'berkas' => 'max:10240',
+		], $messages)->validate();
+
 		$data = Berkas::where('idTim', '=', Auth::user()->idTim)->first();
-		// dd($data);
 		$uploadedBerkas = $req->file('berkas');
 		if ($uploadedBerkas) {
 			if ($data->namaBerkas && $data->alamatBerkas) {
@@ -118,7 +142,10 @@ class HomeController extends Controller {
 				$data->namaBerkas == null;
 				$data->alamatBerkas == null;
 			}
-			$pathBerkas = $uploadedBerkas->store('public/berkas');
+			//using symlink
+			// $pathBerkas = $uploadedBerkas->store('public/berkas');
+			//not using symlink
+			$pathBerkas = $uploadedBerkas->store('upload_berkas');
 			$data->namaBerkas = $uploadedBerkas->getClientOriginalName();
 			$data->alamatBerkas = $pathBerkas;
 		}
@@ -128,6 +155,24 @@ class HomeController extends Controller {
 	}
 
 	public function updateDataDiri(Request $req, $key, $id) {
+		//pesan validasi
+		$messages = [
+			'foto.max' => 'Ukuran maksimal foto yang diupload adalah 2MB, mohon ganti atau resize foto terlebih dahulu.',
+			'foto.image' => 'Berkas foto harus dalam format jpeg, png, jpg, atau svg.',
+			'foto.mimes:jpeg,png,jpg,svg' => 'Berkas foto harus dalam format jpeg, png, jpg, atau svg.',
+			'ktm.max' => 'Ukuran maksimal foto yang diupload adalah 2MB, mohon ganti atau resize foto terlebih dahulu.',
+			'ktm.image' => 'Berkas KTM harus dalam format jpeg, png, jpg, atau svg.',
+			'ktm.mimes:jpeg,png,jpg,svg' => 'Berkas KTM harus dalam format jpeg, png, jpg, atau svg.',
+			'skma.max' => 'Ukuran maksimal berkas yang diupload adalah 2MB, mohon ganti atau kompres terlebih dahulu.',
+		];
+
+		//validasi input
+		$validator = Validator::make($req->all(), [
+			'foto' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+			'ktm' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+			'skma' => 'max:2048',
+		], $messages)->validate();
+
 		switch ($key) {
 		case 1:
 			$data = KetuaTim::find($id);
@@ -166,7 +211,10 @@ class HomeController extends Controller {
 				$data->namaFoto == null;
 				$data->alamatFoto == null;
 			}
-			$pathFoto = $uploadedFoto->store('public/foto');
+			//using symlink
+			// $pathFoto = $uploadedFoto->store('public/foto');
+			//not using symlink
+			$pathFoto = $uploadedFoto->store('foto');
 			$data->namaFoto = $uploadedFoto->getClientOriginalName();
 			$data->alamatFoto = $pathFoto;
 		}
@@ -177,7 +225,10 @@ class HomeController extends Controller {
 				$data->namaSKMA == null;
 				$data->alamatSKMA == null;
 			}
-			$pathSKMA = $uploadedSKMA->store('public/skma');
+			//using symlink
+			// $pathSKMA = $uploadedSKMA->store('public/skma');
+			//not using symlink
+			$pathSKMA = $uploadedSKMA->store('skma');
 			$data->namaSKMA = $uploadedSKMA->getClientOriginalName();
 			$data->alamatSKMA = $pathSKMA;
 		}
@@ -188,7 +239,10 @@ class HomeController extends Controller {
 				$data->namaKTM == null;
 				$data->alamatKTM == null;
 			}
-			$pathKTM = $uploadedKTM->store('public/ktm');
+			//using symlink
+			// $pathKTM = $uploadedKTM->store('public/ktm');
+			//not using symlink
+			$pathKTM = $uploadedKTM->store('ktm');
 			$data->namaKTM = $uploadedKTM->getClientOriginalName();
 			$data->alamatKTM = $pathKTM;
 		}
@@ -199,8 +253,7 @@ class HomeController extends Controller {
 
 	public function updateDataTeam(Request $req, $id) {
 		$messages = [
-			// 'unique' => 'Nama tim ini sudah dipakai, silakan gunakan nama tim yang lain.',
-			'max' => 'Jumlah maksimal karakter untuk nama tim adalah 50, mohon pilih nama tim yang lain.',
+			'namaTim.max' => 'Jumlah maksimal karakter untuk nama tim adalah 50, mohon pilih nama tim yang lain.',
 			'namaTim.required' => 'Mohon masukkan nama tim yang kurang dari 50 karakter.',
 		];
 
@@ -211,11 +264,10 @@ class HomeController extends Controller {
 
 		$Team = Team::find($id);
 		$data = Team::where('namaTim', '=', $req->namaTim)->first();
-		// dd($data);
 		//kalo udh ada yang make nama tim nya (unique custom validator)
 		if ($data) {
 			if ($Team->id != $data->id) {
-				return redirect()->back()->with('alert', 'Nama tim ini sudah dipakai, silakan gunakan nama tim yang lain.');
+				return redirect()->back()->with('alert-udh', 'Nama tim ini sudah dipakai, silakan gunakan nama tim yang lain.');
 			}
 		}
 
