@@ -45,7 +45,14 @@ return [
 
         'local' => [
             'driver' => 'local',
-            'root' => storage_path('app'),
+            //uncheck to your need
+            
+            // original Root
+            // 'root' => storage_path('app'),
+            // Hosting Root
+            // 'root' => '/home/ittodayw/public_html',
+            // Local Machine Root
+            'root' => 'D:/Project/ITTODAY2019/public',
         ],
 
         'public' => [

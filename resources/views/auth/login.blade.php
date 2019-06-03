@@ -13,6 +13,7 @@
                             @endif
                             ">Masuk</a>
             </li>
+            @if (Route::has('register'))
             <li class="splitter">|</li>
             <li>
                 <a href="{{ route('register') }}" class="
@@ -23,6 +24,7 @@
                             @endif
                             ">Daftar</a>
             </li>
+            @endif
         </ul>
         <div class="form-group">
             <label for="email" class="label">Email</label>

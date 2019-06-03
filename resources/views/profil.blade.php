@@ -43,7 +43,7 @@
         <div class="left">
             <img src="
             @if ($Peserta->namaFoto && $Peserta->alamatFoto)
-                {{ Storage::url($Peserta->alamatFoto) }}
+                {{ asset($Peserta->alamatFoto) }}
             @else
                 {{ url('img/home/profil.png') }}
             @endif
@@ -94,27 +94,20 @@
             <input type="text" name="noWA" class="input" value="{{ $Peserta->noWA }}"><br>
             <label class="label">Id Line</label><br>
             <input type="text" name="idLine" class="input" value="{{ $Peserta->idLine }}"><br>
-            <label class="label">Berkas Bukti Mahasiswa/Siswa</label><br>
+            <label class="label">Foto KTM/Kartu Pelajar</label><br>
             <img src="
-            @if ($Peserta->namaSKMA && $Peserta->alamatSKMA)
-            {{ Storage::url($Peserta->alamatSKMA) }}
-            @else
-            {{ url('img/default_file.jpg') }}
-            @endif
-            " class="berkas-image">
-            <input type="file" name="skma" class="input_file" id="aboveSmall"><br>
-            <p id="small">**Surat keterangan mahasiswa aktif / Kartu Rencana Studi (mahasiswa) / Surat keterangan aktif siswa</p><br>
-            <label class="label">Scan KTM/Kartu Pelajar</label><br>
-            <img src="
-                        @if ($Peserta->namaKTM && $Peserta->alamatKTM)
-            {{ Storage::url($Peserta->alamatKTM) }}
+            @if ($Peserta->namaKTM && $Peserta->alamatKTM)
+                {{ asset($Peserta->alamatKTM) }}
             @else
             {{ url('img/default_file.jpg') }}
             @endif
             " class="berkas-image">
             <input type="file" name="ktm" class="input_file"><br>
+            <label class="label">Berkas Bukti Mahasiswa/Siswa</label><br>
+            <input type="text" value="{{ $Peserta->namaSKMA }}" class="link_input" disabled><br>
+            <input type="file" name="skma" class="input_file" id="aboveSmall"><br>
+            <p id="small">**Surat keterangan mahasiswa aktif / Kartu Rencana Studi (mahasiswa) / Surat keterangan aktif siswa</p><br>
             <div class="btn-area">
-                {{-- <button class="cancel-btn custom-btn">Batal</button> --}}
                 <button class="save-btn custom-btn">Simpan</button>
             </div>
         </div>

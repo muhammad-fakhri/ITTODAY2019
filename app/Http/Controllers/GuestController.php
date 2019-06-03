@@ -38,16 +38,16 @@ class GuestController extends Controller
 
 	public function downApps()
 	{
-		return Storage::download('public/RULEBOOK_APPSTODAY.pdf');
+		return Storage::download('rulebook/RULEBOOK_APPSTODAY.pdf');
 	}
 
 	public function downHack()
 	{
-		return Storage::download('public/RULEBOOK_HACKTODAY.pdf');
+		return Storage::download('rulebook/RULEBOOK_HACKTODAY.pdf');
 	}
 
 	public function downDSC()
 	{
-		return Storage::download('public/RULEBOOK_DSC.pdf');
+		return Storage::download('rulebook/RULEBOOK_DSC.pdf');
 	}
 }
