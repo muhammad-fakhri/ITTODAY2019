@@ -65,6 +65,12 @@
                 </p>
             </div>
             @endif
+            @error('bayar')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            @error('berkas')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         @include('layouts.nav')
         <div class="outer-wrapper">

@@ -22,18 +22,23 @@
 <body>
     <div class="big-wrapper">
         <div class="nav-fake">
-            @if ($errors->any())
-                <div class="alert alert-danger" role="alert">
-                    @foreach ($errors->all() as $error)
-                        {{ $error }}
-                    @endforeach
-                </div>
+            @if (session('alert-udh'))
+            <div class="alert alert-danger" role="alert">
+                {{ session('alert-udh') }}
+            </div>
             @endif
-            @if (session('alert'))
-                <div class="alert alert-danger" role="alert">
-                {{ session('alert') }}
-                </div>
-            @endif
+            @error('namaTim')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            @error('foto')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            @error('ktm')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
+            @error('skma')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
         </div>
         @include('layouts.nav')
         <div class="outer-wrapper">

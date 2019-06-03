@@ -5,7 +5,7 @@
     <div id="payment-img">
         <img src="
         @if ($Bayar->alamatBayar)
-        	{{ Storage::url($Bayar->alamatBayar) }}
+            {{ asset($Bayar->alamatBayar) }}
         @else
         	{{ url('img/default_file.jpg') }}
         @endif

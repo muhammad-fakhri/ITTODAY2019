@@ -14,12 +14,15 @@
         @endif
         <input type="text" value="{{ $Berkas->namaBerkas }}" disabled placeholder="nama berkas" id="nama-berkas"><br>
         <input type="file" name="berkas" id="berkas-input"><br>
-        <div @if ($Lomba !=1) style="display: none;" @endif>
+        <small>*ukuran berkas maksimum 10MB</small>
+        @if ($Lomba == 1 )
             <hr>
             <p>Lampirkan link videomu disini</p>
             <input type="text" name="linkVideo" class="link-input" value="{{ $Berkas->linkVideo }}"><br>
             <button id="berkas-btn" type="submit">Simpan</button>
-        </div>
+        @else 
+            <button id="berkas-btn" type="submit">Simpan</button>
+        @endif
     </form>
 </div>
 @endsection
