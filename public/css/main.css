@@ -2572,7 +2572,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 /*------ BANNER AREA AND CONTENT CSS END ------*/
 
 .header-btn {
-    background: #FFBB8E;
+    background: linear-gradient(90deg, #F67E7D 0%, #FFB997 100%);
     width: 200px;
     height: 40px;
     padding-left: 30px;
@@ -2602,9 +2602,9 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .header-btn:hover {
-    border: 1px solid #FFBB8E;
+    border: 1px solid #F67E7D;
     background: #FFFFFF;
-    color: #FFBB8E !important;
+    color: #F67E7D !important;
 }
 
 .single-product {
@@ -2814,7 +2814,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 .home-about-right .primary-btn {
     border-radius: 25px;
-    background: #FFBB8E;
+    background: linear-gradient(90deg, #F67E7D 0%, #FFB997 100%);
     border: 1px solid transparent;
     color: #FFFFFF;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
@@ -2823,24 +2823,25 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .home-about-right .primary-btn:hover {
-    border: 1px solid #FFBB8E;
+    border: 1px solid #F67E7D;
     background: #FFFFFF;
-    color: #FFBB8E !important;
+    color: #F67E7D !important;
 }
 
 .home-about-left .primary-btn {
     border-radius: 25px;
-    background: #FFBB8E;
+    background: linear-gradient(90deg, #F67E7D 0%, #FFB997 100%);
     border: 1px solid transparent;
     color: #fff;
     box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.25);
     text-align: center;
+    font-weight: bold;
 }
 
 .home-about-left .primary-btn:hover {
-    border: 1px solid #FFBB8E;
+    border: 1px solid #F67E7D;
     background: #FFFFFF;
-    color: #FFBB8E !important;
+    color: #F67E7D !important;
 }
 
 

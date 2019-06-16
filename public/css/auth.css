@@ -997,6 +997,7 @@ input:focus {
     font-weight: 500;
     font-size: 25px;
     color: #F67E7D;
+    /*margin-top: 10px;*/
 }
 
 @media(max-width: 960px) {
@@ -1038,14 +1039,19 @@ input:focus {
 }
 
 #payment-img {
-    height: 300px;
+    height: 250px;
     width: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
     /*border: 1px solid green;*/
 }
 
 #payment-img img {
-    width: 100%;
-    height: 300px;
+    /*display: block;*/
+    /*margin: auto;*/
+    height: 250px;
+    width: 80%;
 }
 
 @media (max-width: 960px) {
@@ -1055,6 +1061,7 @@ input:focus {
 
     #payment-img img {
         height: 150px;
+        width: 100%;
     }
 }
 
