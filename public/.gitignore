@@ -1,7 +1,5 @@
-*
-!bayar/*
-!foto/*
-!ktm/*
-!skma/*
-!upload_berkas/*
-!.gitignore
+/bayar
+/foto
+/ktm
+/skma
+/upload_berkas
