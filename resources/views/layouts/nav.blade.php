@@ -36,7 +36,7 @@
                     <li class="menu-has-children">
                         <a style="color: white;" class="nav-menu-1">{{ Auth::user()->name }}</a>
                         <ul>
-                            <li><a href="/home">Home</a></li>
+                            <li><a href="/home">Dashboard</a></li>
                             <li><a href="/data-diri/ketua-tim">Data Tim</a></li>
                             <li><a href="{{ route('bayar') }}">Pembayaran</a></li>
                             <li>

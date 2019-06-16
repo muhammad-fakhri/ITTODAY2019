@@ -40,7 +40,7 @@
                 <h1 class="text-center">Timeline Hacktoday</h1>
             </div>
         </div>
-        <img class="timeline-img" src="{{ asset('img/timeline-hack.png') }}" alt="timeline hacktoday" id="timeline-hacktoday">
+        <img class="timeline-img" src="{{ asset('img/timeline/timeline-hack.jpg') }}" alt="timeline hacktoday" id="timeline-hacktoday">
         <!-- Timeline End -->
         <!-- FAQ Start -->
         <div class="row faq-wrapper">

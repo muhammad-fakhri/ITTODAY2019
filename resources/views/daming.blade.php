@@ -40,7 +40,7 @@
                 <h1 class="text-center">Timeline Data Science Competition</h1>
             </div>
         </div>
-        <img class="timeline-img" src="{{ asset('img/timeline-dsc.png') }}" alt="timeline data science competition" id="timeline-dsc">
+        <img class="timeline-img" src="{{ asset('img/timeline/timeline-dsc.jpg') }}" alt="timeline data science competition" id="timeline-dsc">
         <!-- Timeline End -->
         <!-- FAQ Start -->
         <div class="row faq-wrapper">

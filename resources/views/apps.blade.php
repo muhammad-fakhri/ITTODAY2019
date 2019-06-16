@@ -41,7 +41,7 @@
             </div>
         </div>
         <div>
-            <img class="timeline-img" src="{{ asset('img/timeline-apps.png') }}" alt="timeline appstoday" id="timeline-appstoday">
+            <img class="timeline-img" src="{{ asset('img/timeline/timeline-apps.jpg') }}" alt="timeline appstoday" id="timeline-appstoday">
         </div>
         <!-- Timeline End -->
         <!-- FAQ Start -->
@@ -148,7 +148,7 @@
                         </div>
                         <div id="collapseSeven" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
-                                Biaya pendaftaran untuk mengikuti kompetisi AppsToday adalah sebesar Rp. 100.000,00 yang harus dibayarkan dan mengirimkan bukti pembayaran sebelum pendaftaran ditutup. Apabila peserta tidak melakukan hal diatas, maka peserta dianggap gugur dari rangkaian kompetisi. Tata cara pembayaran yang sah dapat dilihat pada rulebook yang dapat di unduh pada website ittoday.web.id. 
+                                Biaya pendaftaran untuk mengikuti kompetisi AppsToday adalah sebesar Rp. 100.000,00 yang harus dibayarkan dan mengirimkan bukti pembayaran sebelum pendaftaran ditutup. Apabila peserta tidak melakukan hal diatas, maka peserta dianggap gugur dari rangkaian kompetisi. Tata cara pembayaran yang sah dapat dilihat pada rulebook yang dapat di unduh pada website ittoday.web.id.
                             </div>
                         </div>
                     </div>
