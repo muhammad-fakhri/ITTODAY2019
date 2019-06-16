@@ -28,7 +28,7 @@ class HomeController extends Controller {
 	 * @return \Illuminate\Contracts\Support\Renderable
 	 */
 	public function index() {
-		return view('home', ['title' => 'IT TODAY 2019', 'tipe' => true]);
+		return view('home', ['title' => 'Dashboard | IT TODAY 2019', 'tipe' => true]);
 	}
 
 	public function showDataDiri($key) {
