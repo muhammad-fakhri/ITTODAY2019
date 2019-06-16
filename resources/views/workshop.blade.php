@@ -65,7 +65,7 @@
                 <h1 class="text-center">Timeline Workshop</h1>
             </div>
         </div>
-            <img class="timeline-img" src="{{ asset('img/timeline-workshop.png') }}" alt="timeline workshop" id="timeline-workshop">
+            <img class="timeline-img" src="{{ asset('img/timeline/timeline-workshop.jpg') }}" alt="timeline workshop" id="timeline-workshop">
         <!-- Timeline End -->
     </div>
 </section>

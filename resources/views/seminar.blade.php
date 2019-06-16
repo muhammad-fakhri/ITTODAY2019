@@ -64,7 +64,7 @@
                 <h1 class="text-center">Timeline Seminar Nasional</h1>
             </div>
         </div>
-            <img class="timeline-img" src="{{ asset('img/timeline-seminar.png') }}" alt="timeline seminar nasional" id="timeline-seminar">
+            <img class="timeline-img" src="{{ asset('img/timeline/timeline-seminar.jpg') }}" alt="timeline seminar nasional" id="timeline-seminar">
         <!-- Timeline End -->
     </div>
 </section>
