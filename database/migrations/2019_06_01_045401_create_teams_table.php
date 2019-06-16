@@ -29,6 +29,7 @@ class CreateTeamsTable extends Migration
             $table->boolean('verifSKMA2')->default(false);
             $table->boolean('verifKTM2')->default(false);
             $table->boolean('verifFoto2')->default(false);
+            $table->boolean('verifBayar')->default(false);
             $table->timestamps();
         });
     }
