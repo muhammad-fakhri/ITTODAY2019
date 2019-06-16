@@ -62,11 +62,11 @@
                     <input type="hidden" name="_method" value="put">
                     <div class="row">
                         <div class="col">
-                            <label class="label">Nama Tim</label><br>
+                            <label class="label team-label">Nama Tim</label><br>
                             <input type="text" name="namaTim" class="input" value="{{ $Team->namaTim }}">
                         </div>
                         <div class="col">
-                            <label class="label">Cabang Kompetisi</label><br>
+                            <label class="label team-label">Cabang Kompetisi</label><br>
                             <select class="select" name="jenisTim">
                                 <option value="0" @if ($Team->jenisTim == 0)
                                     selected

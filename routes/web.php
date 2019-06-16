@@ -28,7 +28,7 @@ Auth::routes(['verify' => true]);
 //Kalo mau matiin fungsi register
 // Auth::routes(['verify' => true, 'register'=>false]);
 
-Route::get('/home', 'HomeController@index')->name('home')->middleware('verified');
+Route::get('/dashboard', 'HomeController@index')->name('dash')->middleware('verified');
 Route::get('/data-diri/{key}', 'HomeController@showDataDiri')->name('data_diri')->middleware('verified');
 Route::put('/data-diri/{key}/{id}', 'HomeController@updateDataDiri')->middleware('verified');
 Route::put('/data-team/{id}', 'HomeController@updateDataTeam')->middleware('verified');
