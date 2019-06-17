@@ -469,6 +469,13 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 960px) {
 
+    .wrapper{
+        width: 90%;
+        height: 80%;
+        top: 10%;
+        left: 5%;
+    }
+
     .inner-wrapper {
         display: none;
     }
@@ -500,7 +507,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     .form-area {
         padding-left: 0;
         float: left;
-        width: 80%;
+        width: 95%;
         left: 50%;
         -webkit-transform: translateX(-50%) translateY(-50%);
         -ms-transform: translateX(-50%) translateY(-50%);
