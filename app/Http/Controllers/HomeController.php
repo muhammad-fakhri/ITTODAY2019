@@ -65,12 +65,14 @@ class HomeController extends Controller {
 	public function showPembayaran() {
 		$user = Auth::user();
 		$dataBayar = Bayar::where('idTim', '=', $user->idTim)->first();
+		$dataTeam = Team::where('id','=', $user->idTim)->first();
 		// dd($dataTeam);
 		return view('pembayaran', [
 			'title' => 'Pembayaran | IT TODAY 2019', 
 			'tipe' => true, 
 			'upload_page' => true, 
 			'Bayar' => $dataBayar,
+			'Team' => $dataTeam
 		]);
 	}
 
