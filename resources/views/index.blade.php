@@ -29,7 +29,7 @@
                 <img class="mx-auto d-block img-fluid" src="{{ asset('img/apps.png') }}" class="event-image" alt="appstoday">
             </div>
             <div class="col-lg-6 home-about-right no-padding">
-                <h1>Appstoday</h1>
+                <h1>AppsToday</h1>
                 <p>
                     AppsToday merupakan salah satu cabang kompetisi IT Today 2019 yang bisa menjadi wadah bagi peserta untuk menjadi generasi developer baru yang kreatif dan inovatif guna memajukan daya saing Indonesia di bidang TIK.
                 </p>
@@ -38,7 +38,7 @@
         </div>
         <div class="row ">
             <div class="col-lg-6 home-about-left no-padding" id="hacktoday-info">
-                <h1>Hacktoday</h1>
+                <h1>HackToday</h1>
                 <p>
                     HackToday atau yang lebih dikenal dengan Capture The Flag adalah salah satu cabang kompetisi IT Today 2019 dalam bidang keamanan teknologi informasi.
                 </p>

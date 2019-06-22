@@ -604,7 +604,8 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .input:focus {
-    background-color: #ffc9a5;
+    /*background-color: #ffc9a5;*/
+    background-color: #f7c1c0;
 }
 
 .input_date {
@@ -617,7 +618,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .input_date:focus {
-    background-color: #ffc9a5;
+    background-color: #f9cdcc;
 }
 
 .select {
@@ -630,7 +631,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .select:focus {
-    background-color: #ffc9a5;
+    background-color: #f9cdcc;
 }
 
 .input_file {

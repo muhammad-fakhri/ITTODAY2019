@@ -66,7 +66,7 @@
             @endif
         </div>
         
-        @include('layouts.nav', ['some' => 'data'])
+        @include('layouts.nav')
         <div class="outer-wrapper">
             <img src="{{ asset('img/bg.png') }}" alt="bg image">
 

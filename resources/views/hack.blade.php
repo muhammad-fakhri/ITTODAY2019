@@ -7,9 +7,9 @@
         <div class="row d-flex align-items-center justify-content-center">
             <div class="about-content col-lg-12">
                 <h1 class="text-white">
-                    Hacktoday
+                    HackToday
                 </h1>
-                <p class="text-white link-nav"><a href="/">Beranda </a> <span class="lnr lnr-arrow-right"></span> <a href="{{ route('hack') }}"> Hacktoday</a></p>
+                <p class="text-white link-nav"><a href="/">Beranda </a> <span class="lnr lnr-arrow-right"></span> <a href="{{ route('hack') }}"> HackToday</a></p>
             </div>
         </div>
     </div>
@@ -24,7 +24,7 @@
                 <img class="mx-auto d-block img-fluid" src="{{ asset('img/hack.png') }}" class="event-image" alt="hacktoday">
             </div>
             <div class="col-lg-6 home-about-right no-padding">
-                <h1>Hacktoday</h1>
+                <h1>HackToday</h1>
                 <p>
                     HackToday atau yang lebih dikenal dengan Capture The Flag adalah salah satu cabang kompetisi IT Today 2019 dalam bidang keamanan teknologi informasi. Dalam lomba ini, peserta diharuskan untuk mencari celah-celah keamanan jaringan sehingga peserta mampu untuk menembus target yang disediakan oleh panitia. Lomba HackToday yang diadakan IT Today 2019 bertujuan agar setiap peserta mampu mengembangkan kemampuannya pada bidang Information Security.
                 </p>
@@ -37,7 +37,7 @@
         <!-- Timeline Start -->
         <div class="row">
             <div class="col-lg-12 timeline-title">
-                <h1 class="text-center">Timeline Hacktoday</h1>
+                <h1 class="text-center">Timeline HackToday</h1>
             </div>
         </div>
         <img class="timeline-img" src="{{ asset('img/timeline/timeline-hack.jpg') }}" alt="timeline hacktoday" id="timeline-hacktoday">

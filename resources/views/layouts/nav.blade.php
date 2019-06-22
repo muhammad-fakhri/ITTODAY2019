@@ -9,8 +9,8 @@
                     <li class="menu-active"><a href="/" class="nav-menu-1">Beranda</a></li>
                     <li class="menu-has-children"><a style="color: white;" class="nav-menu-1">Kompetisi</a>
                         <ul>
-                            <li><a href="{{ route('apps') }}">Appstoday</a></li>
-                            <li><a href="{{ route('hack') }}">Hacktoday</a></li>
+                            <li><a href="{{ route('apps') }}">AppsToday</a></li>
+                            <li><a href="{{ route('hack') }}">HackToday</a></li>
                             <li><a href="{{ route('daming') }}">Data Science Competition</a></li>
                         </ul>
                     </li>
