@@ -93,6 +93,7 @@ class HomeController extends Controller {
 
 		$user = Auth::user();
 		$bayar = Bayar::where('idTim', '=', $user->idTim)->first();
+		$team = Team::where('id','=', $user->idTim)->first();
 		// dd($bayar);
 		$uploadedBayar = $req->file('bayar');
 		if ($uploadedBayar) {
@@ -109,6 +110,8 @@ class HomeController extends Controller {
 			$bayar->alamatBayar = $pathBayar;
 		}
 		$bayar->save();
+		$team->verifBayar = 2;
+		$team->save();
 		return redirect()->back();
 	}
 

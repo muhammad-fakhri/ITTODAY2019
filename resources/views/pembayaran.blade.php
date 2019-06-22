@@ -15,6 +15,8 @@
         <u>
             @if ($Team->verifBayar == 1)
             Sudah terverifikasi
+            @elseif($Team->verifBayar == 2)
+            Sedang diproses
             @else
             Belum terverifikasi
             @endif

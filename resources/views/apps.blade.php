@@ -142,7 +142,7 @@
                         <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
                                 <div class="faq-button collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    7. Berapa biaya pendaftaran untuk mengikuti kompeitisi AppsToday?
+                                    7. Berapa biaya pendaftaran untuk mengikuti kompetisi AppsToday?
                                 </div>
                             </h2>
                         </div>
