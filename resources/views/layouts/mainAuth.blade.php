@@ -65,6 +65,11 @@
                 </p>
             </div>
             @endif
+            @if (Session::has('alert-bayar'))
+            <div class="alert alert-danger" role="alert">
+                {{ Session::get('alert-bayar') }}
+            </div>
+            @endif
             @error('bayar')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror

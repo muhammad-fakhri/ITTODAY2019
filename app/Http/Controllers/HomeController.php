@@ -59,6 +59,7 @@ class HomeController extends Controller {
 			$data = $dataKetua;
 			break;
 		}
+		// dd($data);
 		return view('profil', ['title' => $title, 'tipe' => true, 'profil_page' => $number, 'Peserta' => $data, 'Team' => $dataTeam]);
 	}
 
@@ -66,7 +67,6 @@ class HomeController extends Controller {
 		$user = Auth::user();
 		$dataBayar = Bayar::where('idTim', '=', $user->idTim)->first();
 		$dataTeam = Team::where('id','=', $user->idTim)->first();
-		// dd($dataTeam);
 		return view('pembayaran', [
 			'title' => 'Pembayaran | IT TODAY 2019', 
 			'tipe' => true, 
@@ -82,21 +82,21 @@ class HomeController extends Controller {
 			'bayar.max' => 'Ukuran maksimal berkas pembayaran yang bisa di upload adalah 2MB, mohon ganti atau resize berkas pembayaran.',
 			'bayar.image' => 'Berkas pembayaran harus dalam format jpeg, png, jpg, atau svg.',
 			'bayar.mimes:jpeg,png,jpg,svg' => 'Berkas pembayaran harus dalam format jpeg, png, jpg, atau svg.',
-			'status_bayar.accepted' => 'Bukti pembayaran sudah terverifikasi, anda tidak diperkenankan untuk mengganti bukti pembayaran yang sudah ada.'
 		];
 
 		//validasi input
 		$validator = Validator::make($req->all(), [
 			'bayar' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
-			'status_bayar' => 'accepted'
 		], $messages)->validate();
 
 		$user = Auth::user();
 		$bayar = Bayar::where('idTim', '=', $user->idTim)->first();
 		$team = Team::where('id','=', $user->idTim)->first();
-		// dd($bayar);
 		$uploadedBayar = $req->file('bayar');
 		if ($uploadedBayar) {
+			if ($team->verifBayar == 1) {
+				return redirect()->back()->with('alert-bayar','Bukti pembayaran sudah terverifikasi, anda tidak diperkenankan untuk mengganti bukti pembayaran yang sudah ada.');
+			}
 			if ($bayar->namaBayar && $bayar->alamatBayar) {
 				Storage::delete($bayar->alamatBayar);
 				$bayar->namaBayar == null;
@@ -118,7 +118,6 @@ class HomeController extends Controller {
 	public function showBerkas() {
 		$jenisLomba = Auth::user()->jenisTim;
 		$dataBerkas = Berkas::where('idTim', '=', Auth::user()->idTim)->first();
-		// dd($dataBerkas);
 		switch ($jenisLomba) {
 		case 1:
 			$berkas = 'Proposal';
@@ -166,7 +165,7 @@ class HomeController extends Controller {
 		$data->save();
 		return redirect()->back();
 	}
-
+ 
 	public function updateDataDiri(Request $req, $key, $id) {
 		//pesan validasi
 		$messages = [
@@ -203,6 +202,10 @@ class HomeController extends Controller {
 			return redirect('/data-diri/ketua-tim')->with('alert-warning', 'Mohon maaf ada error yang terjadi, mohon coba beberapa saat lagi.');
 			break;
 		}
+
+		//Ambil data team
+		$team = Team::where('id','=', Auth::user()->idTim)->first();
+
 		$data->nama = $req->nama;
 		$data->nim = $req->nim;
 		$data->tmptLahir = $req->tmptLahir;
@@ -219,6 +222,29 @@ class HomeController extends Controller {
 		$uploadedSKMA = $req->file('skma');
 		$uploadedKTM = $req->file('ktm');
 		if ($uploadedFoto) {
+			switch ($key) {
+			case 1:
+				if ($team->verifFotoKetua == 1) {
+					return redirect()->back()->with('foto-alert','Foto telah terverifikasi, anda tidak diperkenankan untuk mengganti foto yang sudah ada.');
+				}
+				$team->verifFotoKetua = 2;
+				break;
+			case 2:
+				if ($team->verifFoto1 == 1) {
+					return redirect()->back()->with('foto-alert','Foto telah terverifikasi, anda tidak diperkenankan untuk mengganti foto yang sudah ada.');
+				}
+				$team->verifFoto1 = 2;
+				break;
+			case 3:
+				if ($team->verifFoto2 == 1) {
+					return redirect()->back()->with('foto-alert','Foto telah terverifikasi, anda tidak diperkenankan untuk mengganti foto yang sudah ada.');
+				}
+				$team->verifFoto2 = 2;
+				break;
+			default:
+				return redirect('/data-diri/ketua-tim')->with('alert-warning', 'Mohon maaf ada error yang terjadi, mohon coba beberapa saat lagi.');
+				break;
+			}
 			if ($data->namaFoto && $data->alamatFoto) {
 				Storage::delete($data->alamatFoto);
 				$data->namaFoto == null;
@@ -233,6 +259,29 @@ class HomeController extends Controller {
 		}
 
 		if ($uploadedSKMA) {
+			switch ($key) {
+			case 1:
+				if ($team->verifSKMAKetua == 1) {
+					return redirect()->back()->with('skma-alert','Bukti Mahasiswa/Siswa telah terverifikasi, anda tidak diperkenankan untuk mengganti berkas yang sudah ada.');
+				}
+				$team->verifSKMAKetua = 2;
+				break;
+			case 2:
+				if ($team->verifSKMA1 == 1) {
+					return redirect()->back()->with('skma-alert','Bukti Mahasiswa/Siswa telah terverifikasi, anda tidak diperkenankan untuk mengganti berkas yang sudah ada.');
+				}
+				$team->verifSKMA1 = 2;
+				break;
+			case 3:
+				if ($team->verifSKMA2 == 1) {
+					return redirect()->back()->with('skma-alert','Bukti Mahasiswa/Siswa telah terverifikasi, anda tidak diperkenankan untuk mengganti berkas yang sudah ada.');
+				}
+				$team->verifSKMA2 = 2;
+				break;
+			default:
+				return redirect('/data-diri/ketua-tim')->with('alert-warning', 'Mohon maaf ada error yang terjadi, mohon coba beberapa saat lagi.');
+				break;
+			}
 			if ($data->namaSKMA && $data->alamatSKMA) {
 				Storage::delete($data->alamatSKMA);
 				$data->namaSKMA == null;
@@ -247,6 +296,29 @@ class HomeController extends Controller {
 		}
 
 		if ($uploadedKTM) {
+			switch ($key) {
+			case 1:
+				if ($team->verifKTMKetua == 1) {
+					return redirect()->back()->with('ktm-alert','KTM/Kartu Pelajar telah terverifikasi, anda tidak diperkenankan untuk mengganti foto KTM/Kartu Pelajar yang sudah ada.');
+				}
+				$team->verifKTMKetua = 2;
+				break;
+			case 2:
+				if ($team->verifKTM1 == 1) {
+					return redirect()->back()->with('ktm-alert','KTM/Kartu Pelajar telah terverifikasi, anda tidak diperkenankan untuk mengganti foto KTM/Kartu Pelajar yang sudah ada.');
+				}
+				$team->verifKTM1 = 2;
+				break;
+			case 3:
+				if ($team->verifKTM2 == 1) {
+					return redirect()->back()->with('ktm-alert','KTM/Kartu Pelajar telah terverifikasi, anda tidak diperkenankan untuk mengganti foto KTM/Kartu Pelajar yang sudah ada.');
+				}
+				$team->verifKTM2 = 2;
+				break;
+			default:
+				return redirect('/data-diri/ketua-tim')->with('alert-warning', 'Mohon maaf ada error yang terjadi, mohon coba beberapa saat lagi.');
+				break;
+			}
 			if ($data->namaKTM && $data->alamatKTM) {
 				Storage::delete($data->alamatKTM);
 				$data->namaKTM == null;
@@ -259,7 +331,7 @@ class HomeController extends Controller {
 			$data->namaKTM = $uploadedKTM->getClientOriginalName();
 			$data->alamatKTM = $pathKTM;
 		}
-
+		$team->save();
 		$data->save();
 		return redirect()->back();
 	}

@@ -719,9 +719,15 @@ td {}
     font-size: 20px;
 }
 
-.left td {
+.verif-category td {
     font-family: Roboto;
-    font-style: normal;
+    font-weight: bold;
+    color: black;
+}
+
+.verif-value td {
+    font-family: Roboto;
+    color: black;   
 }
 
 @media(max-width: 960px) {
@@ -729,7 +735,11 @@ td {}
         font-size: 15px;
     }
 
-    .left td {
+    .verif-category td {
+        font-size: 8px;
+    }
+
+    .verif-value td {
         font-size: 8px;
     }
 
@@ -737,6 +747,10 @@ td {}
         width: 100%;
         margin-bottom: 5px;
         font-size: 10px;
+    }
+
+    .divider {
+        display: none;
     }
 }
 

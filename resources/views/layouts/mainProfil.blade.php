@@ -41,6 +41,21 @@
                 {{ session('alert-udh') }}
             </div>
             @endif
+            @if (Session::has('foto-alert'))
+            <div class="alert alert-danger" role="alert">
+                {{ Session::get('foto-alert') }}
+            </div>
+            @endif
+            @if (Session::has('skma-alert'))
+            <div class="alert alert-danger" role="alert">
+                {{ Session::get('skma-alert') }}
+            </div>
+            @endif
+            @if (Session::has('ktm-alert'))
+            <div class="alert alert-danger" role="alert">
+                {{ Session::get('ktm-alert') }}
+            </div>
+            @endif
             @error('namaTim')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
