@@ -65,7 +65,13 @@ class HomeController extends Controller {
 	public function showPembayaran() {
 		$user = Auth::user();
 		$dataBayar = Bayar::where('idTim', '=', $user->idTim)->first();
-		return view('pembayaran', ['title' => 'Pembayaran | IT TODAY 2019', 'tipe' => true, 'upload_page' => true, 'Bayar' => $dataBayar]);
+		// dd($dataTeam);
+		return view('pembayaran', [
+			'title' => 'Pembayaran | IT TODAY 2019', 
+			'tipe' => true, 
+			'upload_page' => true, 
+			'Bayar' => $dataBayar,
+		]);
 	}
 
 	public function postPembayaran(Request $req) {
@@ -74,11 +80,13 @@ class HomeController extends Controller {
 			'bayar.max' => 'Ukuran maksimal berkas pembayaran yang bisa di upload adalah 2MB, mohon ganti atau resize berkas pembayaran.',
 			'bayar.image' => 'Berkas pembayaran harus dalam format jpeg, png, jpg, atau svg.',
 			'bayar.mimes:jpeg,png,jpg,svg' => 'Berkas pembayaran harus dalam format jpeg, png, jpg, atau svg.',
+			'status_bayar.accepted' => 'Bukti pembayaran sudah terverifikasi, anda tidak diperkenankan untuk mengganti bukti pembayaran yang sudah ada.'
 		];
 
 		//validasi input
 		$validator = Validator::make($req->all(), [
 			'bayar' => 'image|mimes:jpeg,png,jpg,svg|max:2048',
+			'status_bayar' => 'accepted'
 		], $messages)->validate();
 
 		$user = Auth::user();

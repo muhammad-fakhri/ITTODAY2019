@@ -68,6 +68,9 @@
             @error('bayar')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror
+            @error('status_bayar')
+            <div class="alert alert-danger">{{ $message }}</div>
+            @enderror
             @error('berkas')
             <div class="alert alert-danger">{{ $message }}</div>
             @enderror

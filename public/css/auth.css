@@ -440,7 +440,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 .wrapper {
     position: relative;
     width: 70%;
-    height: 70%;
+    height: 80%;
     background: white;
     top: 15%;
     left: 15%;
@@ -448,7 +448,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     border-radius: 35px;
     z-index: 2;
     padding: 15px;
-    /*border: 1px solid black;*/
+    /*border: 1px solid green;*/
 }
 
 .inner-wrapper {
