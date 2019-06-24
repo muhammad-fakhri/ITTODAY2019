@@ -17,13 +17,15 @@
             Sudah terverifikasi
             @elseif($Team->verifBayar == 2)
             Sedang diproses
+            @elseif($Team->verifBayar == 3)
+            Bukti pembayaran ditolak
             @else
             Belum terverifikasi
             @endif
         </u>
     </label>
     <br>
-    <small>*Jika bukti pembayaran sudah terverfikasi maka Anda tidak diperkenankan untuk mengganti bukti pembayaran yang sudah ada.</small>
+    <p class="small">*Jika bukti pembayaran sudah terverfikasi maka Anda tidak diperkenankan untuk mengganti bukti pembayaran yang sudah ada.</p>
     <form method="POST" action="{{ route('postBayar') }}" enctype="multipart/form-data">
         @csrf
         <input type="file" name="bayar" id="payment-input"><br>

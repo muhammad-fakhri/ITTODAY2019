@@ -32,6 +32,7 @@ class CreateAnggota1sTable extends Migration {
 			$table->string('alamatKTM')->nullable($value = true);
 			$table->string('namaFoto')->nullable($value = true);
 			$table->string('alamatFoto')->nullable($value = true);
+			$table->longText('pesan')->nullable($value = true);
 			$table->timestamps();
 		});
 	}

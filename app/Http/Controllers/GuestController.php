@@ -13,12 +13,12 @@ class GuestController extends Controller
 
 	public function apps()
 	{
-		return view('apps', ['title' => 'Appstoday | IT TODAY 2019']);
+		return view('apps', ['title' => 'AppsToday | IT TODAY 2019']);
 	}
 
 	public function hack()
 	{
-		return view('hack', ['title' => 'Hacktoday | IT TODAY 2019']);
+		return view('hack', ['title' => 'HackToday | IT TODAY 2019']);
 	}
 
 	public function daming()

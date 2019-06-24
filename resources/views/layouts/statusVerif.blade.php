@@ -12,6 +12,8 @@
             Sudah terverifikasi
             @elseif($Team->verifFotoKetua == 2)
             Sedang Diproses
+            @elseif($Team->verifFotoKetua == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -21,6 +23,8 @@
             Sudah terverifikasi
             @elseif($Team->verifFoto1 == 2)
             Sedang Diproses
+            @elseif($Team->verifFoto1 == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -30,6 +34,8 @@
             Sudah terverifikasi
             @elseif($Team->verifFoto2 == 2)
             Sedang Diproses
+            @elseif($Team->verifFoto2 == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -39,6 +45,8 @@
             Sudah terverifikasi
             @elseif($Team->verifFotoKetua == 2)
             Sedang Diproses
+            @elseif($Team->verifFotoKetua == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -57,6 +65,8 @@
             Sudah terverifikasi
             @elseif($Team->verifSKMAKetua == 2)
             Sedang Diproses
+            @elseif($Team->verifSKMAKetua == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -66,6 +76,8 @@
             Sudah terverifikasi
             @elseif($Team->verifSKMA1 == 2)
             Sedang Diproses
+            @elseif($Team->verifSKMA1 == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -75,6 +87,8 @@
             Sudah terverifikasi
             @elseif($Team->verifSKMA2 == 2)
             Sedang Diproses
+            @elseif($Team->verifSKMA2 == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -84,6 +98,8 @@
             Sudah terverifikasi
             @elseif($Team->verifSKMAKetua == 2)
             Sedang Diproses
+            @elseif($Team->verifSKMAKetua == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -102,6 +118,8 @@
             Sudah terverifikasi
             @elseif($Team->verifKTMKetua == 2)
             Sedang Diproses
+            @elseif($Team->verifKTMKetua == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -111,6 +129,8 @@
             Sudah terverifikasi
             @elseif($Team->verifKTM1 == 2)
             Sedang Diproses
+            @elseif($Team->verifKTM1 == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -120,6 +140,8 @@
             Sudah terverifikasi
             @elseif($Team->verifKTM2 == 2)
             Sedang Diproses
+            @elseif($Team->verifKTM2 == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif
@@ -129,6 +151,8 @@
             Sudah terverifikasi
             @elseif($Team->verifKTMKetua == 2)
             Sedang Diproses
+            @elseif($Team->verifKTMKetua == 3)
+            Berkas ditolak
             @else
             Belum terverifikasi
             @endif

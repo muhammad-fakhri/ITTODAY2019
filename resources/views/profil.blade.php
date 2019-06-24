@@ -49,15 +49,22 @@
             @endif
             ">
             <label class="label">Foto 3x4</label><br>
-            <input type="text" class="link_input" value="@if ($Peserta->namaFoto == NUll)
-                Belum ada foto
-            @else
-                {{$Peserta->namaFoto}} 
-            @endif" disabled>
-            {{-- <input type="text" name="status_foto" value="@if ($profil_page == 1&&$Team->verifFotoKetua == 1){{'no'}} @elseif ($profil_page == 2&&$Team->verifFoto1 == 1){{'no'}} @elseif ($profil_page == 3&&$Team->verifFoto2 == 1){{'no'}}@else{{'yes'}}@endif"> --}}
+            <input type="text" class="link_input" value="@if ($Peserta->namaFoto){{$Peserta->namaFoto}}@else{{"Belum ada foto"}}@endif" disabled>
             <input type="file" name="foto" class="input_file"><br>
             <hr>
             @include('layouts.statusVerif')
+            <hr>
+            <h3>Pesan Verifikasi</h3>
+            <br>
+            <div class="message-area">
+                <p>
+                    @if ($Peserta->pesan)
+                    {{ $Peserta->pesan }}
+                    @else
+                    Anda tidak memiliki pesan pemberitahuan dari panitia.
+                    @endif
+                </p>
+            </div>
         </div>
         <div class="right">
             <label class="label">Nama Lengkap</label><br>
@@ -95,7 +102,6 @@
             <input type="text" name="noWA" class="input" value="{{ $Peserta->noWA }}"><br>
             <label class="label">Id Line</label><br>
             <input type="text" name="idLine" class="input" value="{{ $Peserta->idLine }}"><br>
-            {{-- <input type="text" name="status_ktm" value="@if ($profil_page == 1&&$Team->verifKTMKetua == 1){{'no'}} @elseif ($profil_page == 2&&$Team->verifKTM1 == 1){{'no'}} @elseif ($profil_page == 3&&$Team->verifKTM2 == 1){{'no'}}@else{{'yes'}}@endif"> --}}
             <label class="label">Foto KTM/Kartu Pelajar</label><br>
             <img src="
             @if ($Peserta->namaKTM && $Peserta->alamatKTM)
@@ -105,7 +111,6 @@
             @endif
             " class="berkas-image">
             <input type="file" name="ktm" class="input_file"><br>
-            {{-- <input type="text" name="status_skma" value="@if ($profil_page == 1&&$Team->verifSKMAKetua == 1){{'no'}} @elseif ($profil_page == 2&&$Team->verifSKMA1 == 1){{'no'}} @elseif ($profil_page == 3&&$Team->verifSKMA2 == 1){{'no'}}@else{{'yes'}}@endif"> --}}
             <label class="label">Berkas Bukti Mahasiswa/Siswa</label><br>
             <input type="text" value="{{ $Peserta->namaSKMA }}" class="link_input" disabled><br>
             <input type="file" name="skma" class="input_file" id="aboveSmall"><br>

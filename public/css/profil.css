@@ -450,6 +450,8 @@ body.mobile-nav-active #mobile-nav-toggle {
         width: 90%;
         left: 5%;
         padding: 25px 10px;
+        /*border: 1px solid black;*/
+        height: 78%;
     }
 }
 
@@ -537,13 +539,14 @@ body.mobile-nav-active #mobile-nav-toggle {
     line-height: 28px;
 }
 
-.team-label{
+.team-label {
     color: #F67E7D;
 }
 
 @media(max-width: 960px) {
     .label {
         font-size: 12px;
+        line-height: 1em;
     }
 }
 
@@ -556,7 +559,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media(max-width: 960px) {
     .berkas-image {
-        width: 180px;
+        width: 150px;
         height: 100px;
     }
 }
@@ -656,6 +659,7 @@ body.mobile-nav-active #mobile-nav-toggle {
     #small {
         font-size: 8px;
         margin-bottom: 0px;
+        line-height: 1em;
     }
 }
 
@@ -728,7 +732,7 @@ td {}
 
 .verif-value td {
     font-family: Roboto;
-    color: black;   
+    color: black;
 }
 
 @media(max-width: 960px) {
@@ -738,10 +742,12 @@ td {}
 
     .verif-category td {
         font-size: 8px;
+        line-height: 1em;
     }
 
     .verif-value td {
         font-size: 8px;
+        line-height: 1em;
     }
 
     .left .link_input {
@@ -751,7 +757,7 @@ td {}
     }
 
     .divider {
-        display: none;
+        /*display: none;*/
     }
 }
 
@@ -808,6 +814,24 @@ td {}
 }
 
 /*-------------- Column & Row CSS START -------------- */
+
+/*-------------- MESSAGE AREA CSS START --------------*/
+.message-area {
+    text-align: left;
+    color: black;
+    font-family: Roboto;
+    background: #fff;
+    border-radius: 20px;
+}
+
+@media(max-width: 960px) {
+    .message-area {
+        font-size: 8px;
+        line-height: 1em;
+    }
+}
+
+/*-------------- MESSAGE AREA CSS START --------------*/
 
 /*-------------- FOOTER AREA CSS START --------------*/
 .footer-area {
