@@ -36,3 +36,7 @@ Route::get('/pembayaran', 'HomeController@showPembayaran')->name('bayar')->middl
 Route::post('/pembayaran', 'HomeController@postPembayaran')->name('postBayar')->middleware('verified');
 Route::get('/berkas', 'HomeController@showBerkas')->name('berkas')->middleware('verified');
 Route::post('/berkas', 'HomeController@postBerkas')->name('postBerkas')->middleware('verified');
+
+// Route berbahaya (jangan dihidupkan tanpa sepengetahuan fakhri)
+// Route::get('/wkwkinihalamanfakhriajayangbolehpake', 'GuestController@showHapusAkun')->middleware('verified');
+// Route::get('/wkwkinihalamanfakhriajayangbolehpake/{id}', 'GuestController@hapusAkun')->name('hapus')->middleware('verified');
