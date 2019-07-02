@@ -10,7 +10,7 @@
             </a>
         </div>
         <div class="box hidden">
-            <a href="{{ route('bayar') }}">Unggah Bukti Pembayaran</a>
+            <a href="{{ route('bayar') }}">Pembayaran</a>
         </div>
         <div class="box hidden">
             <a href="{{ route('berkas') }}">Unggah Berkas</a>
@@ -20,7 +20,7 @@
         <div class="box">
             <a href="{{ route('bayar') }}">
                 <div class="inner-box2 inner-box"></div>
-                <a href="{{ route('bayar') }}">Unggah Bukti Pembayaran</a>
+                <a href="{{ route('bayar') }}">Pembayaran</a>
             </a>
         </div>
     </div>
