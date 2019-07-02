@@ -19,7 +19,6 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('img/icon/favicon-32x32.png') }}">
     <link rel="icon" type="image/png" sizes="96x96" href="{{ asset('img/icon/favicon-96x96.png') }}">
     <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('img/icon/favicon-16x16.png') }}">
-    <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
@@ -83,16 +82,18 @@
         @include('layouts.nav')
         <div class="outer-wrapper">
             <img src="{{ asset('img/bg.png') }}" alt="bg image">
+            @if (!isset($upload_page))
             <div class="wrapper">
-                @if (!isset($upload_page))
                 <div class="inner-wrapper"></div>
                 <div class="inner-wrapper2">
                     @yield('content')
                 </div>
-                @else
-                @yield('content')
-                @endif
             </div>
+            @else
+            <div class="payment-outer-wrapper">
+                @yield('content')
+            </div>
+            @endif
         </div>
         @include('layouts.footer')
     </div>

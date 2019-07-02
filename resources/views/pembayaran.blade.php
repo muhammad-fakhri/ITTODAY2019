@@ -1,7 +1,17 @@
 @extends('layouts.mainAuth')
 @section('content')
 <div class="payment-wrapper">
-    <p>Unggah bukti pembayaranmu disini</p>
+    <p>Informasi Pembayaran</p>
+    <div class="payment-info">
+        Nominal pembayaran untuk setiap mata lomba adalah sebagai berikut:<br>
+        &ensp;&ensp;&ensp;AppsToday&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;: Rp 100.000<br>
+        &ensp;&ensp;&ensp;HackToday&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;: Rp 50.000<br>
+        &ensp;&ensp;&ensp;Data Science Competition : Rp 100.000<br>
+        Pembayaran untuk setiap mata lomba dapat dilakukan via transfer ke<br>
+        &ensp;&ensp;&ensp;Nomor Rekening &ensp;: 0824678264 (BNI)<br>
+        &ensp;&ensp;&ensp;Atas Nama&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&ensp;: Fakhoor Izaaz Wildhanrahman
+    </div>
+    <p>Unggah Bukti Pembayaran</p>
     <div id="payment-img">
         <img src="
         @if ($Bayar->alamatBayar)

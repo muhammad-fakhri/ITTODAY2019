@@ -466,7 +466,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 960px) {
 
-    .wrapper{
+    .wrapper {
         width: 90%;
         height: 80%;
         top: 10%;
@@ -686,7 +686,7 @@ input:focus {
     color: #f98a89;
 }
 
-.forget-password:hover{
+.forget-password:hover {
     color: #000000;
 }
 
@@ -732,7 +732,7 @@ input:focus {
     background-size: auto 100%;
 }
 
-@media(max-width: 960px){
+@media(max-width: 960px) {
     .verify-img {
         background-size: auto 70%;
     }
@@ -910,6 +910,7 @@ input:focus {
     .inner-reset-content {
         width: 90%;
     }
+
     .inner-reset-content h3 {
         font-size: 20px;
     }
@@ -983,6 +984,28 @@ input:focus {
 /*------------  RESET PASSWORD CSS END ------------ */
 
 /*-------------- PAYMENT AREA CSS START --------------*/
+.payment-outer-wrapper {
+    position: relative;
+    width: 70%;
+    height: 100%;
+    background: white;
+    top: 7%;
+    left: 15%;
+    box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.27);
+    border-radius: 35px;
+    z-index: 2;
+    padding: 15px;
+    /*border: 1px solid green;*/
+}
+
+@media(max-width: 960px){
+    .payment-outer-wrapper {
+        width: 90%;
+        height: 100%;
+        top: 10%;
+        left: 5%;
+    }
+}
 
 .payment-wrapper {
     position: absolute;
@@ -994,6 +1017,7 @@ input:focus {
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
+    /*border: 1px solid black;*/
 }
 
 
@@ -1001,14 +1025,22 @@ input:focus {
     font-family: Roboto;
     font-style: normal;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 20px;
     color: #F67E7D;
 }
 
-.payment-wrapper .small{
-        font-size: 10px;
-        color: #000000;
-        line-height: 1em;
+.payment-wrapper .small {
+    font-size: 10px;
+    color: #000000;
+    line-height: 1em;
+}
+
+.payment-info {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    padding-left: 10%;
+    /*border: 1px solid grey;*/
 }
 
 @media(max-width: 960px) {
@@ -1018,17 +1050,24 @@ input:focus {
     }
 
     .payment-wrapper p {
-        font-size: 15px;
+        font-size: 12px;
+        margin-bottom: 0;
     }
 
     .payment-wrapper .small {
         line-height: 1em;
     }
 
-    .payment-wrapper .label{
+    .payment-wrapper .label {
         line-height: 1em;
         font-size: 12px;
-    } 
+    }
+
+    .payment-info {
+        font-size: 10px;
+        line-height: 1.2em;
+        padding-right: 10%;
+    }
 }
 
 @media(max-width: 960px) {
@@ -1054,20 +1093,23 @@ input:focus {
 
 @media(max-width: 960px) {
     #payment-btn {
-        width: 50%;
+        font-size: 12px;
+        width: 40%;
+        height: 25px;
     }
 }
 
 #payment-img {
-    height: 250px;
+    height: 200px;
     width: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
+    /*border: 1px solid red;*/
 }
 
 #payment-img img {
-    height: 250px;
+    height: 200px;
     width: 80%;
 }
 
