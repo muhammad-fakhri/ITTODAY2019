@@ -81,6 +81,7 @@ class RegisterController extends Controller {
 		$dataUser = User::where('email', '=', $user->email)->first();
 		$dataUser->idTim = $team->id;
 		$dataUser->jenisTim = 0;
+		$dataUser->baruDaftar = 1;
 		$dataUser->save();
 
 		//buat data ketua tim baru
