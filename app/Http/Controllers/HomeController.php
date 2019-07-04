@@ -173,8 +173,8 @@ class HomeController extends Controller {
 			'foto.image' => 'Berkas foto harus dalam format jpeg, png, jpg, atau svg.',
 			'foto.mimes:jpeg,png,jpg,svg' => 'Berkas foto harus dalam format jpeg, png, jpg, atau svg.',
 			'ktm.max' => 'Ukuran maksimal foto yang diupload adalah 2MB, mohon ganti atau resize foto terlebih dahulu.',
-			'ktm.image' => 'Berkas KTM harus dalam format jpeg, png, jpg, atau svg.',
-			'ktm.mimes:jpeg,png,jpg,svg' => 'Berkas KTM harus dalam format jpeg, png, jpg, atau svg.',
+			'ktm.image' => 'Berkas KTM/Kartu Pelajar harus dalam format jpeg, png, jpg, atau svg.',
+			'ktm.mimes:jpeg,png,jpg,svg' => 'Berkas KTM/Kartu Pelajar harus dalam format jpeg, png, jpg, atau svg.',
 			'skma.max' => 'Ukuran maksimal berkas yang diupload adalah 2MB, mohon ganti atau kompres terlebih dahulu.',
 		];
 

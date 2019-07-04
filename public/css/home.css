@@ -102,6 +102,11 @@ body {
 
 .alert {
     z-index: 1000;
+    text-align: center;
+    height: 85px;
+    font-size: 20px;
+    line-height: 65px;
+    color: #7a0606;
 }
 
 header {
