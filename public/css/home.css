@@ -635,6 +635,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-size: 100% 100%;
 }
 
+.footer-image {
+    margin-bottom: 25px;
+}
+
 .footer-area h6 {
     color: #fff;
     text-align: center;
@@ -673,10 +677,15 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-bottom {
-    margin-top: 25px;
+    margin-top: 30px;
 }
 
 @media (max-width: 991.98px) {
+    .footer-image {
+        width: 150px;
+        height: 76px;
+    }
+
     .footer-social {
         text-align: center;
         margin-bottom: 10px;
@@ -759,7 +768,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 991.98px) {
     .single-footer-widget {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 }
 

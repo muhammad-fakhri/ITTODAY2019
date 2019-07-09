@@ -3049,6 +3049,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     background-size: 100% 100%;
 }
 
+.footer-image {
+    margin-bottom: 25px;
+}
+
 .footer-text a,
 .footer-text i {
     color: #8a90ff;
@@ -3186,17 +3190,18 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .footer-bottom {
-    margin-top: 70px;
+    margin-top: 30px;
 }
 
 @media (max-width: 991.98px) {
+    .footer-image {
+        width: 150px;
+        height: 76px;
+    }
+
     .footer-social {
         text-align: center;
         margin-bottom: 10px;
-    }
-
-    .footer-bottom {
-        margin-top: 0px;
     }
 
     .footer-social a {
@@ -3208,6 +3213,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     .footer-social i {
         color: #cccccc;
         font-size: 25px;
+    }
+
+    .footer-bottom {
+        margin-top: 0px;
     }
 }
 
@@ -3316,7 +3325,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 
 @media (max-width: 991.98px) {
     .single-footer-widget {
-        margin-bottom: 60px;
+        margin-bottom: 30px;
     }
 }
 
