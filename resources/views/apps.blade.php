@@ -26,7 +26,12 @@
             <div class="col-lg-6 home-about-right no-padding">
                 <h1>AppsToday</h1>
                 <p>
-                    AppsToday merupakan salah satu cabang kompetisi IT Today 2019 pada bidang inovasi aplikasi. Lomba ini menjadi wadah bagi peserta akan menjadi generasi developer baru baru yang kreatif dan inovatif untuk memajukan daya saing Indonesia di bidang TIK. Peserta AppsToday merupakan mahasiswa S1 atau diploma. Perangkat lunak yang diajukan harus bersesuaian dengan tema acara IT Today 2019 yaitu “Revolutionize The World With Future Technology” dengan tagline “Bring The Future Today”.
+                    AppsToday merupakan salah satu cabang kompetisi IT Today 2019 pada bidang
+                    inovasi aplikasi. Lomba ini menjadi wadah bagi peserta untuk menjadi generasi developer
+                    baru yang kreatif dan inovatif guna memajukan daya saing Indonesia di bidang TIK.
+                    Peserta AppsToday merupakan mahasiswa S1 atau diploma. Perangkat lunak yang
+                    diajukan harus bersesuaian dengan tema acara AppsToday 2019 yaitu “Enhancing
+                    Human Capability with Technology”.
                 </p>
                 <a class="primary-btn text-uppercase" href="{{ route('downApps') }}" style="color: white;">Download Rulebook</a>
             </div>
