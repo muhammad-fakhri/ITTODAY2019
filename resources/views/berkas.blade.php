@@ -16,7 +16,8 @@
         <input type="file" name="berkas" id="berkas-input">
         <br>
         <small>*ukuran berkas maksimum 10MB</small>
-        <br>
+        <p class="change-file-instruction">Untuk mengganti berkas yang ingin di submit, Anda hanya perlu mengunggah berkas yang baru kemudian berkas yang lama akan otomatis terhapus dan digantikan dengan berkas yang baru.</p>
+        {{-- <br> --}}
         @if ($Lomba == 1 )
         <hr>
         <p>Lampirkan link videomu disini</p>
