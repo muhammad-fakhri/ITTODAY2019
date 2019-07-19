@@ -4032,6 +4032,12 @@ body.mobile-nav-active #mobile-nav-toggle {
     margin-bottom: 20px;
 }
 
+#extend-registration{
+    text-align: center;
+    font-size: 28px;
+    margin-top: 20px;
+}
+
 @media (max-width: 960px) {
     #timeline-appstoday {
         width: 100%;
@@ -4063,6 +4069,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 
     .timeline-title h1 {
+        font-size: 20px;
+    }
+
+    #extend-registration{
         font-size: 20px;
     }
 }

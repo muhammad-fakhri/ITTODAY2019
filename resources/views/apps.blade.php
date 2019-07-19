@@ -45,9 +45,10 @@
                 <h1 class="text-center">Timeline AppsToday</h1>
             </div>
         </div>
-        <div>
-            <img class="timeline-img" src="{{ asset('img/timeline/timeline-apps.jpg') }}" alt="timeline appstoday" id="timeline-appstoday">
-        </div>
+        <img class="timeline-img" src="{{ asset('img/timeline/timeline-apps.jpg') }}" alt="timeline appstoday" id="timeline-appstoday">
+        <h3 id="extend-registration">
+            Pendaftaran diperpanjang sampai 30 Juli 2019 !
+        </h3>
         <!-- Timeline End -->
         <!-- FAQ Start -->
         <div class="row faq-wrapper">

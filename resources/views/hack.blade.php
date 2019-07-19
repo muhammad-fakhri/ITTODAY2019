@@ -41,6 +41,9 @@
             </div>
         </div>
         <img class="timeline-img" src="{{ asset('img/timeline/timeline-hack.jpg') }}" alt="timeline hacktoday" id="timeline-hacktoday">
+        <h3 id="extend-registration">
+            Pendaftaran diperpanjang sampai 30 Juli 2019 !
+        </h3>
         <!-- Timeline End -->
         <!-- FAQ Start -->
         <div class="row faq-wrapper">
@@ -204,12 +207,12 @@
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
-                                <div class="faq-button collapsed" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                <div class="faq-button collapsed" data-toggle="collapse" data-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
                                     12. Dimanakah final akan dilaksanakan?
                                 </div>
                             </h2>
                         </div>
-                        <div id="collapseEleven" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="collapseTwelve" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 Final dilaksanakan pada hari Sabtu, 7 September 2019 pada pukul 09.00 hingga 15.00 di Fakultas MIPA,Institut Pertanian Bogor, Dramaga, Bogor.
                             </div>
@@ -218,12 +221,12 @@
                     <div class="card">
                         <div class="card-header" id="headingThree">
                             <h2 class="mb-0">
-                                <div class="faq-button collapsed" data-toggle="collapse" data-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                                <div class="faq-button collapsed" data-toggle="collapse" data-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
                                     13. Apakah peserta mendapatkan akomodasi pada saat final?
                                 </div>
                             </h2>
                         </div>
-                        <div id="collapseEleven" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+                        <div id="collapseThirteen" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
                                 Tidak, namun peserta akan dibantu oleh pj HackToday untuk dicarikan akomodasi selama berada di IPB.
                             </div>
