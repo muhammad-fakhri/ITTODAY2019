@@ -139,17 +139,19 @@ class HomeController extends Controller {
 		//pesan validasi
 		$messages = [
 			'berkas.max' => 'Ukuran berkas yang bisa diupload adalah maksimal 10MB',
+			'berkas.mimes' => 'Format berkas yang bisa diupload hanya PDF.',
 		];
 
 		//validasi input
 		$validator = Validator::make($req->all(), [
 			'berkas' => 'max:10240',
+			'berkas' => 'mimes:pdf',
 		], $messages)->validate();
 
 		$data = Berkas::where('idTim', '=', Auth::user()->idTim)->first();
 		$uploadedBerkas = $req->file('berkas');
 		if ($uploadedBerkas) {
-			if ($data->namaBerkas && $data->alamatBerkas) {
+			if ($data->namaBerkas && $data->alamatBerkas) 	{
 				Storage::delete($data->alamatBerkas);
 				$data->namaBerkas == null;
 				$data->alamatBerkas == null;
