@@ -20,7 +20,16 @@
                             <li><a href="{{ route('workshop') }}">Workshop</a></li>
                         </ul>
                     </li>
-                    <li><a href="http://himalkom.cs.ipb.ac.id" class="nav-menu-1">Himalkom IPB</a></li>
+                    
+                    {{-- <li class="menu-has-children"><a style="color: white;" class="nav-menu-1">Tentang</a> --}}
+                        {{-- <ul>
+                            <li><a href="#">IT Today 2019</a></li>
+                            <li><a href="http://himalkom.cs.ipb.ac.id" class="nav-menu-1">Himalkom IPB</a></li>
+                        </ul>
+                    </li> --}}
+
+                    <li><a href="{{ route('about') }}" class="nav-menu-1">Tentang</a></li>
+
                     @if (!isset($auth_page))
                     @guest
                     <li class="menu-has-children">

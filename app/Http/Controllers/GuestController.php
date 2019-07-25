@@ -44,6 +44,11 @@ class GuestController extends Controller
 		return view('workshop', ['title' => 'Workshop | IT TODAY 2019']);
 	}
 
+	public function about()
+	{
+		return view('about', ['title' => 'Tentang | IT TODAY 2019']);
+	}
+
 	public function downApps()
 	{
 		return Storage::download('rulebook/RULEBOOK_APPSTODAY.pdf');

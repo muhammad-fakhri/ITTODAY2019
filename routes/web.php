@@ -18,6 +18,7 @@ Route::get('/hacktoday', 'GuestController@hack')->name('hack');
 Route::get('/data-mining', 'GuestController@daming')->name('daming');
 Route::get('/seminar', 'GuestController@seminar')->name('seminar');
 Route::get('/workshop', 'GuestController@workshop')->name('workshop');
+Route::get('/about', 'GuestController@about')->name('about');
 Route::get('/rulebook-appstoday', 'GuestController@downApps')->name('downApps');
 Route::get('/rulebook-hacktoday', 'GuestController@downHack')->name('downHack');
 Route::get('/rulebook-dsc', 'GuestController@downDSC')->name('downDSC');
