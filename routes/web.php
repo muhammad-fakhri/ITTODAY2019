@@ -24,10 +24,10 @@ Route::get('/rulebook-hacktoday', 'GuestController@downHack')->name('downHack');
 Route::get('/rulebook-dsc', 'GuestController@downDSC')->name('downDSC');
 
 //Route untuk user yang sudah login
-Auth::routes(['verify' => true]);
+// Auth::routes(['verify' => true]);
 
-//Kalo mau matiin fungsi register
-// Auth::routes(['verify' => true, 'register'=>false]);
+// Kalo mau matiin fungsi register
+Auth::routes(['verify' => true, 'register'=>false]);
 
 Route::get('/dashboard', 'HomeController@index')->name('dash')->middleware('verified');
 Route::get('/data-diri/{key}', 'HomeController@showDataDiri')->name('data_diri')->middleware('verified');
