@@ -47,7 +47,7 @@
             <div class="col-lg-6 home-about-right no-padding">
                 <h2>TEMPAT KEGIATAN</h1>
                 <br>
-                <h4>Auditorium Common Class Room (CCR)</h4>
+                <h4>Kampus Dramaga</h4>
                 <h4>Institut Pertanian Bogor</h4>
                 <br>
                 <h2>KUOTA PESERTA</h3>
