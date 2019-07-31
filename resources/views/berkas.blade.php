@@ -1,7 +1,8 @@
 @extends('layouts.mainAuth')
 @section('content')
 <div class="berkas-wrapper">
-    <form method="POST" action="{{ route('postBerkas') }}" enctype="multipart/form-data">
+    <form method="POST" enctype="multipart/form-data">
+    {{-- <form method="POST" action="{{ route('postBerkas') }}" enctype="multipart/form-data"> --}}
         @csrf
         @if ($Lomba == 1)
         <p>Unggah proposal terbaikmu disini</p>
@@ -22,7 +23,8 @@
         <hr>
         <p>Lampirkan link videomu disini</p>
         <input type="text" name="linkVideo" class="link-input" value="{{ $Berkas->linkVideo }}"><br>
-        <button id="berkas-btn" type="submit">Simpan</button>
+        {{-- <button id="berkas-btn" type="submit">Simpan</button> --}}
+        <button id="berkas-btn" type="button" onclick="alert('Periode pengumpulan proposal dan link video telah selesai !'); return false;">Simpan</button>
         @else
         <br>
         <button id="berkas-btn" type="submit">Simpan</button>
