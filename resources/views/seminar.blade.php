@@ -25,34 +25,43 @@
             <div class="col-lg-6 home-about-right no-padding">
                 <h1>Seminar Nasional IT Today 2019</h1>
                 <p>
-                    Seminar Nasional adalah salah satu rangkaian acara dalam IT Today 2019. Acara ini membawa tema: "Revolutionize The World With Future Technology". Seminar ini nantinya akan mendatangkan pembicara - pembicara bertalenta yang berasal dari perusahaan IT skala besar dan startup lokal yang berkontribusi dalam perubahan teknologi digital di Indonesia.
+                    Seminar Nasional adalah salah satu rangkaian acara dalam IT Today 2019. Acara ini membawa tema: "Revolutionize The World With Future Technology". Seminar ini nantinya akan mendatangkan pembicara - pembicara bertalenta yang berasal dari perusahaan IT skala besar dan startup di Indonesia yang berkontribusi dalam perubahan teknologi digital di Indonesia.
                 </p>
-                <a class="primary-btn text-uppercase" onclick="alert('Pendaftaran belum dibuka')" style="color: white;">Daftar</a>
+                <p>
+                    Beberapa perusahaan asal pembicara yang akan hadir di acara ini yaitu :
+                    <ul>
+                        <li>- Tanijoy.id (Sesi Agriculture in The Future)</li>
+                        <li>- WIR Group (Sesi Augmented Reality/Virtual Reality)</li>
+                        <li>- Pembicara menarik lainnya</li>
+                    </ul>
+                </p>
+                <a class="primary-btn text-uppercase" href="https://ivenframe.com/event/seminar-nasional-it-today-2019" target="_blank" style="color: white;">Daftar</a>
             </div>
         </div>
         <br>
         <br>
         <br>
         <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-lg-6 home-about-left no-padding">
+            <div class="col-lg-6 home-about-left no-padding" id="seminar-home-about-left">
                 <h2>SYARAT DAN KETENTUAN</h1>
-                <br>
-                <ul class="term">
-                    <li>1. Peserta merupakan mahasiswa S1/Sederajat dan masyarakat umum yang tertarik di bidang teknologi</li>
-                    <li>2. Peserta diharuskan mendaftar seminar nasional melalui web ittoday.web.id</li>
-                    <li>3. Biaya pendaftaran seminar nasional IT Today 2019 adalah sebesar Rp. 20.000,-</li>
-                    <li>4. Peserta akan mendapatkan sertifikat online setelah seminar nasional selesai diadakan</li>
-                </ul>
+                    <br>
+                    <ul class="term">
+                        <li>1. Peserta merupakan mahasiswa S1/Sederajat dan masyarakat umum yang tertarik di bidang teknologi.</li>
+                        <li>2. Biaya pendaftaran seminar nasional IT Today 2019 adalah sebesar Rp. 20.000,-.</li>
+                        <li>3. Peserta akan mendapatkan sertifikat online setelah seminar nasional selesai diadakan.</li>
+                        <li>4. Apabila calon peserta seminar telah membayar, uang yang telah dibayar tidak dapat dikembalikan kecuali beberapa kasus yang fatal.</li>
+                        <li>5. Apabila calon peserta seminar telah membayar tiket seminar namun tidak hadir saat hari H seminar, maka tiket yang telah dibayar tidak dapat dikembalikan (diuangkan).</li>
+                    </ul>
             </div>
             <div class="col-lg-6 home-about-right no-padding">
                 <h2>TEMPAT KEGIATAN</h1>
-                <br>
-                <h4>Kampus Dramaga</h4>
-                <h4>Institut Pertanian Bogor</h4>
-                <br>
-                <h2>KUOTA PESERTA</h3>
-                <br>
-                <h4>500 orang peserta</h4>
+                    <br>
+                    <h4>Kampus Dramaga</h4>
+                    <h4>Institut Pertanian Bogor</h4>
+                    <br>
+                    <h2>KUOTA PESERTA</h3>
+                        <br>
+                        <h4>500 orang peserta</h4>
             </div>
         </div>
         <br>
@@ -64,7 +73,7 @@
                 <h1 class="text-center">Timeline Seminar Nasional</h1>
             </div>
         </div>
-            <img class="timeline-img" src="{{ asset('img/timeline/timeline-seminar.jpg') }}" alt="timeline seminar nasional" id="timeline-seminar">
+        <img class="timeline-img" src="{{ asset('img/timeline/timeline-seminar.jpg') }}" alt="timeline seminar nasional" id="timeline-seminar">
         <!-- Timeline End -->
     </div>
 </section>

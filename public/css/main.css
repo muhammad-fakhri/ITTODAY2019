@@ -2653,6 +2653,14 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 /*-------------- HOME ABOUT CSS AND INFO START --------------*/
+#seminar-home-about-left {
+    margin-top: 80px;
+}
+
+#workshop-home-about-left {
+    margin-top: 60px;
+}
+
 .home-about-left img {
     width: 100%;
 }
@@ -2684,6 +2692,11 @@ body.mobile-nav-active #mobile-nav-toggle {
     line-height: 1.5em;
     text-align: justify;
     font-size: 20px;
+}
+
+.home-about-right li {
+    font-size: 20px;
+    line-height: 1.5em;
 }
 
 .home-about-right a {
@@ -2745,6 +2758,10 @@ body.mobile-nav-active #mobile-nav-toggle {
     }
 
     .home-about-right p {
+        font-size: 15px;
+    }
+
+    .home-about-right li {
         font-size: 15px;
     }
 
