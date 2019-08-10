@@ -72,7 +72,8 @@
         @include('layouts.nav')
         <div class="outer-wrapper">
             <div id="team-info-area">
-                <form method="POST" action="/data-team/{{$Team->id}}" id="team-info">
+                {{-- <form method="POST" action="/data-team/{{$Team->id}}" id="team-info"> --}}
+                <form method="POST" id="team-info">
                     @csrf
                     <input type="hidden" name="_method" value="put">
                     <div class="row">
@@ -98,7 +99,7 @@
                             </select>
                         </div>
                     </div>
-                    <button type="submit" class="custom-btn save-btn" id="team-info-btn">Simpan Nama Tim dan Cabang Kompetisi</button>
+                    <button type="button" class="custom-btn save-btn" id="team-info-btn" onclick="alert('Anda sudah tidak bisa mengganti nama tim dan jenis kompetisi. Jika anda tetap ingin mengganti nama tim atau jenis tim silakan menghubungi panitia.'); return false;">Simpan Nama Tim dan Cabang Kompetisi</button>
                 </form>
             </div>
             <div class="wrapper">
