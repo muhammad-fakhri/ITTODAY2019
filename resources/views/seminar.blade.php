@@ -54,14 +54,14 @@
                     </ul>
             </div>
             <div class="col-lg-6 home-about-right no-padding">
-                <h2>TEMPAT KEGIATAN</h1>
-                    <br>
-                    <h4>Kampus Dramaga</h4>
-                    <h4>Institut Pertanian Bogor</h4>
-                    <br>
-                    <h2>KUOTA PESERTA</h3>
-                        <br>
-                        <h4>500 orang peserta</h4>
+                <h2>TEMPAT KEGIATAN</h2>
+                <br>
+                <h4>Auditorium Common Class Room</h4>
+                <h4>Kampus Dramaga Institut Pertanian Bogor</h4>
+                <br>
+                <h2>KUOTA PESERTA</h2>
+                <br>
+                <h4>500 orang peserta</h4>
             </div>
         </div>
         <br>
