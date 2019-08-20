@@ -41,9 +41,9 @@
             </div>
         </div>
         <img class="timeline-img" src="{{ asset('img/timeline/timeline-dsc.jpg') }}" alt="timeline data science competition" id="timeline-dsc">
-        <h3 id="extend-registration">
+        {{-- <h3 id="extend-registration">
             Pendaftaran diperpanjang sampai 30 Juli 2019 !
-        </h3>
+        </h3> --}}
         <!-- Timeline End -->
         <!-- FAQ Start -->
         <div class="row faq-wrapper">
