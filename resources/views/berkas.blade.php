@@ -1,11 +1,11 @@
 @extends('layouts.mainAuth')
 @section('content')
 <div class="berkas-wrapper">
-    @if ($Lomba == 1 )
+    {{-- @if ($Lomba == 1 || $Lomba == 2) --}}
     <form method="POST" enctype="multipart/form-data">
-        @else
-        <form method="POST" action="{{ route('postBerkas') }}" enctype="multipart/form-data">
-            @endif
+        {{-- @else --}}
+        {{-- <form method="POST" action="{{ route('postBerkas') }}" enctype="multipart/form-data"> --}}
+            {{-- @endif --}}
             @csrf
             @if ($Lomba == 1)
             <p>Unggah proposal terbaikmu disini</p>
@@ -33,7 +33,8 @@
             <button id="berkas-btn" type="button" onclick="alert('Periode pengumpulan writeup telah selesai !'); return false;">Simpan</button>
             @else
             <br>
-            <button id="berkas-btn" type="submit">Simpan</button>
+            {{-- <button id="berkas-btn" type="submit">Simpan</button> --}}
+            <button id="berkas-btn" type="button" onclick="alert('Periode pengumpulan makalah telah selesai !'); return false;">Simpan</button>
             @endif
         </form>
 </div>
