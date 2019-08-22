@@ -61,7 +61,7 @@
                         </div>
                         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
                             <div class="card-body">
-                                Hacktoday terdiri dari 2 Tahap, Tahap Penyisihan bersifat Remote yaitu via online yang artinya peserta dapat mengerjakan soal dimanapun pada hari Sabtu tanggal 10 Agustus 2018 pukul 09.00 WIB sampai dengan 16.00 WIB dan submisi writeup di hari yang sama pada pukul 16.00 WIB sampai dengan 20.00 WIB. Tahap final dilaksanakan secara onsite di FMIPA IPB, Kampus IPB Dramaga, Bogor pada hari Sabtu, 7 September 2018 pukul 09.00 WIB sampai 15.00 WIB.
+                                Hacktoday terdiri dari 2 Tahap, Tahap Penyisihan bersifat Remote yaitu via online yang artinya peserta dapat mengerjakan soal dimanapun pada hari Sabtu tanggal 10 Agustus 2018 pukul 09.00 WIB sampai dengan 16.00 WIB dan submisi writeup di hari yang sama pada pukul 16.00 WIB sampai dengan 20.00 WIB. Tahap final dilaksanakan secara onsite di FMIPA IPB, Kampus IPB Dramaga, Bogor pada hari Sabtu, 24 Agustus 2018 pukul 09.00 WIB sampai 15.00 WIB.
                             </div>
                         </div>
                     </div>
@@ -200,7 +200,7 @@
                         </div>
                         <div id="collapseEleven" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
-                                Tim yang akan lolos ke final berjumlah 10 tim terbaik pada saat tahap penyisihan apabila terdapat tim SMA/SMK.Namun, jika tidak ada tim SMA/SMK dalam 10 tim terbaik maka hanya akan diambil 9 dan diambil 1 tim terbaik SMA/SMK. Pengumuman akan dilaksanakan pada tanggal 17 Agustus 2019.
+                                Tim yang akan lolos ke final berjumlah 10 tim terbaik pada saat tahap penyisihan apabila terdapat tim SMA/SMK.Namun, jika tidak ada tim SMA/SMK dalam 10 tim terbaik maka hanya akan diambil 9 dan diambil 1 tim terbaik SMA/SMK. Pengumuman akan dilaksanakan pada tanggal 14 Agustus 2019.
                             </div>
                         </div>
                     </div>
@@ -214,7 +214,7 @@
                         </div>
                         <div id="collapseTwelve" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
                             <div class="card-body">
-                                Final dilaksanakan pada hari Sabtu, 7 September 2019 pada pukul 09.00 hingga 15.00 di Fakultas MIPA,Institut Pertanian Bogor, Dramaga, Bogor.
+                                Final dilaksanakan pada hari Sabtu, 24 Agustus 2019 pada pukul 09.00 hingga 15.00 di Fakultas MIPA,Institut Pertanian Bogor, Dramaga, Bogor.
                             </div>
                         </div>
                     </div>
