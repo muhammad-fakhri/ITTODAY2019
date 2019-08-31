@@ -30,12 +30,14 @@
                 <p>
                     Beberapa perusahaan asal pembicara yang akan hadir di acara ini yaitu :
                     <ul>
+                        <li>- GDP Labs (Artificial Intelligence)</li>
+                        <li>- Algorit.ma (Data Science)</li>
                         <li>- Tanijoy.id (Sesi Agriculture in The Future)</li>
                         <li>- WIR Group (Sesi Augmented Reality/Virtual Reality)</li>
-                        <li>- Pembicara menarik lainnya</li>
+                        <li>- Kitabisa (Future Human Interaction)</li>
                     </ul>
                 </p>
-                <a class="primary-btn text-uppercase" href="https://ivenframe.com/event/seminar-nasional-it-today-2019" target="_blank" style="color: white;">Daftar</a>
+                <a class="primary-btn text-uppercase" onclick="alert('Pendaftaran Seminar Nasional IT Today 2019 telah ditutup !');" style="color: white;">Daftar</a>
             </div>
         </div>
         <br>

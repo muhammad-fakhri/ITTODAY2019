@@ -27,7 +27,7 @@
                 <p>
                     Workshop IT Today 2019 adalah sebuah acara baru di dalam rangkaian acara IT Today 2019. Acara ini hadir dengan tema  "Deep Learning : Introduction to Computer Vision". Kami memfasilitasi bagi mereka yang tertarik dengan workshop ini untuk saling berkumpul, berdiskusi, bertukar pikiran dan merasakan praktik langsung atau latihan dari tema tersebut. 
                 </p>
-                <a class="primary-btn text-uppercase" href="https://ivenframe.com/event/workshop-it-today-2019" target="_blank" style="color: white;">Daftar</a>
+                <a class="primary-btn text-uppercase" style="color: white;" onclick="alert('Pendaftaran Workshop IT Today 2019 telah ditutup !');">Daftar</a>
             </div>
         </div>
         <br>
