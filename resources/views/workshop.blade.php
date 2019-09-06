@@ -49,13 +49,13 @@
             <div class="col-lg-6 home-about-right no-padding">
                 <h2>TEMPAT KEGIATAN</h1>
                     <br>
-                    <h4>Lab Komputer 1 Ilmu Komputer</h4>
+                    <h4>Laboratorium NCC Ilmu Komputer</h4>
                     <h4>Institut Pertanian Bogor</h4>
                     <br>
                     <h2>KUOTA PESERTA</h3>
                         <br>
-                        <h4>Mahasiswa IPB : 10 orang</h4>
-                        <h4>Mahasiwa Non-IPB : 40 orang</h4>
+                        <h4>Mahasiswa IPB : 5 orang</h4>
+                        <h4>Mahasiwa Non-IPB : 35 orang</h4>
             </div>
         </div>
         <br>
